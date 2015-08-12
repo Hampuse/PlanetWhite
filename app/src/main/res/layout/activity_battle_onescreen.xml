@@ -1,0 +1,49 @@
+
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/mainframe"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentRight="true"
+     android:layout_margin="0dp"
+     android:layout_marginBottom="0dp"
+     android:layout_marginEnd="0dp"
+     android:layout_marginLeft="0dp"
+     android:layout_marginRight="0dp"
+     android:layout_marginStart="0dp"
+     android:layout_marginTop="0dp"
+     android:fillViewport="true"
+     android:padding="0dp"
+     android:paddingBottom="0dp"
+     android:paddingLeft="0dp"
+     android:paddingRight="0dp"
+     android:paddingTop="0dp"
+     tools:context=".GameActivityOneScreen" >
+
+    <FrameLayout
+        android:id="@+id/surface" 
+        android:layout_height = "fill_parent"
+        android:layout_width= "fill_parent"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp"
+   		android:layout_marginLeft="0dp"
+    	android:layout_marginRight="0dp"
+    	android:layout_marginTop="0dp"
+        android:fillViewport="true">
+    
+    </FrameLayout>
+    <!--
+    android:layout_alignParentLeft = "true"
+        android:layout_alignParentRight = "true"
+     <Button
+        android:id = "@+id/button"
+        android:layout_width = "fill_parent"
+        android:layout_height = "fill_parent"
+        /> -->
+  
+             
+</LinearLayout>  

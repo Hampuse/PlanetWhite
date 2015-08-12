@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/BaController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/CtfController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/RespawnHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/LandingPad.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/MotherShip.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Projectile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipLauncher.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Stone.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/pickupobject/PickUpObject.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/icons/IconFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/BattleClock.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/BattleModel.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

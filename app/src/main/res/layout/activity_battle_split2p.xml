@@ -1,0 +1,46 @@
+
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/mainframe"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:paddingBottom="0dp"
+     android:paddingLeft="0dp"
+     android:paddingRight="0dp"
+     android:paddingTop="0dp"
+     tools:context=".GameActivity" >
+     
+    <FrameLayout
+        android:id="@+id/splitscreen1"
+        android:layout_height = "fill_parent"
+        android:layout_width= "0dp"
+        android:layout_weight = "1"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp"
+   		android:layout_marginLeft="0dp"
+    	android:layout_marginRight="0dp"
+    	android:layout_marginTop="0dp">
+    
+    </FrameLayout>
+    <!-- "@dimen/split2p_width" -->
+    <FrameLayout
+        android:id="@+id/splitscreen2"
+        android:layout_height="fill_parent"
+        android:layout_width= "0dp"
+        android:layout_weight = "1"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+        
+    </FrameLayout>
+          <!-- 
+                android:layout_width= "0dp"
+        android:layout_weight = "1"            android:layout_width= "fill_parent"
+                  android:layout_width = "fill_parent"
+          
+           android:layout_width = "@dimen/split2p_width" -->     
+</LinearLayout>  

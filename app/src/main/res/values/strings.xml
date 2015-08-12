@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PlanetWhite</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="redgogreengo">red-go-green-go</string>
+    <string name="redgreengo">red-green-go</string>
+    <string name="circlesingle">Circle Single</string>
+    <string name="circlesingledirect">circleSingleDirect</string>
+    <string name="redgogreengobullets">redgogreengo with bullets</string>
+    <string name="redgogreengobullets_splitscreen">redgogreengobullets_splitscreen</string>
+    <string name="flagtrack1">flagtrack1</string>
+
+</resources>

@@ -1,0 +1,9 @@
+TASK se.oakbright.planetwhite id=9
+  ACTIVITY se.oakbright.planetwhite/.MainActivity 430eb900 pid=17628
+    Local Activity 423f68a8 State:
+      mResumed=true mStopped=false mFinished=false
+      mLoadersStarted=true
+      mChangingConfigurations=false
+      mCurrentConfig={Rect(632, 0 - 648, 800) 1028 0 1.0 0mcc0mnc sv_SE sw800dp w1280dp h752dp xlrg land finger -keyb/v/h -nav/h s.4}
+    FragmentManager misc state:
+      mCurState=5 mStateSaved=false mDestroyed=false
