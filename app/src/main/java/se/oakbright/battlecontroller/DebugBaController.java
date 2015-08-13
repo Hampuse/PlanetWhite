@@ -51,6 +51,8 @@ public class DebugBaController extends TeamAiController {
         shipBuilder.team = this.team;
         Ship ship = shipBuilder.getBuilt();
         return ship;
+        //COMMENTED AWAY TO TRY RESOURC
+        // new comment to test commit
     }*/
 
     private Ship createNewShip(){
