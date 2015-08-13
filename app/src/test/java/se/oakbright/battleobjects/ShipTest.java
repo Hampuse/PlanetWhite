@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import se.oakbright.Buildable;
+import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
 import se.oakbright.battleobjects.statemachine.ShipStateMachineBuilder;
 import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.IconModule;
@@ -36,7 +37,7 @@ public class ShipTest {
         team = mock(BattleTeam.class);
         IconModule iconModule = mock(IconModule.class);
 
-        Ship.Builder shipBuilder = ShipFactoryTest.getShipBuilderFake();
+        Ship.Builder<ShipCommandHandler> shipBuilder = ShipFactoryTest.getShipBuilderFake();
 
         moduleInHiddenBuilder = mock(Buildable.class);
         moduleInReadyToLaunchBuilder = mock(Buildable.class);

@@ -45,11 +45,16 @@ public class DebugBaController extends TeamAiController {
         }
     }
 
-    private Ship createNewShip(){
+    /*private Ship createNewShip(){
         ShipFactory shipFactory = new ShipFactory();
         Ship.Builder shipBuilder = shipFactory.getStandard();
         shipBuilder.team = this.team;
         Ship ship = shipBuilder.getBuilt();
+        return ship;
+    }*/
+
+    private Ship createNewShip(){
+        Ship ship = ShipResource.getNewShip(team);
         return ship;
     }
 

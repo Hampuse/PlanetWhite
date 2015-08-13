@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import se.oakbright.Buildable;
+import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
 import se.oakbright.icons.IconCreater;
 import se.oakbright.icons.IconFactory;
 import se.oakbright.icons.IconId;
@@ -37,7 +38,7 @@ import static org.mockito.Mockito.when;
  */
 public class ShipFactoryTest {
 
-    Ship.Builder shipBuilder;
+    Ship.Builder<ShipCommandHandler> shipBuilder;
     Ship ship;
 
     @Before

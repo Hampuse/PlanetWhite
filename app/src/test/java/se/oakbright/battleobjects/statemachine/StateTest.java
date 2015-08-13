@@ -16,18 +16,18 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 public class StateTest {
     CommandHandler commandHandler1;
     CommandHandler commandHandler2;
-    State state1;
-    State state2;
+    State<CommandHandler> state1;
+    State<CommandHandler> state2;
     StateMachine stateMachine = mock(StateMachine.class);
 
     @Before
     public void setup(){
-        commandHandler1 = new ShipCommandHandler();// mock(CommandHandler.class);
-        state1 = new State(commandHandler1);
+        state1 = new State();//commandHandler1);
+        commandHandler1 = new ShipCommandHandler(state1);// mock(CommandHandler.class);
         state1.setTransitionObserver(stateMachine); //Is normally done by stateMachine.
 
-        commandHandler2 = new ShipCommandHandler();
-        state2 = new State(commandHandler2);
+        state2 = new State();
+        commandHandler2 = new ShipCommandHandler(state2);
 
         commandHandler1.setTransitionOnActivate(state2);
     }

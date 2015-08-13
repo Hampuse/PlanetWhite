@@ -27,6 +27,7 @@ public class BattleObjectTest {
     BattleObject battleObject;
     static Health health;
     static StateMachine<State<BattleObjectInterface>> stateMachine = mock(StateMachine.class);
+    //static StateMachine<State<BattleObjectInterface>> stateMachine2 = stateMachine;
 
     @Before
     public void setup(){
@@ -60,11 +61,13 @@ public class BattleObjectTest {
                 BattleObjectTest.health = healthBuilder.getBuilt();
                 //when(healthBuilder.getBuilt()).thenReturn(BattleObjectTest.health);
                 stateMachineBuilder = mock(StateMachine.Builder.class); //TODO NOT SHIP//StateMachine.Builder.class);
+                BattleObjectTest.stateMachine = stateMachineBuilder.getBuilt();
                 when(stateMachineBuilder.getBuilt()).thenReturn(BattleObjectTest.stateMachine);
                 shapeBuilder = mock(Shape.Builder.class);
                 when(shapeBuilder.getBuilt()).thenReturn(mock(Shape.class));
                 team = mock(BattleTeam.class);
             }
+
 
             @Override
             protected BattleObjectFake getType() {
@@ -75,6 +78,7 @@ public class BattleObjectTest {
             protected void beforeBuildNew() {
 
             }
+
         }
     }
 }

@@ -18,10 +18,11 @@ public class State<I extends BattleObjectInterface> { //implements Activatable
 
     private I commandHandler;
 
-    /*public State(I commandHandler){
+   /* public State(I commandHandler){
         this.commandHandler = commandHandler;
-        commandHandler.setHostingState(this);
+        //commandHandler.setHostingState(this);
     }*/
+
     public void setCommandHandler(I commandHandler){
         this.commandHandler = commandHandler;
     }

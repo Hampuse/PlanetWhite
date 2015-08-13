@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.oakbright.battleobjects.statemachine.StateMachineTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-06T19:33:05" hostname="hampuse-Dator" time="0.001">
+<testsuite name="se.oakbright.battleobjects.statemachine.StateMachineTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-12T20:16:48" hostname="hampuse-Dator" time="0.001">
   <properties/>
   <testcase name="testNewTransition" classname="se.oakbright.battleobjects.statemachine.StateMachineTest" time="0.0"/>
   <testcase name="testConstructor" classname="se.oakbright.battleobjects.statemachine.StateMachineTest" time="0.0"/>

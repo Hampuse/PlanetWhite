@@ -2,6 +2,7 @@ package se.oakbright.battleobjects;
 
 import se.oakbright.Frames.Frame;
 import se.oakbright.RuntimeTests;
+import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
 import se.oakbright.modules.activatables.renderables.DebugInternalPointRenderer;
 import se.oakbright.modules.activatables.updatables.CollisionModule;
 import se.oakbright.modules.activatables.updatables.Mover;
@@ -31,7 +32,7 @@ import static org.mockito.Mockito.when;
  * Created by hampuse on 2015-07-13.
  */
 public class ShipFactory {
-    Ship.Builder shipBuilder = new Ship.Builder();
+    Ship.Builder<ShipCommandHandler> shipBuilder = new Ship.Builder<ShipCommandHandler>();
     IconCreater iconCreater = new ShipFactory.IconCreaterImpl();
     IconModule.Builder iconModuleBuilder = new IconModule.Builder();
     CornerPoint.Builder cornerPointBuilder = new CornerPoint.Builder();
@@ -46,7 +47,7 @@ public class ShipFactory {
     Weapon.Builder weaponBuilder = new MissileLauncher.Builder();
     ShipStateMachineBuilder stateMachineBuilder = new ShipStateMachineBuilder();
 
-    public Ship.Builder getStandard(){
+    public Ship.Builder<ShipCommandHandler> getStandard(){
         //ShipFactoryResource r = new ShipFactoryResource();
         //r.positionerBuilder = shipBuilder.positionerBuilder;
         //r.moverBuilder = new Mover.Builder(r);

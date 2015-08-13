@@ -155,7 +155,7 @@ private static final String TAG = Ship.class.getSimpleName();
 		}
 	}
 
-	public static class Builder extends BattleObject.Builder<Ship,ShipInterface>{
+	public static class Builder<I extends ShipInterface> extends BattleObject.Builder<Ship,I>{
 		//private List<Builder> moduleBuilders;
 		//public ShipStateMachineBuilder stateMachineBuilder;
 		//public Builder(){
