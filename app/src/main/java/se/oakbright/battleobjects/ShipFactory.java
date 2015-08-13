@@ -31,7 +31,8 @@ import static org.mockito.Mockito.when;
 /**
  * Created by hampuse on 2015-07-13.
  */
-public class ShipFactory {
+
+/*public class ShipFactory {
     Ship.Builder<ShipCommandHandler> shipBuilder = new Ship.Builder<ShipCommandHandler>();
     IconCreater iconCreater = new ShipFactory.IconCreaterImpl();
     IconModule.Builder iconModuleBuilder = new IconModule.Builder();
@@ -156,3 +157,4 @@ public class ShipFactory {
     }
 
 }
+*/

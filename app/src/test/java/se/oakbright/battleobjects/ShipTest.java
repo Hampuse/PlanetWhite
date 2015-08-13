@@ -4,12 +4,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import se.oakbright.Buildable;
+import se.oakbright.TypeBuilder;
 import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
 import se.oakbright.battleobjects.statemachine.ShipStateMachineBuilder;
+import se.oakbright.battleobjects.statemachine.State;
+import se.oakbright.battleobjects.statemachine.StateMachine;
 import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.IconModule;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
+import se.oakbright.resources.ShipResource;
+import se.oakbright.resources.TypeResource;
 
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertSame;
@@ -24,7 +29,7 @@ import static org.mockito.Mockito.when;
  */
 public class ShipTest {
     Ship ship;
-    Buildable<Module> moduleInHiddenBuilder, moduleInReadyToLaunchBuilder, moduleInOutThereBuilder;
+    //Buildable<Module> moduleInHiddenBuilder, moduleInReadyToLaunchBuilder, moduleInOutThereBuilder;
     Module moduleInHidden, moduleInReadyToLaunch, moduleInOutThere;
 
     IconModule.Builder IconModuleBuilder = mock(IconModule.Builder.class);
@@ -37,26 +42,40 @@ public class ShipTest {
         team = mock(BattleTeam.class);
         IconModule iconModule = mock(IconModule.class);
 
-        Ship.Builder<ShipCommandHandler> shipBuilder = ShipFactoryTest.getShipBuilderFake();
+        //Ship.Builder<ShipCommandHandler> shipBuilder = ShipFactoryTest.getShipBuilderFake();
 
-        moduleInHiddenBuilder = mock(Buildable.class);
-        moduleInReadyToLaunchBuilder = mock(Buildable.class);
-        moduleInOutThereBuilder = mock(Buildable.class);
+
+
+        //moduleInHiddenBuilder = mock(Buildable.class);
+        //moduleInReadyToLaunchBuilder = mock(Buildable.class);
+        //moduleInOutThereBuilder = mock(Buildable.class);
         moduleInHidden = mock(Module.class);
         moduleInReadyToLaunch = mock(Module.class);
         moduleInOutThere = mock(Module.class);
 
-        when(moduleInHiddenBuilder.getBuilt()).thenReturn(moduleInHidden);
-        when(moduleInReadyToLaunchBuilder.getBuilt()).thenReturn(moduleInReadyToLaunch);
-        when(moduleInOutThereBuilder.getBuilt()).thenReturn(moduleInOutThere);
+        //when(moduleInHiddenBuilder.getBuilt()).thenReturn(moduleInHidden);
+        //when(moduleInReadyToLaunchBuilder.getBuilt()).thenReturn(moduleInReadyToLaunch);
+        //when(moduleInOutThereBuilder.getBuilt()).thenReturn(moduleInOutThere);
 
-        ShipStateMachineBuilder stateMachineBuilder = new ShipStateMachineBuilder();
-        stateMachineBuilder.hidden.addActiveModule(moduleInHiddenBuilder);
-        stateMachineBuilder.readyToLaunch.addActiveModule(moduleInReadyToLaunchBuilder);
-        stateMachineBuilder.outThere.addActiveModule(moduleInOutThereBuilder);
-        shipBuilder.stateMachineBuilder = stateMachineBuilder;
+        final ShipStateMachineBuilder stateMachineBuilder = new ShipStateMachineBuilder();
+        stateMachineBuilder.hidden.addActiveModule(moduleInHidden);
+        stateMachineBuilder.readyToLaunch.addActiveModule(moduleInReadyToLaunch);
+        stateMachineBuilder.outThere.addActiveModule(moduleInOutThere);
+        //shipBuilder.stateMachineBuilder = stateMachineBuilder;
 
-        shipBuilder.team = team;
+        TypeResource<Ship> shipResource = new TypeResource<Ship>(){
+            @Override
+            public Ship createNewOfType() {
+                return null;
+            }
+
+            @Override
+            public StateMachine<State<ShipCommandHandler>> getStateMachine() {
+                return stateMachineBuilder.getBuilt();
+            }
+        };
+
+        TypeBuilder<Ship> shipBuilder = new TypeBuilder<Ship>(shipResource);
         ship = shipBuilder.getBuilt();
     }
 
@@ -81,13 +100,5 @@ public class ShipTest {
         verifyZeroInteractions(moduleInHidden);
         verify(moduleInReadyToLaunch).deactivate();
         verify(moduleInOutThere).activate();
-    }
-
-    @Test
-    public void verify_that_iconModule_buildNew(){
-        verify(moduleInHiddenBuilder).getBuilt();
-        verify(moduleInOutThereBuilder).getBuilt();
-        verify(moduleInReadyToLaunchBuilder).getBuilt();
-
     }
 }

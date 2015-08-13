@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import se.oakbright.Frames.Frame;
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.ShipFactoryTest;
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Speed;
@@ -33,7 +32,7 @@ public class MoverTest {
     Positioner positioner = spy(positionerBuilder.getBuilt());
 
 
-    BattleObject.Builder hostBuilder = mock(BattleObject.Builder.class);
+    //TODO BattleObject.Builder hostBuilder = mock(BattleObject.Builder.class);
     BattleObject host = mock(BattleObject.class);
     PathModule.Builder pathModuleBuilder = mock(PathModule.Builder.class);
     PathModule pathModule = mock(PathModule.class);
@@ -57,7 +56,7 @@ public class MoverTest {
         moverBuilder.positionerBuilder = mock(Positioner.Builder.class);
         when(moverBuilder.positionerBuilder.getBuilt()).thenReturn(positioner);
 
-        when(hostBuilder.getBuilt()).thenReturn(host);
+        //TODO when(hostBuilder.getBuilt()).thenReturn(host);
 
         moverBuilder.pathModuleBuilder = pathModuleBuilder;
         when(pathModuleBuilder.getBuilt()).thenReturn(pathModule);

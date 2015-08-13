@@ -40,19 +40,19 @@ public class StateMachine<S extends State> {
         public StateMachine<State<I>> buildNew() {
             Set<State> states = getStates();
             StateMachine stateMachine = new StateMachine(initialState);
-            for (State state : states) {
+            /*for (State state : states) {
                 buildModules(state);
-            }
+            }*/
             return stateMachine;
         }
 
         protected abstract Set<State> getStates();
 
-        private void buildModules(State state){
+       /* private void buildModules(State state){
             Set<Buildable<Module>> moduleBuilders = state.getModuleBuilders();
             for(Buildable<Module> moduleBuilder: moduleBuilders){
                 state.addActiveModule(moduleBuilder.getBuilt());
             }
-        }
+        }*/
     }
 }

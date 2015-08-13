@@ -10,7 +10,6 @@ import se.oakbright.battleobjects.Ship;
 import se.oakbright.planetwhite.BattleClock.BaTimer;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.ships1.RobotShipDirect;
 
 public class TeamAiController extends BaController{
 	private int timeBetweenReleases = 2000; //ms
@@ -35,8 +34,8 @@ public class TeamAiController extends BaController{
 	@Override
 	public void update(){
 		if(releaseTimer.isFinished()){
-			Ship ship = new RobotShipDirect(this.battleModel, this.team);
-			RespawnHandler.respawnObject(ship, new Frame[]{battleModel.trackFrame});
+			//TODO Ship ship = new RobotShipDirect(this.battleModel, this.team);
+			//TODO RespawnHandler.respawnObject(ship, new Frame[]{battleModel.trackFrame});
 			if(timeDecTimer.isFinished()){
 				timeDecTimer.reset();
 				releaseTimer.decreaseInterval(50);

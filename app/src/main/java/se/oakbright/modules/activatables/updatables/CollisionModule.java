@@ -14,6 +14,7 @@ import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.Bounding;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resources.TypeResource;
 
 /**
  * Created by hampuse on 2015-06-26.
@@ -122,4 +123,8 @@ public class CollisionModule extends Module implements Collidable {
             }
         }
     }*/
+
+    public interface Resource extends TypeResource<CollisionModule>{
+
+    }
 }

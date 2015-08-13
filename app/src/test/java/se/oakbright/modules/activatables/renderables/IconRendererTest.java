@@ -19,7 +19,7 @@ public class IconRendererTest {
 
     @Before
     public void setup(){
-        iconRenderer = new IconRenderer();
+       //TODO iconRenderer = new IconRenderer();
         ServiceProvider.reset();
         ServiceProvider.setBattleModel(battleModel);
     }

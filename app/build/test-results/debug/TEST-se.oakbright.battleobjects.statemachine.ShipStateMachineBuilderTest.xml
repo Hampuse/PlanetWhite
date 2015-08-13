@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-12T20:16:48" hostname="hampuse-Dator" time="0.002">
+<testsuite name="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-13T20:48:00" hostname="hampuse-Dator" time="0.004">
   <properties/>
-  <testcase name="verifyOutThereState" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.0"/>
-  <testcase name="testGetStandard" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.001"/>
+  <testcase name="verifyOutThereState" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.002"/>
+  <testcase name="testGetStandard" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.0"/>
   <testcase name="verifyHiddenState" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.0"/>
   <testcase name="verifyReadyToLaunchState" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.0"/>
   <testcase name="verifyInitState" classname="se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest" time="0.0"/>

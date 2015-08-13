@@ -7,6 +7,8 @@ import java.lang.reflect.InvocationTargetException;
 
 import se.oakbright.battlecontroller.Respawnable;
 import se.oakbright.battleobjects.statemachine.ShipInterface;
+import se.oakbright.battleobjects.statemachine.State;
+import se.oakbright.battleobjects.statemachine.StateMachine;
 import se.oakbright.modules.activatables.updatables.CollisionModule;
 import se.oakbright.modules.activatables.renderables.HighlightRenderer;
 import se.oakbright.modules.activatables.updatables.Mover;
@@ -18,6 +20,7 @@ import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
 import se.oakbright.icons.IconId;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
+import se.oakbright.resources.ShipResource;
 
 import android.util.Log;
 
@@ -33,7 +36,13 @@ private static final String TAG = Ship.class.getSimpleName();
 	//protected SelectionModule selectionModule;
 	//protected HighlightRenderer highlight;
 
+	private StateMachine<State<ShipCommandHandler>> stateMachine;
 
+	public Ship(Resource r){
+		stateMachine = r.getStateMachine();
+		//super(r);
+
+	}
 	/*public Ship(Builder builder){
 		super(builder);
 		Log.w("good", "in Ship constructor ,builder");
@@ -154,7 +163,7 @@ private static final String TAG = Ship.class.getSimpleName();
 			return null;
 		}
 	}
-
+/*
 	public static class Builder<I extends ShipInterface> extends BattleObject.Builder<Ship,I>{
 		//private List<Builder> moduleBuilders;
 		//public ShipStateMachineBuilder stateMachineBuilder;
@@ -186,6 +195,9 @@ private static final String TAG = Ship.class.getSimpleName();
 			//stateMachine?
 		}
 	}
-
+*/
+	public interface Resource{
+		public StateMachine<State<ShipCommandHandler>> getStateMachine();
+	}
 }
 

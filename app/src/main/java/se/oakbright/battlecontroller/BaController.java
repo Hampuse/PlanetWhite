@@ -12,7 +12,7 @@ import se.oakbright.planetwhite.BattleTeam;
 
 public class BaController {
 	private static final int UPDATE_INTERVAL = 500; // ms
-	final Rect spawnRegionBattleField;// = new Rect(0,0,battle,200);
+	final Rect spawnRegionBattleField;
 	private long timeAtLastUpdate;
 	protected BattleTeam team;
 	protected BattleModel battleModel;

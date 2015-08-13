@@ -25,6 +25,11 @@ public class IconRenderer extends RenderableModuleMiddleLayer implements Rendera
     //public IconRenderer(InIcon icon) {
       //  this.icon = icon;
     //}
+	public IconRenderer(IconRenderer.Resource r){
+		iconModule = r.getIconModule();
+		pivotPoint = r.getPivotPoint();
+		//cornerPoint = r.get
+	}
 
     public void render(Canvas canvas, BattleSurface battleSurface) {		//draws the ship on canvas. called from render() in MainGameSurface.
         //if(this.isHiglighted){	//TODO should be implemented somehow
@@ -104,7 +109,7 @@ public class IconRenderer extends RenderableModuleMiddleLayer implements Rendera
 		*/
     }
 
-	public static class Builder extends Buildable<IconRenderer> {
+	/*public static class Builder extends Buildable<IconRenderer> {
 		public IconModule.Builder iconModuleBuilder;
 		public Buildable<? extends InternalPoint> cornerPointBuilder;
 		public Buildable<? extends InternalPoint> pivotPointBuilder;
@@ -120,6 +125,10 @@ public class IconRenderer extends RenderableModuleMiddleLayer implements Rendera
 			//TODO check if any module is null?
 			return iconRenderer;
 		}
-	}
+	}*/
 
+	public interface Resource{
+		public InternalPoint getPivotPoint();
+		IconModule getIconModule();
+	}
 }

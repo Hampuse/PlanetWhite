@@ -11,7 +11,7 @@ import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.planetwhite.R;
 
-public class RobotShipTracker extends Ship {
+/*public class RobotShipTracker extends Ship {
 	public static final IconId iconIdGreen = IconIdFactory.valueOf(R.drawable.deltangreen, 100000, 100000);	//default icons if no other icon is set by the extending class (in the constructor)
 	public static final IconId iconIdRed= IconIdFactory.valueOf(R.drawable.deltanred, 100000, 100000);
 	public static final IconId iconIdGrey = iconIdRed;	//TODO 
@@ -46,7 +46,7 @@ public class RobotShipTracker extends Ship {
 		}
 	}
 	*/
-	protected void updateScope(){
+	/*protected void updateScope(){
 		Log.d(TAG,"updateScope()");
 		scope.set(this.getX() - 500, this.getY() - 500, this.getX() + 500, this.getY() + 500);	
 	}
@@ -54,4 +54,4 @@ public class RobotShipTracker extends Ship {
 		return new Ship.Blueprint(RobotShipTracker.class);
 	}
 	
-}
+}*/

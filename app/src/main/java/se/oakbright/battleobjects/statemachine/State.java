@@ -60,14 +60,14 @@ public class State<I extends BattleObjectInterface> { //implements Activatable
         //The rest of the modules are active in both old and new, no need to do anything with them.
     }
 
-    void addActiveModule(Module module){
+    public void addActiveModule(Module module){
         if(module == null){
             throw new IllegalArgumentException();
         }
         this.activeModules.add(module);
     }
 
-    public void addActiveModule(Buildable<Module> moduleBuilder){
+    /*public void addActiveModule(Buildable<Module> moduleBuilder){
         if(moduleBuilder == null){
             throw new IllegalArgumentException();
         }
@@ -76,5 +76,5 @@ public class State<I extends BattleObjectInterface> { //implements Activatable
 
     Set<Buildable<Module>> getModuleBuilders(){
         return moduleBuilders;
-    }
+    }*/
 }

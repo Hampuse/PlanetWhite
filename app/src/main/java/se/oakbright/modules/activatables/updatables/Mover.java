@@ -51,6 +51,10 @@ public class Mover extends UpdatableModule{
         this.pathPaint.setAntiAlias(true);
     }*/
 
+    /*public Mover(Mover.Resource r){
+
+    }*/
+
     public void update() {
         Log.d("moov", "In Mover.update()");
         //TODO
@@ -240,5 +244,8 @@ public class Mover extends UpdatableModule{
         public static interface MoverResource{
             public Positioner getPositioner();
         }
+    }
+    public static interface Resource{
+
     }
 }

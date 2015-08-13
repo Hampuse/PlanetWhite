@@ -12,7 +12,7 @@ import se.oakbright.weapons1.BulletLauncher;
 /*
  * hunter ship. bullets, fast, weak.
  */
-public class Deltan extends Ship{
+/*public class Deltan extends Ship{
 	public static final IconId iconIdGreen = IconIdFactory.valueOf(R.drawable.deltangreen, 100000, 250000);	//default icons if no other icon is set by the extending class (in the constructor)
 	public static final IconId iconIdRed= IconIdFactory.valueOf(R.drawable.deltanred, 100000, 250000);
 	public static final IconId iconIdGrey = iconIdRed;	//TODO 
@@ -51,4 +51,4 @@ public class Deltan extends Ship{
 //		return false;			// cannot pick up object;
 //	}
 	
-}
+//}

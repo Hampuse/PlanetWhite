@@ -11,8 +11,9 @@ import se.oakbright.battleobjects.IsActiveObserver;
 import se.oakbright.calculation.DirectionCalculation;
 import se.oakbright.modules.internalpoints.Aim;
 import se.oakbright.modules.internalpoints.InternalPoint;
+import se.oakbright.resources.TypeResource;
 
-public abstract class Weapon extends UpdatableModule implements IsActiveObserver {
+public abstract class Weapon extends UpdatableModule implements IsActiveObserver{
 	private static final String TAG = Weapon.class.getSimpleName();
 	private final int AIM_SCOPE; //degrees. how far on each side along the ships direction the weapon is able to fire.
 	private final int RELOAD_TIME; //ms
@@ -21,6 +22,10 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 	private long timeAtLastReload;
 	protected Direction direction;
 	protected InternalPoint mouthPosition;
+
+	/*public Weapon(Weapon.Resource r){
+	asdfa
+	}*/
 
 	public Weapon( int aimScope, int reloadTime){
 		timeAtLastReload = 0;
@@ -134,6 +139,10 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 		}*/
 
 		protected abstract Weapon getType();
+	}
+
+	public interface Resource {
+		void getTest();
 	}
 
 	/* From Ship:

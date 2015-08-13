@@ -14,12 +14,6 @@ import se.oakbright.setup.Team;
 import se.oakbright.setup.TeamSetup;
 import se.oakbright.setup.TrackSetupEmptyTrack;
 import se.oakbright.setup.TeamColor;
-import se.oakbright.ships1.Bollen;
-import se.oakbright.ships1.BulletVasen;
-import se.oakbright.ships1.CrasherShip;
-import se.oakbright.ships1.Gaffeln;
-import se.oakbright.ships1.Pokalen;
-import se.oakbright.ships1.VasenShip;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -124,7 +118,7 @@ public class MainActivity extends Activity {
 	
 	private BattleSetup setupRedGoGreenGo(){
 		BattleSetup battleSetup = new BattleSetup();
-    	battleSetup.test = "hejsan";
+    	/*battleSetup.test = "hejsan";
     	battleSetup.simpelTest.s = "jojojo";
 		battleSetup.addTeamSetup(new TeamSetup( new Team("GBG", TeamColor.GREEN, false)));
 		battleSetup.addTeamSetup(new TeamSetup(new Team("STHLM", TeamColor.RED, false)));
@@ -152,13 +146,13 @@ public class MainActivity extends Activity {
 		battleSetup.missionSetup = new CtfSetup();
 		battleSetup.trackSetup = new TrackSetupEmptyTrack();
 		battleSetup.sceneEffects = new SceneEffectSetupDiagonalStones();
-		battleSetup.turnHandler = new TurnHandlerBoth.Blueprint();
+		battleSetup.turnHandler = new TurnHandlerBoth.Blueprint();*/
 		return battleSetup;
 	}
 	
 	private BattleSetup setupRedGoGreenGoBullets(){
 		BattleSetup battleSetup = setupRedGoGreenGo();
-		ArrayList<LinkedList<Ship.Blueprint>> listOfQueues = new ArrayList<LinkedList<Ship.Blueprint>>();
+		/*ArrayList<LinkedList<Ship.Blueprint>> listOfQueues = new ArrayList<LinkedList<Ship.Blueprint>>();
 		LinkedList<Ship.Blueprint> shipQ1 = new LinkedList<Ship.Blueprint>();
 		shipQ1.add(BulletVasen.getBlueprint());
 		shipQ1.add(BulletVasen.getBlueprint());
@@ -177,7 +171,7 @@ public class MainActivity extends Activity {
 		MotherShip.Blueprint blueprint = new MotherShip.Blueprint(MotherShip.class);
 		blueprint.initListOfQueues(listOfQueues);
 		battleSetup.teamSetups.get(0).setMotherShip(blueprint);	
-		battleSetup.teamSetups.get(1).setMotherShip(blueprint);
+		battleSetup.teamSetups.get(1).setMotherShip(blueprint);*/
 		return battleSetup;
 	}
 
@@ -189,7 +183,7 @@ public class MainActivity extends Activity {
 	}
 	private BattleSetup setupPokalenGetFlag(){
 		BattleSetup battleSetup = new BattleSetup();
-		battleSetup.addTeamSetup(new TeamSetup( new Team("GBG", TeamColor.GREEN, false)));
+		/*battleSetup.addTeamSetup(new TeamSetup( new Team("GBG", TeamColor.GREEN, false)));
 		battleSetup.addTeamSetup(new TeamSetup(new Team("STHLM", TeamColor.RED, false)));
 		
 		ArrayList<LinkedList<Ship.Blueprint>> listOfQueues = new ArrayList<LinkedList<Ship.Blueprint>>();
@@ -232,13 +226,13 @@ public class MainActivity extends Activity {
 		battleSetup.teamSetups.get(1).setMotherShip(blueprint);
 		battleSetup.missionSetup = new CtfSetup();
 		battleSetup.trackSetup = new TrackSetupEmptyTrack();
-		battleSetup.sceneEffects = new SceneEffectSetupDiagonalStones();
+		battleSetup.sceneEffects = new SceneEffectSetupDiagonalStones();*/
 		return battleSetup;
 	}
 	
 	private BattleSetup setupCircleSingle(){
 		BattleSetup battleSetup = new BattleSetup();
-		Team teamPlayer = new Team("GBG", TeamColor.GREEN, false);
+		/*Team teamPlayer = new Team("GBG", TeamColor.GREEN, false);
 		TeamSetup teamPlayerSetup = new TeamSetup( teamPlayer);
 		battleSetup.addTeamSetup(teamPlayerSetup);
 		TeamSetup teamEnemy = new TeamSetup(new Team("THE ENEMY", TeamColor.RED, true));
@@ -268,7 +262,7 @@ public class MainActivity extends Activity {
 		//battleSetup.missionSetup = new CtfSetup();
 		battleSetup.trackSetup = new CircleTrack();
 		//battleSetup.sceneEffects = new SceneEffectSetupDiagonalStones();
-		battleSetup.turnHandler = new TurnHandlerSingle.Blueprint(teamPlayer);
+		battleSetup.turnHandler = new TurnHandlerSingle.Blueprint(teamPlayer);*/
 		return battleSetup;
 		
 	}
@@ -285,7 +279,7 @@ public class MainActivity extends Activity {
 	
 	private BattleSetup setupFlagTrack1(){
 		BattleSetup battleSetup = new BattleSetup();
-		battleSetup.screenType = BattleSetup.ScreenType.SPLITSCREEN2P;	//splitscreen
+		/*battleSetup.screenType = BattleSetup.ScreenType.SPLITSCREEN2P;	//splitscreen
 		battleSetup.addTeamSetup(new TeamSetup( new Team("GBG", TeamColor.GREEN, false)));
 		battleSetup.addTeamSetup(new TeamSetup(new Team("STHLM", TeamColor.RED, false)));
 		
@@ -327,7 +321,7 @@ public class MainActivity extends Activity {
 		battleSetup.teamSetups.get(1).setMotherShip(blueprint);
 		battleSetup.missionSetup = new CtfSetup();
 		battleSetup.trackSetup = new CircleTrack();
-		//battleSetup.sceneEffects = new SceneEffectSetupDiagonalStones();
+		//battleSetup.sceneEffects = new SceneEffectSetupDiagonalStones();*/
 		return battleSetup;
 	}
 

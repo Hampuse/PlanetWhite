@@ -5,7 +5,7 @@ import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.weapons1.BulletLauncher;
 
-public class BulletVasen extends VasenShip {
+/*public class BulletVasen extends VasenShip {
 
 	public BulletVasen(BattleModel battleModel, BattleTeam team) {
 		super(battleModel, team);
@@ -18,4 +18,4 @@ public class BulletVasen extends VasenShip {
 		return new Ship.Blueprint(BulletVasen.class);
 	}
 
-}
+}*/

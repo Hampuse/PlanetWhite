@@ -9,7 +9,7 @@ import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.planetwhite.R;
 import se.oakbright.weapons1.CrasherDirect;
 
-public class CrasherShip extends Ship{
+/*public class CrasherShip extends Ship{
 	public static final IconId iconIdGreen = IconIdFactory.valueOf(R.drawable.gaffelngreen, 100000, 250000);	//default icons if no other icon is set by the extending class (in the constructor)
 	public static final IconId iconIdRed= IconIdFactory.valueOf(R.drawable.gaffelnred, 100000, 250000);
 	public static final IconId iconIdGrey = iconIdRed;	//TODO 
@@ -50,4 +50,4 @@ public class CrasherShip extends Ship{
 	protected boolean tryPickUpObject(PickUpObject pickedUpObject){
 		return false;			//CrasherShip cannot pick up object;
 	}*/
-}
+//}

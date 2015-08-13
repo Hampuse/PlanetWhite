@@ -1,16 +1,10 @@
 package se.oakbright.battlecontroller;
 
-import android.util.Log;
-
-import java.io.Serializable;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-
+import se.oakbright.TypeBuilder;
 import se.oakbright.battleobjects.Ship;
-import se.oakbright.battleobjects.ShipFactory;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resources.ShipResource;
 
 /**
  * Created by hampuse on 2015-07-19.
@@ -55,8 +49,16 @@ public class DebugBaController extends TeamAiController {
         // new comment to test commit
     }*/
 
+ /*   private Ship createNewShip(){
+        BattleObject.TypeBuilder<Ship, Ship.Resource> shipBuildable = new BattleObject.TypeBuilder<Ship, Ship.>(new ShipResource(team));
+        Ship ship = shipBuildable.getBuilt();
+        //Ship ship = ShipResource.getNewShip(team);
+        return null; //ship;
+    }*/
+
     private Ship createNewShip(){
-        Ship ship = ShipResource.getNewShip(team);
+        TypeBuilder<Ship> shipBuildable = new TypeBuilder<Ship>(new ShipResource(team));
+        Ship ship = shipBuildable.getBuilt();
         return ship;
     }
 
@@ -65,6 +67,7 @@ public class DebugBaController extends TeamAiController {
         ship.commandGetReadyToLaunch();
         ship.commandLaunch();
     }
+
 /*    public static class Blueprint implements Serializable {
         private Class controllerClass;
 

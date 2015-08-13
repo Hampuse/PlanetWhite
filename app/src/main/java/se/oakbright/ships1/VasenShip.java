@@ -9,7 +9,7 @@ import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.planetwhite.R;
 import se.oakbright.weapons1.MissileLauncher;
 
-public class VasenShip extends Ship{
+/*public class VasenShip extends Ship{
 	public static final IconId iconIdGreen = IconIdFactory.valueOf(R.drawable.pokalengreen, 200000, 200000);	//default icons if no other icon is set by the extending class (in the constructor)
 	public static final IconId iconIdRed= IconIdFactory.valueOf(R.drawable.pokalenred, 200000, 200000);
 	public static final IconId iconIdGrey = iconIdRed;	//TODO
@@ -27,4 +27,4 @@ public class VasenShip extends Ship{
 	public static Ship.Blueprint getBlueprint(){
 		return new Ship.Blueprint(VasenShip.class);
 	}
-}
+}*/

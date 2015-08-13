@@ -12,7 +12,7 @@ import se.oakbright.planetwhite.R;
  * A ship that can pick up flags,
  *  slow, sturdy.
  */
-public class Pokalen extends Ship{
+/*public class Pokalen extends Ship{
 	public static final IconId iconIdGreen = IconIdFactory.valueOf(R.drawable.pokalengreen, 200000, 200000);	//default icons if no other icon is set by the extending class (in the constructor)
 	public static final IconId iconIdRed= IconIdFactory.valueOf(R.drawable.pokalenred, 200000, 200000);
 	public static final IconId iconIdGrey = iconIdRed;	//TODO
@@ -33,4 +33,4 @@ public class Pokalen extends Ship{
 	}
 	
 	
-}
+}*/

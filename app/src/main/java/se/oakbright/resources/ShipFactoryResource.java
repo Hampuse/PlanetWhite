@@ -15,4 +15,6 @@ public class ShipFactoryResource implements MoverBuilderResource {
     public Buildable<Positioner> getPositionerBuilder() {
         return positionerBuilder;
     }
+
+
 }

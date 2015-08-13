@@ -42,6 +42,7 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 	private static final String TAG = BattleObject.class.getSimpleName();
 
 	//List<Module> modules = new ArrayList<Module>();
+
 	protected Shape shape;
 	protected Health health;
 	protected Positioner positioner;
@@ -82,7 +83,7 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
     }
 
     public final void setPosition(int x, int y){ //To be overriden if changes need to be done higher up
-		this.positioner.setPosition(x,y);
+		this.positioner.setPosition(x, y);
 	}
 
 	public final void setDirectionTowards(int x, int y){
@@ -100,6 +101,10 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 	public int getMaxBoundingRadii() {	//TODO delete and fix. is here only because stone and ship implements respawnable.
 		return 0;
 	}
+
+	/*public BattleObject(R r){
+		//TODO
+	}*/
 
 	@Override
 	public final void activate(){
@@ -151,9 +156,12 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 		// Override for functionality
 	}
 
+	public class BattleObjectResource{
+
+	}
 	//TODO class OutOfHpObserver extends Observer {
 	//}
-
+/*
 	public abstract static class Builder<T extends BattleObject, I extends BattleObjectInterface> extends Buildable<T>{
 		public Shape.Builder shapeBuilder;
 		public Health.Builder healthBuilder;
@@ -173,10 +181,7 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 			directionBuilder.positionBuilder = middlePointBuilder;
 		}
 
-		/*public Builder(T type){
-			this();
-			this.type = type;
-		}*/
+
 
 		@Override
 		public T buildNew(){
@@ -197,5 +202,37 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 		protected abstract T getType();
 		protected abstract void beforeBuildNew();
 
-	}
+	}*/
+
+	/*public static interface Resource{
+		public void test();
+	}*/
+
+	/*public static class TypeBuilder<T extends BattleObject<R>, R extends BattleObject.Resource>{
+		R resource;
+		public TypeBuilder(R resource){
+			this.resource = resource;
+		}
+
+		public T getBuilt(){
+			recursion...
+			//TODO
+			return null;
+		}
+	}*/
+
+/*
+	public static class TypeBuilder<T>{
+		Resource resource;
+		public TypeBuilder(Resource<T> resource){
+			this.resource = resource;
+		}
+
+		public T getBuilt(){
+			return resource.getType();
+			//recursion...
+			//TODO
+			return null;
+		}
+	}*/
 }

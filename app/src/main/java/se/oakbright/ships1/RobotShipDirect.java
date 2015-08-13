@@ -11,7 +11,7 @@ import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.planetwhite.R;
 import se.oakbright.weapons1.CrasherDirect;
 
-public class RobotShipDirect extends Ship {
+/*public class RobotShipDirect extends Ship {
 	public static final IconId iconIdGreen = IconIdFactory.valueOf(R.drawable.bollengreen, 150000, 100000);	//default icons if no other icon is set by the extending class (in the constructor)
 	public static final IconId iconIdRed= IconIdFactory.valueOf(R.drawable.bollenred, 150000, 100000);
 	public static final IconId iconIdGrey = iconIdRed;	//TODO 
@@ -48,4 +48,4 @@ public class RobotShipDirect extends Ship {
 	@Override
 	protected void trackTrackObject() {
 		this.setDirection(trackObject.getX(), trackObject.getY()); */
-}
+//}
