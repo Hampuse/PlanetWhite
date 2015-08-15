@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.oakbright.modules.internalpoints.CornerPointTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-06T16:28:59" hostname="hampuse-Dator" time="0.06">
+<testsuite name="se.oakbright.modules.internalpoints.CornerPointTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-15T16:32:07" hostname="hampuse-Dator" time="0.02">
   <properties/>
-  <testcase name="testX" classname="se.oakbright.modules.internalpoints.CornerPointTest" time="0.057"/>
-  <testcase name="testY" classname="se.oakbright.modules.internalpoints.CornerPointTest" time="0.002"/>
+  <testcase name="testX" classname="se.oakbright.modules.internalpoints.CornerPointTest" time="0.02"/>
+  <testcase name="testY" classname="se.oakbright.modules.internalpoints.CornerPointTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

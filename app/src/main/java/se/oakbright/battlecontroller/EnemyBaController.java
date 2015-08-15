@@ -1,7 +1,7 @@
 package se.oakbright.battlecontroller;
 
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.Ship;
+import se.oakbright.battleobjects.ShipCommands;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 import android.util.Log;
@@ -10,7 +10,7 @@ public class EnemyBaController extends BaController{
 	private static final String TAG = EnemyBaController.class.getSimpleName();
 	private static int shipReleaseInterval = 3000;
 	private long timeAtLastReleaseShip;
-	private Ship newlyReleasedShip;
+	private BattleObject<ShipCommands> newlyReleasedShip;
 	
 	
 	public EnemyBaController(BattleModel battleModel, BattleTeam team){
@@ -42,8 +42,8 @@ public class EnemyBaController extends BaController{
 		newlyReleasedShip.setDirectionTowards((int) (Math.random() * battleModel.trackWidth), (int) (Math.random() * battleModel.trackHeight));
 	}
 	
-	public Ship pollNewlyReleasedShip() {	//return the ship that was most newly released, and forgets it when it has been handed over to the caller. 
-		Ship ship = newlyReleasedShip;	
+	public BattleObject<ShipCommands> pollNewlyReleasedShip() {	//return the ship that was most newly released, and forgets it when it has been handed over to the caller.
+		BattleObject<ShipCommands> ship = newlyReleasedShip;
 		newlyReleasedShip = null;
 		return ship;
 	}

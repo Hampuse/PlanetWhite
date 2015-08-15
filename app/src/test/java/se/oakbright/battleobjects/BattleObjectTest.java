@@ -1,26 +1,8 @@
 package se.oakbright.battleobjects;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Matchers;
-
-import se.oakbright.TypeBuilder;
-import se.oakbright.battleobjects.statemachine.BattleObjectInterface;
-import se.oakbright.battleobjects.statemachine.CommandHandler;
-import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
-import se.oakbright.battleobjects.statemachine.ShipStateMachineBuilder;
-import se.oakbright.battleobjects.statemachine.State;
-import se.oakbright.battleobjects.statemachine.StateMachine;
-import se.oakbright.modules.ModuleObserver;
-import se.oakbright.modules.helpers.Health;
-import se.oakbright.modules.helpers.Shape;
-import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.resources.TypeResource;
-
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by hampuse on 2015-07-12.

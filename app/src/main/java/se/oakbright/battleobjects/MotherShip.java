@@ -7,8 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import se.oakbright.Frames.Frame;
-import se.oakbright.battleobjects.pickupobject.PickUpFlag;
-import se.oakbright.battleobjects.pickupobject.PickUpObject;
+
 import se.oakbright.calculation.DirectionCalculation;
 import se.oakbright.icons.IconId;
 import se.oakbright.icons.IconIdFactory;
@@ -18,8 +17,8 @@ import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.planetwhite.GameActivity;
 import se.oakbright.planetwhite.R;
 import android.util.Log;
-
-public class MotherShip extends BattleObject {	//TODO SIMPLIFY AND ADD MODULES INSTEAD
+//TODO
+/*public class MotherShip extends BattleObject {	//TODO SIMPLIFY AND ADD MODULES INSTEAD
 	private static final String TAG = MotherShip.class.getSimpleName();
 	public static final int NUMBER_OF_LAUNCHPADS = 2;
 	public static final int WIDTH = (int) (750000*GameActivity.SIZE_ADJUST);
@@ -170,7 +169,7 @@ public class MotherShip extends BattleObject {	//TODO SIMPLIFY AND ADD MODULES I
 	public int getDirection() {
 		return (int) this.anchor.getRotationAngle();
 	}*/
-	
+	/*
 	private static LinkedList<Ship> createShipQFromBlueprints(List<Ship.Blueprint> blueprints, BattleModel battleModel, Frame movingFrame, BattleTeam team, MotherShip host){
 		LinkedList<Ship> shipQ = new LinkedList<Ship>();
 		for(Ship.Blueprint blueprint: blueprints){
@@ -186,7 +185,7 @@ public class MotherShip extends BattleObject {	//TODO SIMPLIFY AND ADD MODULES I
 		}
 		return shipQ;
 	}*/
-
+/*
 	boolean receiveShip(Ship ship){	//get called by a landingPad, when a ship is about to land.
 		if(ship.getTeam() == this.getTeam()){
 			//TODO SKicka skepp på lagning och sen till rätt ramp 	
@@ -229,6 +228,7 @@ public class MotherShip extends BattleObject {	//TODO SIMPLIFY AND ADD MODULES I
 		return 0;
 	}
 */
+/*
 	public Frame getInvalidSpawnFrameAround() {
 		int anchorX = this.anchor.getXworld();
 		int anchorY = this.anchor.getYworld();
@@ -289,4 +289,4 @@ public class MotherShip extends BattleObject {	//TODO SIMPLIFY AND ADD MODULES I
 		}
 	}
 
-}
+}*/

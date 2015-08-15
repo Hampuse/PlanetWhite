@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * Created by hampuse on 2015-06-28.
  */
-public abstract class CommandHandler implements BattleObjectInterface{
+/*public abstract class CommandHandler implements BattleObjectInterface{
     private boolean isInAnActiveState = false;
     State hostingState;
     private Transition onActivate, onDeactivate;
@@ -65,4 +65,4 @@ public abstract class CommandHandler implements BattleObjectInterface{
         public void execute(){
         }
     }
-}
+}*/

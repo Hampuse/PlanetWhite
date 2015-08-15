@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.oakbright.modules.helpers.HealthTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-13T20:48:01" hostname="hampuse-Dator" time="0.005">
+<testsuite name="se.oakbright.modules.helpers.HealthTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-15T16:32:03" hostname="hampuse-Dator" time="0.013">
   <properties/>
   <testcase name="test_decrease_hp" classname="se.oakbright.modules.helpers.HealthTest" time="0.001"/>
-  <testcase name="test_that_outOfHpObservers_get_notified" classname="se.oakbright.modules.helpers.HealthTest" time="0.004"/>
+  <testcase name="test_that_outOfHpObservers_get_notified" classname="se.oakbright.modules.helpers.HealthTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

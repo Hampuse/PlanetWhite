@@ -3,7 +3,6 @@ package se.oakbright.ships1;
 import android.graphics.Region;
 import android.util.Log;
 
-import se.oakbright.battleobjects.Ship;
 import se.oakbright.icons.IconChooser;
 import se.oakbright.icons.IconId;
 import se.oakbright.icons.IconIdFactory;

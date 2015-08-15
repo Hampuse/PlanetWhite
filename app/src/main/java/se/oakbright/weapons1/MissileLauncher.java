@@ -3,7 +3,6 @@ package se.oakbright.weapons1;
 import android.util.Log;
 
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.Projectile;
 import se.oakbright.modules.activatables.updatables.Weapon;
 
 public class MissileLauncher extends Weapon {

@@ -3,12 +3,13 @@ package se.oakbright.battleobjects.statemachine;
 import java.util.Set;
 
 import se.oakbright.Buildable;
+import se.oakbright.CommandReceiverHolder;
 import se.oakbright.modules.Module;
 
 /**
  * Created by hampuse on 2015-06-26.
  */
-public class StateMachine<S extends State> {
+/*public class StateMachine<S extends State> {
     private S currentState;
 
     public StateMachine(S initState){
@@ -43,7 +44,7 @@ public class StateMachine<S extends State> {
             /*for (State state : states) {
                 buildModules(state);
             }*/
-            return stateMachine;
+           /* return stateMachine;
         }
 
         protected abstract Set<State> getStates();
@@ -54,5 +55,30 @@ public class StateMachine<S extends State> {
                 state.addActiveModule(moduleBuilder.getBuilt());
             }
         }*/
+    //}
+//}
+public class StateMachine<C> implements CommandReceiverHolder<C> {
+    public State<C> currentState; //TODO private
+
+    public StateMachine(State<C> initState){
+        setCurrentState(initState);
+    }
+
+    private void setCurrentState(State<C> state){
+        currentState = state;
+        currentState.setTransitionObserver(this);
+    }
+
+    public void newTransition(State oldState, State<C> newState){
+        if(oldState != currentState){
+            throw new IllegalStateException();
+        }
+        currentState.removeTransitionObserver(this);
+        setCurrentState(newState);
+    }
+
+    @Override
+    public C getCommandReceiver() {
+        return currentState.getCommandReceiver();
     }
 }

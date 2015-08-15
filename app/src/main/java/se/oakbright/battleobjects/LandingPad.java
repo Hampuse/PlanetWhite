@@ -1,12 +1,11 @@
 package se.oakbright.battleobjects;
 
-import se.oakbright.battleobjects.pickupobject.PickUpObject;
 import se.oakbright.icons.IconId;
 import se.oakbright.icons.IconIdFactory;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-
-public class LandingPad extends BattleObject{
+//TODO fix with components
+/*public class LandingPad extends BattleObject{
 private static final String TAG = LandingPad.class.getSimpleName();
 private final MotherShip host;
 public static final IconId ICON_LANDINGPAD = IconIdFactory.valueOfInvisibleIcon(150000,150000);
@@ -43,6 +42,7 @@ private State state = State.ENTER_ACTIVE;
 		}
 	}
 	*/
+/*
 	public boolean receivePickUpObject(PickUpObject pickedUpObject) {
 		if(host.receivePickUpObject(pickedUpObject)){
 			return true;
@@ -61,4 +61,4 @@ private State state = State.ENTER_ACTIVE;
 		}
 	}
 
-}
+}*/

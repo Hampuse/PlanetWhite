@@ -1,13 +1,13 @@
 package se.oakbright.modules.activatables.updatables;
 
+import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.Module;
-import se.oakbright.battleobjects.pickupobject.PickUpObject;
 
 /**
  * Created by hampuse on 2015-06-26.
  */
 public class PickingUpModule extends Module {
-    private PickUpObject pickedUpObject = null;
+    private BattleObject pickedUpObject = null;
 
    //TODO
     /*protected boolean tryPickUpObject(PickUpObject pickedUpObject){
@@ -24,7 +24,7 @@ public class PickingUpModule extends Module {
         //TODO
     }
 
-    protected boolean tryPickUpObject(PickUpObject pickedUpObject){
+    protected boolean tryPickUpObject(BattleObject pickedUpObject){
         if(this.pickedUpObject == null){
             this.pickedUpObject = pickedUpObject;
             return true;
@@ -40,8 +40,8 @@ public class PickingUpModule extends Module {
             return false;
     }
 
-    public PickUpObject retrievePickUpObject() {
-        PickUpObject temp = pickedUpObject;
+    public BattleObject retrievePickUpObject() {
+        BattleObject temp = pickedUpObject;
         pickedUpObject = null;
         return temp;
 

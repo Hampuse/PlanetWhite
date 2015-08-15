@@ -6,7 +6,7 @@ import se.oakbright.modules.helpers.Health;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 
-public abstract class Projectile extends BattleObject {
+/*public abstract class Projectile extends BattleObject {
 	static final int VELOCITY = 3600000;
 	private static final String TAG = Projectile.class.getSimpleName();
 	private Mover mover;
@@ -25,7 +25,7 @@ public abstract class Projectile extends BattleObject {
 	/*public static ProjectileResource getStandardResource(){
 		ProjectileResource
 	}*/
-
+/*
 	public Projectile(BattleModel battleModel, BattleTeam team, BattleObject recentlyEjectedFrom, IconId icon) {
 		super(); //TODO :...battleModel, team, icon);
 		//setBitmap(battleSurface.BM_MISSILE);
@@ -157,4 +157,4 @@ public abstract class Projectile extends BattleObject {
 //	public void setSpeedLevel(int speedLevel) {
 //		this.mover.setSpeedLevel(speedLevel);
 //	}
-}
+//}

@@ -1,21 +1,10 @@
 package se.oakbright.resources;
 
-import se.oakbright.TypeBuilder;
-import se.oakbright.battleobjects.Ship;
-import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
-import se.oakbright.battleobjects.statemachine.ShipStateMachineBuilder;
-import se.oakbright.battleobjects.statemachine.State;
-import se.oakbright.battleobjects.statemachine.StateMachine;
-import se.oakbright.modules.activatables.renderables.IconRenderer;
-import se.oakbright.modules.activatables.updatables.Mover;
-import se.oakbright.modules.activatables.updatables.Weapon;
-import se.oakbright.modules.helpers.IconModule;
-import se.oakbright.modules.internalpoints.InternalPoint;
-import se.oakbright.planetwhite.BattleTeam;
 
 /**
  * Created by hampuse on 2015-08-13.
  */
+/*
 public class ShipResource implements TypeResource<Ship>, Ship.Resource, Weapon.Resource, Mover.Resource, IconRenderer.Resource{
     public BattleTeam team;
     public IconRenderer iconRenderer;
@@ -85,7 +74,7 @@ public class ShipResource implements TypeResource<Ship>, Ship.Resource, Weapon.R
                 return null;
             }
         };*/
-    }
+    /*}
 
     @Override
     public InternalPoint getPivotPoint() {
@@ -101,4 +90,4 @@ public class ShipResource implements TypeResource<Ship>, Ship.Resource, Weapon.R
     public void getTest() {
 
     }
-}
+}*/

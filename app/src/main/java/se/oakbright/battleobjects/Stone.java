@@ -10,7 +10,7 @@ import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.planetwhite.GameActivity;
 import se.oakbright.planetwhite.R;
 
-public class Stone extends BattleObject implements Respawnable{
+/*public class Stone extends BattleObject implements Respawnable{
 	final static int VELOCITY = (int)(16000*GameActivity.VELOCITY_ADJUST);//(float) 0.01;
 	private static final String TAG = Stone.class.getSimpleName();
 	private final static IconId iconId = IconIdFactory.valueOf(R.drawable.stone2, 500000,500000);
@@ -142,7 +142,7 @@ public class Stone extends BattleObject implements Respawnable{
 		//this.clearIAObservers();	//can't clear unless force sceneBaControllerState to register again when reincarnate.
 	}*/
 
-	
+	/*
 	@Override
 	public void respawn(int x, int y) {
 			this.positioner.setPosition(x, y);
@@ -174,4 +174,4 @@ public class Stone extends BattleObject implements Respawnable{
 		this.mover.go();
 	}
 
-}
+}*/

@@ -1,38 +1,11 @@
 package se.oakbright.battleobjects;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import se.oakbright.Buildable;
-import se.oakbright.TypeBuilder;
-import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
-import se.oakbright.icons.IconCreater;
-import se.oakbright.icons.IconFactory;
-import se.oakbright.icons.IconId;
-import se.oakbright.icons.InIcon;
-import se.oakbright.icons.InvisibleIcon;
-import se.oakbright.modules.activatables.renderables.IconRenderer;
-import se.oakbright.modules.activatables.updatables.Mover;
-import se.oakbright.modules.activatables.updatables.MoverTest;
-import se.oakbright.modules.activatables.updatables.PathModule;
-import se.oakbright.modules.helpers.IconModule;
-import se.oakbright.modules.helpers.OrientationMatrix;
-import se.oakbright.modules.helpers.Shape;
-import se.oakbright.modules.internalpoints.CornerPoint;
-import se.oakbright.modules.internalpoints.MiddlePoint;
-import se.oakbright.planetwhite.BattleModel;
-import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.planetwhite.ServiceProvider;
-
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertNotSame;
 import static junit.framework.Assert.assertNull;
 import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by hampuse on 2015-07-14.

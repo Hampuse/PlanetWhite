@@ -8,7 +8,6 @@ import android.util.Log;
 
 import se.oakbright.Frames.Frame;
 import se.oakbright.battleobjects.IsActiveObservable;
-import se.oakbright.battleobjects.Stone;
 
 public abstract class SceneBaControllerState {
 	public abstract void update(SceneBaController controller);
@@ -27,19 +26,12 @@ public abstract class SceneBaControllerState {
 		
 		@Override
 		public void update(SceneBaController controller){
-			for(Stone stone: res.stones.values()){	
-				//PointFinder pf = PointFinder.getInstance(); //invalidSpawnFrames, stone);
-				//Point spawnPoint 
+			//TODO redo
+			/* for(Stone stone: res.stones.values()){
 				stone.setDirection(130);
 				while(!RespawnHandler.tryRespawnOnce(stone, this)){	//TODO safer not to get stuck in loop
 				}
-				/*Point spawnPoint = Frame.getRandomSpawnPoint(stone.getBoundingSquareSide(),stone.getBoundingSquareSide(), spawnFrames);
-				if(Frame.isSpawnPointOutside(this.invalidSpawnFrames, spawnPoint, stone.getBoundingSquareSide(), stone.getBoundingSquareSide())){
-					stone.reset(spawnPoint.x, spawnPoint.y, res.directionOfField);
-					stone.activate();	
-				}*/
-			}
-			//controller.setState(controller.)
+			}*/
 			controller.tryChangeState();
 		}
 
@@ -83,14 +75,10 @@ public abstract class SceneBaControllerState {
 		@Override
 		public void notifyIsActiveChangeIn(IsActiveObservable subject) {
 			if (subject.isActive() == false){
-				if( res.stones.containsKey(subject)){
-					Stone stone = res.stones.get(subject);
-					//stone.setDirection(200); //TODO res.directionOfField);
-					RespawnHandler.respawnObject(stone, this.spawnLane);// this);//spawnFrames, invalidSpawnFrames) ; //Respawnable obj, )
-					//Point spawnPoint = Frame.getRandomSpawnPoint(stone.getBoundingSquareSide(),stone.getBoundingSquareSide(), spawnFrames);
-					//stone.reset(spawnPoint.x, spawnPoint.y, res.directionOfField);
-					//stone.activate();
-				}
+				//TODO FIX if( res.stones.containsKey(subject)){
+					//TODO FIX Stone stone = res.stones.get(subject);
+					//TODO FIX RespawnHandler.respawnObject(stone, this.spawnLane);// this);//spawnFrames, invalidSpawnFrames) ; //Respawnable obj, )
+				//}
 			}
 		}
 
@@ -107,12 +95,9 @@ public abstract class SceneBaControllerState {
 	
 	//-- common resources object --//
 	public static class Res{
-		//public Set<Stone> stones;
-		public Map<IsActiveObservable, Stone> stones;
-		//public int directionOfField;
-		public Res(Map<IsActiveObservable, Stone> stones){// int directionOfField){	
-			this.stones = stones;
-			//this.directionOfField = directionOfField;
-		}
+		//TODO FIX public Map<IsActiveObservable, Stone> stones;
+		//TODO FIX public Res(Map<IsActiveObservable, Stone> stones){// int directionOfField){
+			//TODO FIX this.stones = stones;
+		//}
 	}
 }

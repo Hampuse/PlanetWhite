@@ -1,32 +1,6 @@
 package se.oakbright.battleobjects;
 
-import se.oakbright.Frames.Frame;
-import se.oakbright.RuntimeTests;
-import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
-import se.oakbright.modules.activatables.renderables.DebugInternalPointRenderer;
-import se.oakbright.modules.activatables.updatables.CollisionModule;
-import se.oakbright.modules.activatables.updatables.Mover;
-import se.oakbright.modules.activatables.updatables.PathModule;
-import se.oakbright.modules.activatables.updatables.Weapon;
-import se.oakbright.modules.helpers.Bounding;
-import se.oakbright.modules.helpers.Positioner;
-import se.oakbright.modules.helpers.Speed;
-import se.oakbright.modules.internalpoints.CornerPoint;
-import se.oakbright.modules.internalpoints.MiddlePoint;
-import se.oakbright.modules.activatables.renderables.IconRenderer;
-import se.oakbright.battleobjects.statemachine.ShipStateMachineBuilder;
-import se.oakbright.icons.IconCreater;
-import se.oakbright.icons.IconId;
-import se.oakbright.icons.IconIdFactory;
-import se.oakbright.modules.helpers.IconModule;
-import se.oakbright.modules.helpers.OrientationMatrix;
-import se.oakbright.modules.helpers.Shape;
-import se.oakbright.planetwhite.R;
-import se.oakbright.resources.ShipFactoryResource;
-import se.oakbright.weapons1.MissileLauncher;
-
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by hampuse on 2015-07-13.

@@ -1,8 +1,6 @@
 package se.oakbright.battlecontroller;
 
 import se.oakbright.Frames.Frame;
-import se.oakbright.battleobjects.pickupobject.PickUpFlag;
-import se.oakbright.battleobjects.pickupobject.PickUpObject;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 import android.util.Log;
@@ -26,15 +24,15 @@ Frame movingFrame;
 	void releaseNewStar(){
 		int x = (int) (this.movingFrame.left + Math.random() * (this.movingFrame.right - this.movingFrame.left));	//TODO göra om med Frame, spawn general
 		int y = (int) (this.movingFrame.top + Math.random() * (this.movingFrame.bottom - this.movingFrame.top));
-		this.newlyReleasedObject = new PickUpFlag(this.battleModel, this); //TODO kanske ej bör skapa en ny varje release?
+		//TODO this.newlyReleasedObject = new PickUpFlag(this.battleModel, this); //TODO kanske ej bör skapa en ny varje release?
 		this.newlyReleasedObject.setPosition(x,y);
-		this.newlyReleasedObject.activate();
+		//TODO this.newlyReleasedObject.activate();
 	}
 
-	@Override
+	/*@Override
 	public void reportThatPickUpObjectIsSpent(PickUpObject pickUpObject) {//TODO DETTA GÅR EJ FRAM
 		//TODO omladdning mm?
 		releaseNewStar();
-	}
+	}*/
 	
 }

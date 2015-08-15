@@ -7,20 +7,20 @@ class ShipLauncher {
 	private final int y;
 	private final int direction;
 	private final BattleObject host;
-	private Ship shipReadyToLaunch;
-	private Ship newlyReleasedShip;
-	private LinkedList<Ship> shipQ;
+	private BattleObject<ShipCommands> shipReadyToLaunch;
+	private BattleObject<ShipCommands> newlyReleasedShip;
+	private LinkedList<BattleObject<ShipCommands>> shipQ;
 	
-	public ShipLauncher(int x, int y, int direction, BattleObject host, LinkedList<Ship> shipQ) {
+	public ShipLauncher(int x, int y, int direction, BattleObject host, LinkedList<BattleObject<ShipCommands>> shipQ) {
 		this.x = x;
 		this.y = y;
 		this.direction = direction; //host.getSpeed.getDirectionDegBetween(host.getAnchorXworld(), host.getAnchorYworld(), x, y);
 		this.host = host;
 		if(shipQ != null){
-			this.shipQ = new LinkedList<Ship>(shipQ);
+			this.shipQ = new LinkedList<BattleObject<ShipCommands>>(shipQ);
 		}
 		else{
-			this.shipQ = new LinkedList<Ship>(); //just create an empty list if the argument was null
+			this.shipQ = new LinkedList<BattleObject<ShipCommands>>(); //just create an empty list if the argument was null
 		}
 			//this.shipQ.add(new CrasherShip(host.getBattleSurface(),host.getTeam()));
 			/*this.shipQ.add(new Ship(host.getBattleSurface(), x ,y , host.getMovingFrame(), host.getTeam(), host));
@@ -39,9 +39,7 @@ class ShipLauncher {
 	
 	void update(){
 		if (this.shipReadyToLaunch != null){
-			//this.shipReadyToLaunch.update(); //TODO SKA DEN VA HÄR
-			if(this.shipReadyToLaunch.isLaunched()){
-				//this.shipReadyToLaunch.setSpeedLevel(1);
+			if(this.shipReadyToLaunch.command().isLaunched()){
 				this.newlyReleasedShip = this.shipReadyToLaunch;
 				this.shipReadyToLaunch = null;
 			}
@@ -62,7 +60,7 @@ class ShipLauncher {
 		return shipReadyToLaunch;
 	}*/
 	
-	void addShipToQ(Ship ship){
+	void addShipToQ(BattleObject<ShipCommands> ship){
 		this.shipQ.add(ship);
 	}
 
@@ -71,7 +69,7 @@ class ShipLauncher {
 		if(this.shipReadyToLaunch != null){
 			// TODO? this.shipReadyToLaunch.halt(); //setSpeedLevel(0);
 			//this.shipReadyToLaunch.initPosition(this.x, this.y, this.direction);
-			this.shipReadyToLaunch.activate();
+			this.shipReadyToLaunch.command().activate();
 			//TODO? this.shipReadyToLaunch.commandGetReadyToLaunch(this.x, this.y, this.direction);
 			
 		}

@@ -8,7 +8,7 @@ import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.PickUpContent;
 import se.oakbright.planetwhite.PickUpFlagContent;
 
-public abstract class PickUpObject extends BattleObject {
+/*public abstract class PickUpObject extends BattleObject {
 	private static final int GIVE_DAMAGE = 0;
 	//private final static int ICON_ID_NORMAL = R.drawable.star;
 	//private final InIcon iconNormal;
@@ -104,7 +104,7 @@ public abstract class PickUpObject extends BattleObject {
 	}
 
 	*/
-
+/*
 	void beReleased(){
 		/* FÖRENKTLAT
 		shape.setIcon(this.iconIdNormal);
@@ -118,7 +118,7 @@ public abstract class PickUpObject extends BattleObject {
 		super.setIsAbleToCollide(true);
 		this.status = Status.OUT_THERE;
 		*/
-	}
+	/*}
 
 	private final void setIsPickedUpBy(BattleObject battleObject){
 		/*FÖRENKLAT
@@ -127,13 +127,13 @@ public abstract class PickUpObject extends BattleObject {
 		this.setIcon(this.iconIdPickedUp);
 		this.status = Status.ENTER_PICKED_UP;
 		*/
-	}
+/*	}
 	
 	public PickUpContent openAndGetPickUpContent() {
 		/*FÖRENKLAT
 		this.status = Status.ENTER_SPENT;
 		return this.pickUpContent;
 		*/
-		return null;
+	/*	return null;
 	}
-}
+}*/

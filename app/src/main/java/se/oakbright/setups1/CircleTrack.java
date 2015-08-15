@@ -1,11 +1,10 @@
 package se.oakbright.setups1;
 
 import android.graphics.Point;
-import se.oakbright.battleobjects.Stone;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.setup.ControllerRes;
 import se.oakbright.setup.TrackSetup;
-
+/*
 public class CircleTrack extends TrackSetup {
 
 	@Override
@@ -69,23 +68,9 @@ public class CircleTrack extends TrackSetup {
 		stone.setPosition((int)(0.9*w),(int)( 0.3*h));
 		stone.halt();
 		stone.activate();
-		/*
-		stone = new Stone(battleModel, commonRes.neutralTeam);
-		stone.setPositioner(xm, ym+100);
-		stone.setSpeedLevel(0);
-		stone.activate();
-		
-		stone = new Stone(battleModel, commonRes.neutralTeam);
-		stone.setPositioner(xm-100, ym+100);
-		stone.setSpeedLevel(0);
-		stone.activate();
-		
-		stone = new Stone(battleModel, commonRes.neutralTeam);
-		stone.setPositioner(xm-100, ym);
-		stone.setSpeedLevel(0);
-		stone.activate();*/
+
 	}
 	
 
 
-}
+}*/

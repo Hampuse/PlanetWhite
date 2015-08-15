@@ -3,10 +3,11 @@ package se.oakbright.battleobjects.statemachine;
 import java.util.HashSet;
 import java.util.Set;
 
+
 /**
  * Created by hampuse on 2015-07-12.
  */
-public class ShipStateMachineBuilder extends StateMachine.Builder<ShipCommandHandler>{
+/*public class ShipStateMachineBuilder extends StateMachine.Builder<ShipCommandHandler>{
     public State init, hidden, readyToLaunch, outThere;
 
     public ShipStateMachineBuilder(){
@@ -60,4 +61,4 @@ public class ShipStateMachineBuilder extends StateMachine.Builder<ShipCommandHan
         StateMachine stateMachine = new StateMachine(init);
         return stateMachine;
     }*/
-}
+//}

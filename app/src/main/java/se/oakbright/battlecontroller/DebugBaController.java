@@ -1,17 +1,18 @@
 package se.oakbright.battlecontroller;
 
-import se.oakbright.TypeBuilder;
-import se.oakbright.battleobjects.Ship;
+import se.oakbright.Blueprints;
+import se.oakbright.battleobjects.Ship.ShipBlueprints;
+import se.oakbright.battleobjects.BattleObject;
+import se.oakbright.battleobjects.ShipCommands;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.resources.ShipResource;
 
 /**
  * Created by hampuse on 2015-07-19.
  */
 public class DebugBaController extends TeamAiController {
-    Ship ship1;
-    Ship ship2;
+    BattleObject<ShipCommands> ship1;
+    BattleObject<ShipCommands> ship2;
 
     public DebugBaController(BattleModel battleModel,BattleTeam team){
         super(battleModel,team);
@@ -56,16 +57,15 @@ public class DebugBaController extends TeamAiController {
         return null; //ship;
     }*/
 
-    private Ship createNewShip(){
-        TypeBuilder<Ship> shipBuildable = new TypeBuilder<Ship>(new ShipResource(team));
-        Ship ship = shipBuildable.getBuilt();
-        return ship;
+    private BattleObject<ShipCommands> createNewShip(){
+        Blueprints<BattleObject<ShipCommands>> shipBlueprints = new ShipBlueprints();
+        return shipBlueprints.getBuilt();
     }
 
-    private void launchShip(Ship ship){
-        ship.activate();
-        ship.commandGetReadyToLaunch();
-        ship.commandLaunch();
+    private void launchShip(BattleObject<ShipCommands> ship){
+        ship.command().activate();
+        ship.command().getReadyToLaunch();
+        ship.command().launch();
     }
 
 /*    public static class Blueprint implements Serializable {

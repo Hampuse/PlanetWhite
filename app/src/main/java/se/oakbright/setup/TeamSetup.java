@@ -5,22 +5,26 @@ import java.io.Serializable;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
+
+import se.oakbright.BattleObjectCommands;
+import se.oakbright.Blueprints;
 import se.oakbright.battlecontroller.TeamAiController;
-import se.oakbright.battleobjects.MotherShip;
+import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleSurface;
 import se.oakbright.planetwhite.BattleTeam;
 
 public class TeamSetup implements Serializable{
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private static final String TAG = BattleTeam.class.getSimpleName();
 
-	private final Team team;	
-	private MotherShip.Blueprint motherShipBP = null;
+	private final Team team;
+
+	//TODO private MotherShip.Blueprint motherShipBP = null;
+	private Blueprints<BattleObject<BattleObjectCommands>> motherShipBP = null;
+
 	private int motherShipX;
 	private int motherShipY;
 	private int motherShipDirection;
@@ -30,25 +34,15 @@ public class TeamSetup implements Serializable{
 	public TeamSetup(Team team){
 		this.team = team;
 	}
-	public void setMotherShip(MotherShip.Blueprint motherShip){
+
+	/*public void setMotherShip(MotherShip.Blueprint motherShip){
 		this.motherShipBP = motherShip;
-	}
+	}*/
 	
 	public void setTeamAiController(TeamAiController.Blueprint blueprint){
 		this.teamAiControllerBlueprint = blueprint;
 	}
 
-	//class Initialized{
-		//Initialized(){
-			
-	//	}
-	/*public MotherShip getMotherShip(BattleSurface battleSurface, int x, int y, int direction) {
-			if(this.motherShipBP != null)
-				return this.motherShipBP.create(battleSurface, x, y, battleSurface.getBattleFieldFrame(), this.team, direction);
-			else
-				return null;
-		}
-//	}*/
 	public Team getTeam() {
 			return this.team;
 	}
@@ -71,9 +65,9 @@ public class TeamSetup implements Serializable{
 		battleModel.addTeam(battleTeam);
 		if(this.motherShipBP != null){
 			try{
-				MotherShip motherShip = this.motherShipBP.create(battleModel, this.motherShipX, this.motherShipY, battleModel.trackFrame, battleTeam, this.motherShipDirection);
-				commonRes.invalidSpawnAreas.add(motherShip.getInvalidSpawnFrameAround());
-				motherShip.activate();
+				BattleObject<BattleObjectCommands> motherShip = this.motherShipBP.getBuilt(); //TODO (battleModel, this.motherShipX, this.motherShipY, battleModel.trackFrame, battleTeam, this.motherShipDirection);
+				//TODO commonRes.invalidSpawnAreas.add(motherShip.getInvalidSpawnFrameAround());
+				motherShip.command().activate();
 			}catch(NullPointerException e){
 				Log.e(TAG,"Nullpointer when creating new motherShip in TeamSetup. MotherShip not created. Possibly no positioner is set by addMotherShipPosition(... ) ");
 				throw (e); 
@@ -84,15 +78,6 @@ public class TeamSetup implements Serializable{
 		}
 		
 	}
-	/*//--Parcelable methods --//
-	@Override
-	public int describeContents() {
-		return 0;
-	}
-	@Override
-	public void writeToParcel(Parcel out, int arg1) {
-		out.
-		
-	}*/
+
 }
 	

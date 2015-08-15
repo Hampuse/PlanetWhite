@@ -3,6 +3,7 @@ package se.oakbright.battleobjects.statemachine;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotSame;
 import static junit.framework.Assert.assertSame;
@@ -13,7 +14,7 @@ import static org.mockito.Mockito.verify;
 /**
  * Created by hampuse on 2015-07-12.
  */
-public class ShipStateMachineBuilderTest {
+/*public class ShipStateMachineBuilderTest {
     State<ShipCommandHandler> stateInit, stateHidden, stateReadyToLaunch, stateOutThere;
     ShipCommandHandler commandHandlerInit;
     StateMachine<State<ShipCommandHandler>> stateMachine;
@@ -119,4 +120,4 @@ public class ShipStateMachineBuilderTest {
         currentCommandHandler().deactivate();
         assertSame(stateInit, stateMachine.getCurrentState());
     }
-}
+}*/

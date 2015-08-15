@@ -1,6 +1,5 @@
 package se.oakbright.ships1;
 
-import se.oakbright.battleobjects.Ship;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 import se.oakbright.weapons1.BulletLauncher;

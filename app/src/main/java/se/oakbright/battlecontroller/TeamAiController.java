@@ -6,7 +6,6 @@ import java.lang.reflect.InvocationTargetException;
 
 import android.util.Log;
 import se.oakbright.Frames.Frame;
-import se.oakbright.battleobjects.Ship;
 import se.oakbright.planetwhite.BattleClock.BaTimer;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;

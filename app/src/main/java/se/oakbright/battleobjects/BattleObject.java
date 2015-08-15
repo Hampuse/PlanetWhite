@@ -1,36 +1,16 @@
 package se.oakbright.battleobjects;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Observer;
 import java.util.Set;
 
-import se.oakbright.Buildable;
-import se.oakbright.Frames.Frame;
-import se.oakbright.RuntimeTests;
-import se.oakbright.battleobjects.statemachine.BattleObjectInterface;
-import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
-import se.oakbright.battleobjects.statemachine.ShipInterface;
+import se.oakbright.BattleObjectCommands;
+import se.oakbright.CommandReceiverHolder;
 import se.oakbright.modules.ModuleObserver;
-import se.oakbright.modules.internalpoints.MiddlePoint;
-import se.oakbright.modules.Module;
-import se.oakbright.modules.activatables.Activatable;
-import se.oakbright.battleobjects.statemachine.CommandHandler;
-import se.oakbright.battleobjects.statemachine.ShipStateMachineBuilder;
-import se.oakbright.battleobjects.statemachine.State;
-import se.oakbright.battleobjects.statemachine.StateMachine;
-import se.oakbright.icons.IconId;
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.Health;
-import se.oakbright.modules.helpers.IconModule;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Shape;
-import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.planetwhite.ServiceProvider;
-
-import android.util.Log;
 
 /**
  * The basic object type that all the visible objects in this package share.
@@ -38,7 +18,7 @@ import android.util.Log;
  *
  */
 
-public abstract class BattleObject extends Object implements IsActiveObservable, IsActiveObserver, Activatable{
+public class BattleObject<C extends BattleObjectCommands> implements IsActiveObservable, IsActiveObserver{
 	private static final String TAG = BattleObject.class.getSimpleName();
 
 	//List<Module> modules = new ArrayList<Module>();
@@ -47,28 +27,38 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 	protected Health health;
 	protected Positioner positioner;
 	protected Direction direction;
-	protected StateMachine stateMachine;
-    protected BattleModel battleModel;
+	//protected StateMachine stateMachine;
+    //protected BattleModel battleModel;
     protected BattleTeam team;
+	public CommandReceiverHolder<C> commandHandler;	//TODO private
 
 	private Set<IsActiveObserver> isActiveObservers = new HashSet<IsActiveObserver>();
+
+	public BattleObject(BattleObjectResource<C> r){
+		shape = r.getShape();
+		health = r.getHealth();
+		positioner = r.getPositioner();
+		direction = r.getDirection();
+		team = r.getTeam();
+		commandHandler = r.getCommandHandler();
+	}
 
 	public void afterBuild(){	//Is called by Builder, just before returning the built BattleObject.
 		health.addOutOfHpObserver(new ModuleObserver<Health>(){
 			@Override
 			public void notify(Health subject) {
-				deactivate();
+				command().deactivate();
 			}
 		});
 	}
 
-    public Frame getMovingFrame() {
+    /*public Frame getMovingFrame() {
         return this.positioner.getMovingFrame();
-    }
+    }*/
 
-    public final BattleModel getBattleModel(){
+    /*public final BattleModel getBattleModel(){
         return this.battleModel;
-    }
+    }*/
 
     public final BattleTeam getTeam(){
         return this.team;
@@ -106,22 +96,27 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 		//TODO
 	}*/
 
-	@Override
-	public final void activate(){
+	/*@Override
+	public void activate(){
 		CommandHandler commandHandler = currentStateCommandHandler();
 		commandHandler.activate();
 	}
 
 	@Override
-	public final void deactivate(){
+	public void deactivate(){
 		CommandHandler commandHandler = currentStateCommandHandler();
 		commandHandler.deactivate();
+	}*/
+
+	public C command(){
+		return commandHandler.getCommandReceiver();
 	}
 
-	protected <U extends CommandHandler> U currentStateCommandHandler(){
+	//protected abstract <U extends CommandHandler> U currentStateCommandHandler();
+	/*protected <U extends CommandHandler> U currentStateCommandHandler(){
 		State<U> currentState = stateMachine.getCurrentState();
 		return currentState.getCommandHandler();
-	}
+	}*/
 
     //--IsActiveObservable interface--//
 	@Override
@@ -156,9 +151,43 @@ public abstract class BattleObject extends Object implements IsActiveObservable,
 		// Override for functionality
 	}
 
-	public class BattleObjectResource{
-
+	public interface BattleObjectResource<C>{
+		Shape getShape();
+		Health getHealth();
+		Positioner getPositioner();
+		Direction getDirection();
+		BattleTeam getTeam();
+		CommandReceiverHolder<C> getCommandHandler();
 	}
+
+	public abstract static class ResourceImpl<C> implements BattleObjectResource<C>{
+		@Override
+		public Shape getShape() {
+			return null;
+		}
+
+		@Override
+		public Health getHealth() {
+			return null;
+		}
+
+		@Override
+		public Positioner getPositioner() {
+			return null;
+		}
+
+		@Override
+		public Direction getDirection() {
+			return null;
+		}
+
+		@Override
+		public BattleTeam getTeam() {
+			return null;
+		}
+	}
+	//public static <T extends BattleObject> T getOfType(ObjectResource<T> resource){
+
 	//TODO class OutOfHpObserver extends Observer {
 	//}
 /*

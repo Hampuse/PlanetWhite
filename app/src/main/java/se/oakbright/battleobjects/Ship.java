@@ -1,11 +1,12 @@
 package se.oakbright.battleobjects;
-
+/*
 
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import se.oakbright.battlecontroller.Respawnable;
+import se.oakbright.battleobjects.statemachine.CommandHandler;
 import se.oakbright.battleobjects.statemachine.ShipInterface;
 import se.oakbright.battleobjects.statemachine.State;
 import se.oakbright.battleobjects.statemachine.StateMachine;
@@ -16,11 +17,10 @@ import se.oakbright.modules.activatables.updatables.PathCreator;
 import se.oakbright.modules.activatables.updatables.PickingUpModule;
 import se.oakbright.modules.activatables.selectables.SelectionModule;
 import se.oakbright.modules.activatables.updatables.Weapon;
-import se.oakbright.battleobjects.statemachine.ShipCommandHandler;
+import se.oakbright.battleobjects.Ship.ShipCommandHandler;
 import se.oakbright.icons.IconId;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-import se.oakbright.resources.ShipResource;
 
 import android.util.Log;
 
@@ -39,6 +39,7 @@ private static final String TAG = Ship.class.getSimpleName();
 	private StateMachine<State<ShipCommandHandler>> stateMachine;
 
 	public Ship(Resource r){
+		super(r);
 		stateMachine = r.getStateMachine();
 		//super(r);
 
@@ -85,6 +86,7 @@ private static final String TAG = Ship.class.getSimpleName();
 		this.modules.add(pathCreator);*/
 	//}
 
+/*
 	public void commandLaunch(){
 		ShipCommandHandler commandHandler = currentStateCommandHandler();
 		commandHandler.commandLaunch();
@@ -95,6 +97,11 @@ private static final String TAG = Ship.class.getSimpleName();
 		commandHandler.commandGetReadyToLaunch();
 	}
 
+	@Override
+	protected ShipCommandHandler currentStateCommandHandler(){
+		State<ShipCommandHandler> currentState = stateMachine.getCurrentState();
+		return currentState.getCommandHandler();
+	}
 
 	//TODO
 	/*boolean invitationToLand(LandingPad landingPad) {   //TODO ska den vara här?
@@ -111,7 +118,7 @@ private static final String TAG = Ship.class.getSimpleName();
 		return true;
 	}*/
 
-
+/*
 	@Override
 	public boolean isLaunched() {
 		ShipCommandHandler commandHandler = currentStateCommandHandler();
@@ -196,8 +203,9 @@ private static final String TAG = Ship.class.getSimpleName();
 		}
 	}
 */
-	public interface Resource{
+/*
+	public interface Resource extends BattleObject.BattleObjectResource{
 		public StateMachine<State<ShipCommandHandler>> getStateMachine();
 	}
-}
+}*/
 

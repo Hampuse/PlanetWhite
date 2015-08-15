@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import se.oakbright.modules.activatables.renderables.IconRenderer;
+import se.oakbright.modules.helpers.IconModule;
+import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.ServiceProvider;
 
@@ -19,7 +21,7 @@ public class IconRendererTest {
 
     @Before
     public void setup(){
-       //TODO iconRenderer = new IconRenderer();
+        iconRenderer = new IconRenderer(new ResourceImpl());
         ServiceProvider.reset();
         ServiceProvider.setBattleModel(battleModel);
     }
@@ -30,5 +32,17 @@ public class IconRendererTest {
         verify(battleModel).addRenderableMiddleLayer(iconRenderer);
     }
 
+    //TODO:
+    private class ResourceImpl implements IconRenderer.Resource{
+        @Override
+        public InternalPoint getPivotPoint() {
+            return null;
+        }
+
+        @Override
+        public IconModule getIconModule() {
+            return null;
+        }
+    }
     //public void test_that
 }

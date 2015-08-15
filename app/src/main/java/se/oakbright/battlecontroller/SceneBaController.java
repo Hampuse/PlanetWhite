@@ -14,7 +14,6 @@ import se.oakbright.battlecontroller.SceneBaControllerState.RunningState;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.battleobjects.IsActiveObservable;
 import se.oakbright.battleobjects.IsActiveObserver;
-import se.oakbright.battleobjects.Stone;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 
@@ -46,17 +45,16 @@ public class SceneBaController extends BaController implements IsActiveObserver{
 	
 	public SceneBaController(BattleModel battleModel, BattleTeam team, SpawnLane spawnLane, int capacity){// ArrayList<Frame> commonInvalidSpawnFrames, int capacity, int directionOfField) {
 		super(battleModel, team);
-		//spawnRegion1 = new Rect(-1,-1,0,,);
-		// int directionOfField = BattleObject.getDirectionDegBetween(battleSurface.getBattleFieldFrame().left, battleSurface.getBattleFieldFrame().top, battleSurface.getBattleFieldFrame().right, battleSurface.getBattleFieldFrame().bottom);
-		Map<IsActiveObservable,Stone> stones = new IdentityHashMap<IsActiveObservable, Stone>(capacity);
+		//TODO FIX:
+		/*Map<IsActiveObservable,Stone> stones = new IdentityHashMap<IsActiveObservable, Stone>(capacity);
 		for(int i = 0; i<capacity; i++){
 			Stone stone = new Stone(battleModel, team);
 			stone.registerIAObserver(this);
 			stones.put(stone, stone);// (stone);
 		}
-		this.commonResources = new Res(stones);//,directionOfField);
-		//%Frame[] invalidSpawnFrames = new Frame[commonInvalidSpawnFrames.size()];
-		//%commonInvalidSpawnFrames.toArray(invalidSpawnFrames);
+		this.commonResources = new Res(stones);
+		*/
+
 		
 		//--state RUNNING --// 
 		Frame spawnFrameWished1 = UnboundedFrame.getUnboundedLeft(0,0,battleModel.trackFrame.bottom - 200);	//the line at the left border

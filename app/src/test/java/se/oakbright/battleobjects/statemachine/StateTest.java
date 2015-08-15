@@ -3,9 +3,11 @@ package se.oakbright.battleobjects.statemachine;
 import org.junit.Before;
 import org.junit.Test;
 
+import se.oakbright.CommandReceiver;
 import se.oakbright.modules.Module;
 
 import static junit.framework.Assert.assertSame;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyZeroInteractions;
@@ -13,23 +15,24 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 /**
  * Created by hampuse on 2015-07-13.
  */
+
 public class StateTest {
-    CommandHandler commandHandler1;
-    CommandHandler commandHandler2;
-    State<CommandHandler> state1;
-    State<CommandHandler> state2;
+    CommandReceiver commandHandler1;
+    CommandReceiver commandHandler2;
+    State<CommandReceiver> state1;
+    State<CommandReceiver> state2;
     StateMachine stateMachine = mock(StateMachine.class);
 
     @Before
     public void setup(){
         state1 = new State();//commandHandler1);
-        commandHandler1 = new ShipCommandHandler(state1);// mock(CommandHandler.class);
+        commandHandler1 = new CommandReceiver(state1);// mock(CommandHandler.class);
         state1.setTransitionObserver(stateMachine); //Is normally done by stateMachine.
 
         state2 = new State();
-        commandHandler2 = new ShipCommandHandler(state2);
+        commandHandler2 = new CommandReceiver(state2);
 
-        commandHandler1.setTransitionOnActivate(state2);
+        commandHandler1.onActivate.setTransition(state2);
     }
 
     @Test

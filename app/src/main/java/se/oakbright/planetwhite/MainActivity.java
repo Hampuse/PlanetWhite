@@ -5,8 +5,6 @@ import java.util.LinkedList;
 
 import se.oakbright.battlecontroller.DebugBaController;
 import se.oakbright.battlecontroller.TeamAiController;
-import se.oakbright.battleobjects.MotherShip;
-import se.oakbright.battleobjects.Ship;
 import se.oakbright.setup.BattleSetup;
 import se.oakbright.setup.CtfSetup;
 import se.oakbright.setup.SceneEffectSetupDiagonalStones;
@@ -22,7 +20,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import se.oakbright.setups1.CircleTrack;
 
 public class MainActivity extends Activity {
 	private static final String TAG = MainActivity.class.getSimpleName();

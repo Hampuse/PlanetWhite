@@ -6,107 +6,312 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="shoot" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e07037a-15b3-4386-9c10-6982896e2236" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ModuleBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/Type.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/TypeBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/TypeResource.java" />
-      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\BattleObject$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Ship$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\debug\se\oakbright\battleobjects\BattleObjectTest$BattleObjectFake$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\debug\se\oakbright\battleobjects\BattleObjectTest$BattleObjectFake.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\debug\se\oakbright\battleobjects\BattleObjectTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\debug\se\oakbright\battleobjects\ShipFactoryTest.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/BattleObjectCommands.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/Blueprints.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandReceiverHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ObjectResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipBlueprints.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipStateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprints.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprintsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/StateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/TransitionCommand.java" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\LandingPad$State.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\LandingPad.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\MotherShip$Blueprint.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\MotherShip$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\MotherShip.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Projectile$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Projectile.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Ship$Blueprint.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Ship$Resource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Ship.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\ShipTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Stone$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\Stone.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\pickupobject\PickUpFlag.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\pickupobject\PickUpObject$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\pickupobject\PickUpObject.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\CommandHandler$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\CommandHandler$NullTransition.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\CommandHandler$Transition.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\CommandHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\ShipCommandHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\ShipStateMachineBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\ShipStateMachineBuilderTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\battleobjects\statemachine\StateMachine$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\resources\ShipResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\setups1\CircleTrack.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\weapons1\Bullet.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\debug\se\oakbright\weapons1\Missile.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\AbcShipFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\BattleObject$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\BattleObjectTest$BattleObjectFake$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\BattleObjectTest$BattleObjectFake.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\BattleObjectTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\LandingPad$State.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\LandingPad.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\MotherShip$Blueprint.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\MotherShip$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\MotherShip.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Projectile$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Projectile.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Ship$Blueprint.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Ship$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Ship.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\ShipFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\ShipFactory$IconCreaterImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\ShipFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\ShipFactoryTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\ShipTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Stone$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\Stone.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\pickupobject\PickUpFlag.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\pickupobject\PickUpObject$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\pickupobject\PickUpObject.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\CommandHandler$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\CommandHandler$NullTransition.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\CommandHandler$Transition.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\CommandHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\ShipCommandHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\ShipStateMachineBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\ShipStateMachineBuilderTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\battleobjects\statemachine\StateMachine$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\modules\activatables\renderables\IconRenderer$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\setups1\CircleTrack.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\Bollen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\BulletVasen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\CrasherShip.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\Deltan.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\Gaffeln.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\Pokalen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\RobotShipDirect.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\RobotShipTracker.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\ships1\VasenShip.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\weapons1\Bullet.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\release\se\oakbright\weapons1\Missile.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\debug\se\oakbright\battleobjects\ShipTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\debug\se\oakbright\battleobjects\statemachine\ShipStateMachineBuilderTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\release\se\oakbright\battleobjects\BattleObjectTest$BattleObjectFake$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\release\se\oakbright\battleobjects\BattleObjectTest$BattleObjectFake.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\release\se\oakbright\battleobjects\BattleObjectTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\release\se\oakbright\battleobjects\ShipFactoryTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\release\se\oakbright\battleobjects\ShipTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\build\intermediates\classes\test\release\se\oakbright\battleobjects\statemachine\ShipStateMachineBuilderTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\src\test\java\se\oakbright\battleobjects\ShipTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\src\test\java\se\oakbright\modules\activatables\renderables\IconRendererTest.java___jb_bak___" afterPath="" />
+      <change type="MOVED" beforePath="C:\Dropbox\AndroidStudioProjects\PlanetWhite\app\src\main\java\se\oakbright\battleobjects\statemachine\ShipCommandHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/BattleObject$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/BattleObject$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/BattleObject$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/BattleObject$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/BattleObject$BattleObjectResource.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/BattleObject$BattleObjectResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/BattleObject.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/BattleObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/updatables/CollisionModule$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/updatables/CollisionModule$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/updatables/CollisionModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/updatables/CollisionModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/BattleObject.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/BattleObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/CollisionModule$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/CollisionModule$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/CollisionModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/CollisionModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/CommandHandlerTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/CommandHandlerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/battleobjects/statemachine/CommandHandlerTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/battleobjects/statemachine/CommandHandlerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/CtfController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/CtfController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/CtfController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/CtfController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/DebugBaController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/DebugBaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/DebugBaController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/DebugBaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/EnemyBaController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/EnemyBaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/EnemyBaController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/EnemyBaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/renderables/IconRenderer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/renderables/IconRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/renderables/IconRendererTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/renderables/IconRendererTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/renderables/IconRendererTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/renderables/IconRendererTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/modules/activatables/renderables/IconRendererTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/modules/activatables/renderables/IconRendererTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/modules/activatables/updatables/MoverTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/modules/activatables/updatables/MoverTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/Ship$Blueprint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/Ship$Blueprint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/Ship.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/Ship.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/battleobjects/ShipTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/battleobjects/ShipTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/modules/activatables/renderables/IconRendererTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/modules/activatables/renderables/IconRendererTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/planetwhite/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/planetwhite/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/weapons1/MissileLauncher$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/weapons1/MissileLauncher$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/weapons1/MissileLauncher$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/weapons1/MissileLauncher$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/weapons1/MissileLauncher.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/weapons1/MissileLauncher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/weapons1/MissileLauncher.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/weapons1/MissileLauncher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Mover$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Mover$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Mover.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Mover.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/MoverTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/MoverTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/modules/activatables/updatables/MoverTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/modules/activatables/updatables/MoverTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/PickUpController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/PickUpController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/PickUpController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/PickUpController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/updatables/PickingUpModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/modules/activatables/updatables/PickingUpModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/PickingUpModule.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/PickingUpModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState$InitState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState$InitState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState$InitState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState$InitState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState$Res.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState$Res.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState$Res.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState$Res.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState$RunningState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState$RunningState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState$RunningState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState$RunningState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/SceneBaControllerState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/SceneBaControllerState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/ShipCommands.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/ShipCommands.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/ShipCommands.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/ShipCommands.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/ShipLauncher.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/ShipLauncher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/ShipLauncher.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/ShipLauncher.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/State.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateMachine$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateMachine$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/State.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateMachine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateMachine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/StateMachine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/StateMachine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateMachineTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateMachineTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/StateMachineTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/StateMachineTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/battleobjects/statemachine/StateMachineTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/battleobjects/statemachine/StateMachineTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/battleobjects/statemachine/StateMachineTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/battleobjects/statemachine/StateMachineTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battleobjects/statemachine/StateTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/StateTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battleobjects/statemachine/StateTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/battleobjects/statemachine/StateTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/se/oakbright/battleobjects/statemachine/StateTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/battleobjects/statemachine/StateTest.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/test/release/se/oakbright/battleobjects/statemachine/StateTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/TeamAiController$Blueprint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/TeamAiController$Blueprint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/TeamAiController$Blueprint.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/TeamAiController$Blueprint.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/TeamAiController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/battlecontroller/TeamAiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/TeamAiController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/battlecontroller/TeamAiController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/setup/TeamSetup.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/se/oakbright/setup/TeamSetup.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/setup/TeamSetup.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/setup/TeamSetup.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Weapon$Builder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Weapon$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Weapon.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/se/oakbright/modules/activatables/updatables/Weapon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/binary/testDebug/results.bin" afterPath="$PROJECT_DIR$/app/build/test-results/binary/testDebug/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/binary/testRelease/results.bin" afterPath="$PROJECT_DIR$/app/build/test-results/binary/testRelease/results.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/AbcShipFactory.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/AbcShipFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/BaController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/BaController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/BattleObjectTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/BattleObjectTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Bollen.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Bollen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/Bullet.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/Bullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/BulletVasen.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/BulletVasen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/CollisionModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/CollisionModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/setups1/CircleTrack.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/setups1/CircleTrack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/CommandHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/CommandHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/CrasherShip.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/CrasherShip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/CtfController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/CtfController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/DebugBaController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/DebugBaController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Deltan.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Deltan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/EnemyBaController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/EnemyBaController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/renderables/IconRenderer.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/renderables/IconRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/renderables/IconRendererTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/renderables/IconRendererTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/LandingPad.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/LandingPad.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Mover.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Mover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/updatables/MoverTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/updatables/MoverTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/Missile.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/Missile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/MissileLauncher.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/MissileLauncher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/MotherShip.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/MotherShip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/PickUpController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/PickUpController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/pickupobject/PickUpFlag.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/pickupobject/PickUpFlag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/pickupobject/PickUpObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/pickupobject/PickUpObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/PickingUpModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/PickingUpModule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Pokalen.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Pokalen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Projectile.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Projectile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipDirect.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipDirect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipTracker.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipTracker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaControllerState.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaControllerState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipCommands.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipCommands.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipFactory.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipFactoryResource.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipFactoryResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipFactoryTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipLauncher.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipLauncher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipResource.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilderTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.BattleObjectTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.BattleObjectTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.ShipFactoryTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.ShipFactoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateMachineTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateMachineTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Stone.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Stone.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.ShipTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.ShipTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.ShipTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.ShipTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.statemachine.StateMachineTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.statemachine.StateMachineTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.statemachine.StateMachineTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.statemachine.StateMachineTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.statemachine.StateTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.battleobjects.statemachine.StateTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.statemachine.StateTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.battleobjects.statemachine.StateTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.renderables.IconRendererTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.renderables.IconRendererTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.renderables.IconRendererTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.renderables.IconRendererTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.updatables.MoverTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.updatables.MoverTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.updatables.MoverTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.updatables.MoverTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.updatables.UpdatableModuleTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.updatables.UpdatableModuleTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.updatables.UpdatableModuleTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.updatables.UpdatableModuleTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.updatables.WeaponTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.activatables.updatables.WeaponTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.updatables.WeaponTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.activatables.updatables.WeaponTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.helpers.HealthTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.helpers.HealthTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.helpers.HealthTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.helpers.HealthTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.helpers.SpeedTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.helpers.SpeedTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.helpers.SpeedTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.helpers.SpeedTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.internalpoints.CornerPointTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.internalpoints.CornerPointTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.internalpoints.CornerPointTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.internalpoints.CornerPointTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.internalpoints.MiddlePointTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.modules.internalpoints.MiddlePointTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.internalpoints.MiddlePointTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.modules.internalpoints.MiddlePointTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.planetwhite.MainActivityTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/debug/TEST-se.oakbright.planetwhite.MainActivityTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.planetwhite.MainActivityTest.xml" afterPath="$PROJECT_DIR$/app/build/test-results/release/TEST-se.oakbright.planetwhite.MainActivityTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/TeamAiController.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/TeamAiController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/setup/TeamSetup.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/setup/TeamSetup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/VasenShip.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/VasenShip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Weapon.java" afterPath="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Weapon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/index.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.BattleObjectTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.BattleObjectTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.ShipFactoryTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.ShipFactoryTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/index.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.ShipTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.ShipTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.ShipTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.ShipTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.battleobjects.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.battleobjects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.battleobjects.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.battleobjects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.statemachine.ShipStateMachineBuilderTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.statemachine.StateMachineTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.statemachine.StateMachineTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.statemachine.StateMachineTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.statemachine.StateMachineTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.statemachine.StateTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.battleobjects.statemachine.StateTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.statemachine.StateTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.battleobjects.statemachine.StateTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.battleobjects.statemachine.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.battleobjects.statemachine.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.battleobjects.statemachine.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.battleobjects.statemachine.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.renderables.IconRendererTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.renderables.IconRendererTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.renderables.IconRendererTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.renderables.IconRendererTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.activatables.renderables.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.activatables.renderables.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.activatables.renderables.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.activatables.renderables.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.updatables.MoverTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.updatables.MoverTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.updatables.MoverTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.updatables.MoverTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.updatables.UpdatableModuleTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.updatables.UpdatableModuleTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.updatables.UpdatableModuleTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.updatables.UpdatableModuleTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.updatables.WeaponTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.activatables.updatables.WeaponTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.updatables.WeaponTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.activatables.updatables.WeaponTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.activatables.updatables.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.activatables.updatables.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.activatables.updatables.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.activatables.updatables.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.helpers.HealthTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.helpers.HealthTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.helpers.HealthTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.helpers.HealthTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.helpers.SpeedTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.helpers.SpeedTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.helpers.SpeedTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.helpers.SpeedTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.helpers.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.helpers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.helpers.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.helpers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.internalpoints.CornerPointTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.internalpoints.CornerPointTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.internalpoints.CornerPointTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.internalpoints.CornerPointTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.internalpoints.MiddlePointTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.modules.internalpoints.MiddlePointTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.internalpoints.MiddlePointTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.modules.internalpoints.MiddlePointTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.internalpoints.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.modules.internalpoints.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.internalpoints.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.modules.internalpoints.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.planetwhite.MainActivityTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/classes/se.oakbright.planetwhite.MainActivityTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.planetwhite.MainActivityTest.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/classes/se.oakbright.planetwhite.MainActivityTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.planetwhite.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/debug/packages/se.oakbright.planetwhite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.planetwhite.html" afterPath="$PROJECT_DIR$/app/build/reports/tests/release/packages/se.oakbright.planetwhite.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PlanetWhite.iws" />
@@ -148,40 +353,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Ship.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.36">
-              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShipResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipResource.java">
+      <file leaf-file-name="StateMachine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1096#1097#0" expanded="true" />
-                <element signature="e#1128#1129#0" expanded="true" />
-                <element signature="e#3016#3017#0" expanded="true" />
-                <element signature="e#3043#3044#0" expanded="true" />
-                <element signature="e#3098#3099#0" expanded="true" />
-                <element signature="e#3125#3126#0" expanded="true" />
+                <element signature="e#1864#1865#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/MainActivity.java">
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipStateMachineBlueprintsTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprintsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.008264462">
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2171#2172#0" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2261#2262#0" expanded="true" />
+                <element signature="e#2296#2297#0" expanded="true" />
+                <element signature="e#2359#2360#0" expanded="true" />
+                <element signature="e#2394#2395#0" expanded="true" />
+                <element signature="e#2455#2456#0" expanded="true" />
+                <element signature="e#2490#2491#0" expanded="true" />
+                <element signature="e#2547#2548#0" expanded="true" />
+                <element signature="e#2582#2583#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipStateMachineBlueprints.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <folding>
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipCommandReceiver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#740#741#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransitionCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/TransitionCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+              <folding>
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandReceiver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+              <folding>
+                <element signature="e#565#566#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,45 +472,8 @@
       <file leaf-file-name="BattleObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.36">
-              <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1962#1980#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gaffeln.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShipTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43375394">
-              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-              <folding>
-                <element signature="e#2713#2714#0" expanded="true" />
-                <element signature="e#2756#2757#0" expanded="true" />
-                <element signature="e#2996#3002#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BattleObjectTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/BattleObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="2" selection-start-line="103" selection-start-column="2" selection-end-line="103" selection-end-column="2" />
+              <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -1512,57 +1758,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/renderables/DebugInternalPointRenderer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/MotherShip.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/LandingPad.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/pickupobject/PickUpObject.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Stone.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/updatables/WeaponTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Projectile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/BattleObjectInterface.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipInterface.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/CommandHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipCommandHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/CommandHandlerTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/Buildable.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/BaController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipFactoryResource.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/DebugBaController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/Resource.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/TypeResource.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/CollisionModule.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/GenericBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/TypeBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/renderables/IconRenderer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Mover.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Weapon.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipFactory.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ModuleBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/Type.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/AbcShipFactory.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipFactoryTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Pokalen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Bollen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/VasenShip.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/CrasherShip.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipTracker.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/renderables/IconRendererTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/BulletVasen.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/updatables/MoverTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Deltan.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipDirect.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/TeamAiController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/BattleObjectTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/CtfController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaControllerState.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipCommands.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipLauncher.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/PickingUpModule.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/setups1/CircleTrack.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/StateHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/DebugBaController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/StateMachineR.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/StateR.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/Command.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/BattleObjectCommands.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipCommandReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipState.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipBlueprints.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/Blueprints.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBlueprints.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandRecieverHolder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipBlueprints.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipStateHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/TeamAiController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipResource.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Bollen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/BulletVasen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/CrasherShip.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Deltan.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Pokalen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipDirect.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipTracker.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/VasenShip.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/EnemyBaController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/CommandHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilderTest.java" />
+        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateMachineTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandReceiver.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipTest.java" />
+        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprints.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/TransitionCommand.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java" />
+        <option value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/Ship/ShipTest.java" />
       </list>
     </option>
   </component>
@@ -1605,7 +1851,26 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanetWhite" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanetWhite" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2464,165 +2729,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planetwhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activatables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activatables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="updatables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activatables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="selectables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se.oakbright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activatables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="renderables" />
+              <option name="myItemId" value="weapons1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2641,6 +2748,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="battleobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanetWhite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se.oakbright" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="battleobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statemachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanetWhite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se.oakbright" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="battleobjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ship" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2692,37 +2843,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlanetWhite" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4107761d0c78118b" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_22_x86" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/se/oakbright" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -2750,11 +2882,11 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="se.oakbright.battleobjects.Ship" />
       <recent name="se.oakbright.modules.activatables.renderables" />
       <recent name="se.oakbright.modules.helpers" />
       <recent name="se.oakbright.modules.activatables.updatables" />
       <recent name="se.oakbright.modules.internalpoints" />
-      <recent name="se.oakbright.modules" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="se.oakbright.test2" />
@@ -3064,7 +3196,7 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23771429" sideWeight="0.4208556" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23657143" sideWeight="0.4208556" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16928251" sideWeight="0.54485047" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.296" sideWeight="0.5171123" order="7" side_tool="true" content_ui="tabs" />
@@ -3074,10 +3206,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27085716" sideWeight="0.45989305" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.49572194" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30171427" sideWeight="0.45828876" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28228572" sideWeight="0.45828876" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905483" sideWeight="0.5336323" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17005348" sideWeight="0.4551495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1631016" sideWeight="0.4551495" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24685714" sideWeight="0.48288772" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3099,24 +3231,25 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.296" sideWeight="0.5171123" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.49572194" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14628571" sideWeight="0.4208556" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23657143" sideWeight="0.4208556" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27314284" sideWeight="0.45989305" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27085716" sideWeight="0.45989305" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.49572194" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33485714" sideWeight="0.45828876" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28228572" sideWeight="0.45828876" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905483" sideWeight="0.5336323" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17914438" sideWeight="0.4551495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1631016" sideWeight="0.4551495" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24685714" sideWeight="0.48288772" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3133,284 +3266,140 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Stone.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/LandingPad.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/updatables/WeaponTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="128" selection-start-line="49" selection-start-column="128" selection-end-line="49" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Projectile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/TypeInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/CommandHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3169572">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipCommandHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/BattleObjectInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/CommandHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/Buildable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56962025">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/Missile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/BaController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/weapons1/MissileLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipFactoryResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5529226">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/MotherShip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="45" column="115" selection-start-line="45" selection-start-column="115" selection-end-line="45" selection-end-column="115" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/se/oakbright/planetwhite/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/TypeResource.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/setup/TeamSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/PickUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/TypeBuilder.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/CtfController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="4" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaControllerState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/SceneBaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#4240#4241#0" expanded="false" />
+            <element signature="e#4265#4266#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/CollisionModule.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+          <folding>
+            <element signature="e#2141#2142#0" expanded="false" />
+            <element signature="e#2168#2169#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/renderables/IconRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-116.0">
-          <caret line="127" column="7" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Mover.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/PickingUpModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/modules/activatables/updatables/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.0">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ModuleBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7235387">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5529226">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/AbcShipFactory.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/setups1/CircleTrack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/StateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17814727">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/DebugBaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0268562">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Bollen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.3696682">
-          <caret line="69" column="2" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/CrasherShip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7235387">
-          <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Pokalen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/VasenShip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7235387">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7235387">
-          <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+        <state vertical-scroll-proportion="-1.0688837">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3418,55 +3407,49 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="159" column="2" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/BattleObjectCommands.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/DebugBaController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7921615">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/Blueprints.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/renderables/IconRendererTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ShipStateHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/modules/activatables/updatables/MoverTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/TeamAiController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Deltan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/BulletVasen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5529226">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3474,88 +3457,285 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/planetwhite/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/TeamAiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39432177">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipDirect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6167192">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.36">
-          <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1962#1980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/BattleObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="2" selection-start-line="103" selection-start-column="2" selection-end-line="103" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.36">
-          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/resources/ShipResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Bollen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/BulletVasen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#3016#3017#0" expanded="true" />
-            <element signature="e#3043#3044#0" expanded="true" />
-            <element signature="e#3098#3099#0" expanded="true" />
-            <element signature="e#3125#3126#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/ShipTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/CrasherShip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43375394">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2756#2757#0" expanded="true" />
-            <element signature="e#2996#3002#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Deltan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Gaffeln.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/Pokalen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipDirect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/RobotShipTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/ships1/VasenShip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1584786">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/CommandHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72266245">
+          <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateMachineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77190083">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20495868">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandReceiverHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battlecontroller/EnemyBaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/ShipStateMachineBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19809826">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipBlueprints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03937008">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/BattleObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/ShipCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43307087">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipCommandReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/CommandReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/TransitionCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+          <folding>
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/StateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding>
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/statemachine/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/statemachine/StateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/se/oakbright/battleobjects/Ship/ShipStateMachineBlueprintsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.008264462">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2171#2172#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2359#2360#0" expanded="true" />
+            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2455#2456#0" expanded="true" />
+            <element signature="e#2490#2491#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#2582#2583#0" expanded="true" />
           </folding>
         </state>
       </provider>
