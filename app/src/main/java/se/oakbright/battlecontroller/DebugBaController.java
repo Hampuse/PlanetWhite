@@ -1,9 +1,9 @@
 package se.oakbright.battlecontroller;
 
 import se.oakbright.Blueprints;
-import se.oakbright.battleobjects.Ship.ShipBlueprints;
+import se.oakbright.battleobjects.ship.ShipBlueprints;
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.ShipCommands;
+import se.oakbright.battleobjects.ship.ShipCommands;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 
@@ -51,7 +51,7 @@ public class DebugBaController extends TeamAiController {
     }*/
 
  /*   private Ship createNewShip(){
-        BattleObject.TypeBuilder<Ship, Ship.Resource> shipBuildable = new BattleObject.TypeBuilder<Ship, Ship.>(new ShipResource(team));
+        BattleObject.TypeBuilder<Ship, Ship.Builder> shipBuildable = new BattleObject.TypeBuilder<Ship, Ship.>(new ShipResource(team));
         Ship ship = shipBuildable.getBuilt();
         //Ship ship = ShipResource.getNewShip(team);
         return null; //ship;

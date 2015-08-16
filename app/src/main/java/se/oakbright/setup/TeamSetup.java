@@ -6,7 +6,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-import se.oakbright.BattleObjectCommands;
 import se.oakbright.Blueprints;
 import se.oakbright.battlecontroller.TeamAiController;
 import se.oakbright.battleobjects.BattleObject;
@@ -23,7 +22,7 @@ public class TeamSetup implements Serializable{
 	private final Team team;
 
 	//TODO private MotherShip.Blueprint motherShipBP = null;
-	private Blueprints<BattleObject<BattleObjectCommands>> motherShipBP = null;
+	private Blueprints<BattleObject> motherShipBP = null;
 
 	private int motherShipX;
 	private int motherShipY;
@@ -65,7 +64,7 @@ public class TeamSetup implements Serializable{
 		battleModel.addTeam(battleTeam);
 		if(this.motherShipBP != null){
 			try{
-				BattleObject<BattleObjectCommands> motherShip = this.motherShipBP.getBuilt(); //TODO (battleModel, this.motherShipX, this.motherShipY, battleModel.trackFrame, battleTeam, this.motherShipDirection);
+				BattleObject motherShip = this.motherShipBP.getBuilt(); //TODO (battleModel, this.motherShipX, this.motherShipY, battleModel.trackFrame, battleTeam, this.motherShipDirection);
 				//TODO commonRes.invalidSpawnAreas.add(motherShip.getInvalidSpawnFrameAround());
 				motherShip.command().activate();
 			}catch(NullPointerException e){

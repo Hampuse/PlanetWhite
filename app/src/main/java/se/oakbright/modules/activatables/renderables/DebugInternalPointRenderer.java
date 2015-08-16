@@ -4,7 +4,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
-import se.oakbright.Buildable;
 import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.planetwhite.BattleSurface;
 
@@ -26,8 +25,8 @@ public class DebugInternalPointRenderer extends RenderableModuleForegroundLayer{
         paint.setColor(Color.WHITE);
         canvas.drawPoint(battleSurface.coordToPxl(x), battleSurface.coordToPxl(y), paint);
     }
-
-    public static class Builder extends Buildable<DebugInternalPointRenderer> {
+    //TODO REPLACE:
+    /*public static class Builder extends Buildable<DebugInternalPointRenderer> {
         private Buildable<? extends InternalPoint> pointBuilder;
 
         public Builder(Buildable<? extends InternalPoint> pointBuilder){
@@ -39,5 +38,5 @@ public class DebugInternalPointRenderer extends RenderableModuleForegroundLayer{
             DebugInternalPointRenderer pointRenderer = new DebugInternalPointRenderer(pointBuilder.getBuilt());
             return pointRenderer;
         }
-    }
+    }*/
 }

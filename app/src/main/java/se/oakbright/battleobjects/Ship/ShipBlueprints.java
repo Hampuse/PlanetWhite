@@ -1,9 +1,8 @@
-package se.oakbright.battleobjects.Ship;
+package se.oakbright.battleobjects.ship;
 
 import se.oakbright.Blueprints;
-import se.oakbright.CommandReceiverHolder;
+import se.oakbright.battleobjects.statemachine.CommandReceiverHolder;
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.ShipCommands;
 import se.oakbright.battleobjects.statemachine.StateMachine;
 import se.oakbright.modules.activatables.renderables.IconRenderer;
 import se.oakbright.modules.helpers.IconModule;
@@ -22,7 +21,6 @@ public class ShipBlueprints extends Blueprints<BattleObject<ShipCommands>> {
 
 
     public class ResourceImpl extends BattleObject.ResourceImpl<ShipCommands> implements IconRenderer.Resource{
-        //StateMachineR stateMachineR;
         StateMachine<ShipCommands> stateMachine;
 
         @Override

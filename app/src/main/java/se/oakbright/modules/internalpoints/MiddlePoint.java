@@ -1,6 +1,5 @@
 package se.oakbright.modules.internalpoints;
 
-import se.oakbright.Buildable;
 import se.oakbright.modules.helpers.Positioner;
 
 /**
@@ -19,6 +18,7 @@ public class MiddlePoint implements InternalPoint {
         return positioner.getY();
     }
 
+    /*
     public static class Builder extends Buildable<MiddlePoint>{
         public Buildable<Positioner> positionerBuilder;
         @Override
@@ -27,6 +27,6 @@ public class MiddlePoint implements InternalPoint {
             middlePoint.positioner = positionerBuilder.getBuilt();
             return middlePoint;
         }
-    }
+    }*/
 }
 

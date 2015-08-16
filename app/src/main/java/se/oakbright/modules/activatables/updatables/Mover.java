@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.Log;
 
-import se.oakbright.Buildable;
 import se.oakbright.Frames.Frame;
 import se.oakbright.RuntimeTests;
 import se.oakbright.battleobjects.BattleObject;
@@ -13,12 +12,11 @@ import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Speed;
 import se.oakbright.modules.activatables.Activatable;
 import se.oakbright.planetwhite.ServiceProvider;
-import se.oakbright.resources.MoverBuilderResource;
 
 /**
  * Created by hampuse on 2015-06-25.
  */
-public class Mover extends UpdatableModule{
+public class Mover extends UpdatableModule {
 
     private static final String TAG = Mover.class.getSimpleName();
     //ConcurrentLinkedQueue<Point> path;	//The coordinates for the path that the ship should travel;
@@ -26,8 +24,8 @@ public class Mover extends UpdatableModule{
     //BattleObject recentlyEjectedFrom;
     //BattleObject trackObject;
 
-    private float xFloat;	//The x coordinate in more precise way than x, that is an int representing the same.
-    private float yFloat;	//The decimals of the y coordinate
+    private float xFloat;    //The x coordinate in more precise way than x, that is an int representing the same.
+    private float yFloat;    //The decimals of the y coordinate
 
 
     //private Paint pathPaint = new Paint();	//
@@ -39,7 +37,7 @@ public class Mover extends UpdatableModule{
     //private Activatable host;
     //private PathModule pathModule;
     private Direction direction;
-   //TODO private TrackerModule trackerModule;
+    //TODO private TrackerModule trackerModule;
 
     /*public Mover(Frame movingFrame, int velocity){
         this.movingFrame = movingFrame;
@@ -51,12 +49,11 @@ public class Mover extends UpdatableModule{
         this.pathPaint.setAntiAlias(true);
     }*/
 
-    /*public Mover(Mover.Resource r){
+    /*public Mover(Mover.Builder r){
 
     }*/
 
     public void update() {
-        Log.d("moov", "In Mover.update()");
         //TODO
        /* FÖRENKLAT NU
         if (this.trackObject != null) {        // track the trackObject if it exists.
@@ -166,7 +163,7 @@ public class Mover extends UpdatableModule{
     }*/
 
     void setVelocity(float f) {
-       speed.setVelocity(f);
+        speed.setVelocity(f);
     }
 
     private float getVelocityX() {
@@ -177,7 +174,7 @@ public class Mover extends UpdatableModule{
         return speed.getDeltaYperUpdate();
     }
 
-
+}
    /* ///////////// Nested classes: //////////////////
     private class Coord {
         public final int x;
@@ -195,7 +192,8 @@ public class Mover extends UpdatableModule{
     }
 */
 
-    public static class Builder extends Buildable<Mover>{
+//TODO REPLACE :
+/*    public static class Builder extends Buildable<Mover>{
         //public Frame movingFrame;
         public Integer goVelocity;
         public Buildable<Positioner> positionerBuilder;
@@ -245,7 +243,7 @@ public class Mover extends UpdatableModule{
             public Positioner getPositioner();
         }
     }
-    public static interface Resource{
+    public static interface Builder{
 
     }
-}
+}*/

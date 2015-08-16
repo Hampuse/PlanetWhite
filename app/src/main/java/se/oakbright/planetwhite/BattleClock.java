@@ -18,7 +18,6 @@ public class BattleClock {
 	public void update(){	//updates the time.
 		long timeSinceUpdate = System.currentTimeMillis() - timeAtLastUpdate;
 		this.timeAtLastUpdate = System.currentTimeMillis();
-		//int millisPerUpdate = 
 		this.time = (int) (this.time + timeSinceUpdate*pace);
 		microsPerUpdate = (int) (1000*timeSinceUpdate*this.pace);		//TODO kanske ändra endast när det är stora ändringar typ skifte av pace.
 		
@@ -27,9 +26,6 @@ public class BattleClock {
 	public void halt() {
 		this.pace = 0;
 		
-	}
-	public void setSlowMotion(){
-		this.pace = (float)0.01;//DOESNT WORK
 	}
 
 	public void resume() {
@@ -46,7 +42,6 @@ public class BattleClock {
 	}
 	
 	public static class BaTimer{	//simple not optimized.
-		//private int endTime;
 		private int interval;
 		public long startTime;
 		public BaTimer(){

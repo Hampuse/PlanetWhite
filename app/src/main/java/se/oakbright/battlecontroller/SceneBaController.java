@@ -185,11 +185,8 @@ public class SceneBaController extends BaController implements IsActiveObserver{
 	
 
 	@Override
-	public void notifyIsActiveChangeIn(IsActiveObservable subject) {
-			state.notifyIsActiveChangeIn(subject);	
+	public void notifyIsDeactivated(IsActiveObservable subject) {
+			state.notifyIsDeactivated(subject);
 	}
-	
-	
-	
-	
+
 }

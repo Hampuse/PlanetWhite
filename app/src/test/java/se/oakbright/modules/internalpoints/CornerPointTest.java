@@ -15,6 +15,8 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by hampuse on 2015-07-10.
  */
+//TODO:
+    /*
 public class CornerPointTest {
     CornerPoint cornerPoint;
 
@@ -35,7 +37,7 @@ public class CornerPointTest {
 
         cornerPoint = cornerPointBuilder.getBuilt();
     }
-
+*/
     /**
      * Position of
      * cornerpoint and middlepoint:
@@ -47,6 +49,8 @@ public class CornerPointTest {
      * 3   m
      * 4
      */
+
+/*
     @Test
     public void testX(){
         when(shape.getWidthDst()).thenReturn(4);
@@ -58,4 +62,4 @@ public class CornerPointTest {
         when(shape.getHeightDst()).thenReturn(4);
         assertEquals(1, cornerPoint.y());
     }
-}
+}*/

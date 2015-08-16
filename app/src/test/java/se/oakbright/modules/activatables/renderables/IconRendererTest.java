@@ -44,5 +44,4 @@ public class IconRendererTest {
             return null;
         }
     }
-    //public void test_that
 }

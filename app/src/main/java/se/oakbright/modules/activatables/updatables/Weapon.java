@@ -2,7 +2,6 @@ package se.oakbright.modules.activatables.updatables;
 
 import android.util.Log;
 
-import se.oakbright.Buildable;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.activatables.renderables.DebugInternalPointRenderer;
 import se.oakbright.modules.helpers.Direction;
@@ -11,7 +10,6 @@ import se.oakbright.battleobjects.IsActiveObserver;
 import se.oakbright.calculation.DirectionCalculation;
 import se.oakbright.modules.internalpoints.Aim;
 import se.oakbright.modules.internalpoints.InternalPoint;
-import se.oakbright.resources.TypeResource;
 
 public abstract class Weapon extends UpdatableModule implements IsActiveObserver{
 	private static final String TAG = Weapon.class.getSimpleName();
@@ -23,9 +21,13 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 	protected Direction direction;
 	protected InternalPoint mouthPosition;
 
-	/*public Weapon(Weapon.Resource r){
+	/*public Weapon(Weapon.Builder r){
 	asdfa
 	}*/
+
+	public interface Resource {
+		void getTest();
+	}
 
 	public Weapon( int aimScope, int reloadTime){
 		timeAtLastReload = 0;
@@ -37,9 +39,7 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 	public void tryFire(){
 		if(this.aim != null){
 			if(tryReload()){
-				Log.d("shoot", "reaload succesful");
 				if(inAimScope()){
-					Log.d("shoot", "aim in scope");
 					fireAt(aim.x(), aim.y());
 				}
 			}
@@ -97,11 +97,9 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 	}
 
 	@Override
-	public void notifyIsActiveChangeIn(IsActiveObservable subject) {
-		if( !subject.isActive() ){		//If an observed object get inactivated
-			if(aim.targetObjectEquals(subject)){	// If the aim has that object as a target, delete the aim.
-				this.aim = null;
-			}
+	public void notifyIsDeactivated(IsActiveObservable subject) {	//If an observed object get inactivated
+		if(aim.targetObjectEquals(subject)){	// If the aim has that object as a target, delete the aim.
+			this.aim = null;
 		}
 	}
 
@@ -118,6 +116,8 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 		tryFire();
 	}
 
+
+	/*
 	public abstract static class Builder extends Buildable<Weapon> {
 		//public int AIM_SCOPE; //degrees. how far on each side along the ships direction the weapon is able to fire.
 		//public int RELOAD_TIME; //ms
@@ -132,18 +132,11 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 			return weapon;
 		}
 
-		/*private Direction setupDirection(){
-			Direction.Builder builder = new Direction.Builder();
-			builder.positionBuilder = mouthPositionBuilder;
-			return builder.getBuilt();
-		}*/
 
 		protected abstract Weapon getType();
-	}
+	}*/
 
-	public interface Resource {
-		void getTest();
-	}
+
 
 	/* From Ship:
 	//////////// Weapon methods: ///////////////////

@@ -3,8 +3,7 @@ package se.oakbright.battleobjects;
 import java.util.HashSet;
 import java.util.Set;
 
-import se.oakbright.BattleObjectCommands;
-import se.oakbright.CommandReceiverHolder;
+import se.oakbright.battleobjects.statemachine.CommandReceiverHolder;
 import se.oakbright.modules.ModuleObserver;
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.Health;
@@ -20,45 +19,38 @@ import se.oakbright.planetwhite.BattleTeam;
 
 public class BattleObject<C extends BattleObjectCommands> implements IsActiveObservable, IsActiveObserver{
 	private static final String TAG = BattleObject.class.getSimpleName();
-
-	//List<Module> modules = new ArrayList<Module>();
-
-	protected Shape shape;
-	protected Health health;
-	protected Positioner positioner;
-	protected Direction direction;
-	//protected StateMachine stateMachine;
-    //protected BattleModel battleModel;
-    protected BattleTeam team;
-	public CommandReceiverHolder<C> commandHandler;	//TODO private
+	final Shape shape;
+	final Health health;
+	final Positioner positioner;
+	final Direction direction;
+    final BattleTeam team;
+	final CommandReceiverHolder<C> commandHandler;
 
 	private Set<IsActiveObserver> isActiveObservers = new HashSet<IsActiveObserver>();
 
 	public BattleObject(BattleObjectResource<C> r){
 		shape = r.getShape();
 		health = r.getHealth();
+		//TODO addHpObserver();
 		positioner = r.getPositioner();
 		direction = r.getDirection();
 		team = r.getTeam();
 		commandHandler = r.getCommandHandler();
 	}
 
-	public void afterBuild(){	//Is called by Builder, just before returning the built BattleObject.
+	private void addHpObserver(){
 		health.addOutOfHpObserver(new ModuleObserver<Health>(){
 			@Override
 			public void notify(Health subject) {
-				command().deactivate();
+				deactivate();
 			}
 		});
 	}
 
-    /*public Frame getMovingFrame() {
-        return this.positioner.getMovingFrame();
-    }*/
-
-    /*public final BattleModel getBattleModel(){
-        return this.battleModel;
-    }*/
+	public void deactivate(){
+		commandHandler.deactivate();
+		notifyIAObserversThatThisIsDeactivated();
+	}
 
     public final BattleTeam getTeam(){
         return this.team;
@@ -92,38 +84,16 @@ public class BattleObject<C extends BattleObjectCommands> implements IsActiveObs
 		return 0;
 	}
 
-	/*public BattleObject(R r){
-		//TODO
-	}*/
-
-	/*@Override
-	public void activate(){
-		CommandHandler commandHandler = currentStateCommandHandler();
-		commandHandler.activate();
-	}
-
-	@Override
-	public void deactivate(){
-		CommandHandler commandHandler = currentStateCommandHandler();
-		commandHandler.deactivate();
-	}*/
-
 	public C command(){
 		return commandHandler.getCommandReceiver();
 	}
 
-	//protected abstract <U extends CommandHandler> U currentStateCommandHandler();
-	/*protected <U extends CommandHandler> U currentStateCommandHandler(){
-		State<U> currentState = stateMachine.getCurrentState();
-		return currentState.getCommandHandler();
-	}*/
-
     //--IsActiveObservable interface--//
-	@Override
+	/*@Override
 	public final boolean isActive(){
-		//TODO	refactor so that notify if active or not, so this is not needed	return currentStateCommandHandler().isInAnActiveState();
+		command().isActive()//TODO	refactor so that notify if active or not, so this is not needed	return currentStateCommandHandler().isInAnActiveState();
 		return true;
-	}
+	}*/
 
 	@Override
 	public void registerIAObserver(IsActiveObserver observer){
@@ -134,20 +104,20 @@ public class BattleObject<C extends BattleObjectCommands> implements IsActiveObs
 	public void unRegisterIAObserver(IsActiveObserver observer){
 		this.isActiveObservers.remove(observer);
 	}
-	@Override
-	public void notifyIAObservers(){	//Must be called by the subject when a change occur
+
+	private void notifyIAObserversThatThisIsDeactivated(){	//Must be called by the subject when a change occur
 		for(IsActiveObserver observer: isActiveObservers){
-			observer.notifyIsActiveChangeIn(this);
+			observer.notifyIsDeactivated(this);
 		}
 	}
 	
-	protected void clearIAObservers(){
+	private void clearIAObservers(){
 		this.isActiveObservers.clear();
 	}
 
 	//-- isActiveObserver interface --//
 	@Override
-	public void notifyIsActiveChangeIn(IsActiveObservable subject){
+	public void notifyIsDeactivated(IsActiveObservable subject){
 		// Override for functionality
 	}
 
@@ -160,7 +130,7 @@ public class BattleObject<C extends BattleObjectCommands> implements IsActiveObs
 		CommandReceiverHolder<C> getCommandHandler();
 	}
 
-	public abstract static class ResourceImpl<C> implements BattleObjectResource<C>{
+	public abstract static class ResourceImpl<C> implements BattleObjectResource<C>{	//TODO what
 		@Override
 		public Shape getShape() {
 			return null;
@@ -186,82 +156,4 @@ public class BattleObject<C extends BattleObjectCommands> implements IsActiveObs
 			return null;
 		}
 	}
-	//public static <T extends BattleObject> T getOfType(ObjectResource<T> resource){
-
-	//TODO class OutOfHpObserver extends Observer {
-	//}
-/*
-	public abstract static class Builder<T extends BattleObject, I extends BattleObjectInterface> extends Buildable<T>{
-		public Shape.Builder shapeBuilder;
-		public Health.Builder healthBuilder;
-		public Buildable<Positioner> positionerBuilder;
-		public Direction.Builder directionBuilder;
-		public BattleTeam team;
-		public StateMachine.Builder<I> stateMachineBuilder;
-		//public ShipStateMachineBuilder stateMachineBuilder; //TODO SHould not be marked with all spec ship types. Would be solved if only have TypeInterface
-		//public T type;
-
-		public Builder(){
-			healthBuilder = new Health.Builder();	//TODO should be Health.Inbreakable() or something?
-			positionerBuilder = new Positioner.Builder();
-			directionBuilder = new Direction.Builder();
-			MiddlePoint.Builder middlePointBuilder = new MiddlePoint.Builder();
-			middlePointBuilder.positionerBuilder = positionerBuilder;
-			directionBuilder.positionBuilder = middlePointBuilder;
-		}
-
-
-
-		@Override
-		public T buildNew(){
-			beforeBuildNew();
-			T type = getType();
-			type.stateMachine = stateMachineBuilder.getBuilt();
-			type.shape = shapeBuilder.getBuilt();
-			type.health = healthBuilder.getBuilt();
-			type.positioner = positionerBuilder.getBuilt();
-			type.direction = directionBuilder.getBuilt();
-			type.battleModel = ServiceProvider.getBattleModel(); //TODO should not be here right?
-			type.team = team;
-			RuntimeTests.testForNull(team, "team");
-			type.afterBuild();
-			return type;
-		}
-
-		protected abstract T getType();
-		protected abstract void beforeBuildNew();
-
-	}*/
-
-	/*public static interface Resource{
-		public void test();
-	}*/
-
-	/*public static class TypeBuilder<T extends BattleObject<R>, R extends BattleObject.Resource>{
-		R resource;
-		public TypeBuilder(R resource){
-			this.resource = resource;
-		}
-
-		public T getBuilt(){
-			recursion...
-			//TODO
-			return null;
-		}
-	}*/
-
-/*
-	public static class TypeBuilder<T>{
-		Resource resource;
-		public TypeBuilder(Resource<T> resource){
-			this.resource = resource;
-		}
-
-		public T getBuilt(){
-			return resource.getType();
-			//recursion...
-			//TODO
-			return null;
-		}
-	}*/
 }

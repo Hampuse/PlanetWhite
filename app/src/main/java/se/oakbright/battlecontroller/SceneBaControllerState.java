@@ -8,10 +8,11 @@ import android.util.Log;
 
 import se.oakbright.Frames.Frame;
 import se.oakbright.battleobjects.IsActiveObservable;
+import se.oakbright.battleobjects.IsActiveObserver;
 
-public abstract class SceneBaControllerState {
+public abstract class SceneBaControllerState implements IsActiveObserver{
 	public abstract void update(SceneBaController controller);
-	public abstract void notifyIsActiveChangeIn(IsActiveObservable subject);
+	//public abstract void notifyIsActiveChangeIn(IsActiveObservable subject);
 	
 	//////////-- INIT--////////////////////////////
 	public static class InitState extends SceneBaControllerState implements RespawnDemander{
@@ -36,7 +37,7 @@ public abstract class SceneBaControllerState {
 		}
 
 		@Override
-		public void notifyIsActiveChangeIn(IsActiveObservable subject) {
+		public void notifyIsDeactivated(IsActiveObservable subject) {
 			//don't care	//TODO consume it somehow?
 		}
 
@@ -73,13 +74,11 @@ public abstract class SceneBaControllerState {
 		}
 
 		@Override
-		public void notifyIsActiveChangeIn(IsActiveObservable subject) {
-			if (subject.isActive() == false){
+		public void notifyIsDeactivated(IsActiveObservable subject) {
 				//TODO FIX if( res.stones.containsKey(subject)){
 					//TODO FIX Stone stone = res.stones.get(subject);
 					//TODO FIX RespawnHandler.respawnObject(stone, this.spawnLane);// this);//spawnFrames, invalidSpawnFrames) ; //Respawnable obj, )
 				//}
-			}
 		}
 
 		/*@Override

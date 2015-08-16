@@ -3,7 +3,6 @@ package se.oakbright.battleobjects.statemachine;
 import org.junit.Before;
 import org.junit.Test;
 
-import se.oakbright.CommandReceiver;
 import se.oakbright.modules.Module;
 
 import static junit.framework.Assert.assertSame;

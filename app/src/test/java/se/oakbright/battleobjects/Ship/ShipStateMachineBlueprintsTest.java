@@ -1,23 +1,17 @@
-package se.oakbright.battleobjects.Ship;
+package se.oakbright.battleobjects.ship;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import se.oakbright.Blueprints;
-import se.oakbright.CommandReceiver;
-import se.oakbright.CommandReceiverHolder;
+import se.oakbright.battleobjects.statemachine.CommandReceiverHolder;
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.Ship.ShipStateMachineBlueprints;
-import se.oakbright.battleobjects.ShipCommands;
 import se.oakbright.battleobjects.statemachine.State;
 import se.oakbright.battleobjects.statemachine.StateMachine;
 import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.Health;
-import se.oakbright.modules.helpers.IconModule;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Shape;
-import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
 
 import static junit.framework.Assert.assertNotNull;
@@ -25,7 +19,6 @@ import static junit.framework.Assert.assertSame;
 import static org.junit.Assert.assertNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyZeroInteractions;
 
@@ -34,7 +27,6 @@ import static org.mockito.Mockito.verifyZeroInteractions;
  */
 public class ShipStateMachineBlueprintsTest {
     BattleObject<ShipCommands> ship;
-    //Buildable<Module> moduleInHiddenBuilder, moduleInReadyToLaunchBuilder, moduleInOutThereBuilder;
     Module moduleInHidden = mock(Module.class);
     Module moduleInReadyToLaunch = mock(Module.class);
     Module moduleInOutThere = mock(Module.class);
@@ -43,15 +35,11 @@ public class ShipStateMachineBlueprintsTest {
     State initState;
     State hiddenState;
 
-    IconModule.Builder IconModuleBuilder = mock(IconModule.Builder.class);
-    BattleModel battleModel;
     BattleTeam team;
-    //@Mock IconId iconId;
 
     @Before
     public void setup(){
         team = mock(BattleTeam.class);
-        //IconModule iconModule = mock(IconModule.class);
         ship = new BattleObject<ShipCommands>(new FakeResourceImpl());
     }
 
@@ -90,7 +78,6 @@ public class ShipStateMachineBlueprintsTest {
             stateMachineBlueprints.hidden.addActiveModule(moduleInHidden);
             stateMachineBlueprints.readyToLaunch.addActiveModule(moduleInReadyToLaunch);
             stateMachineBlueprints.outThere.addActiveModule(moduleInOutThere);
-            //stateMachine = spy(stateMachineBlueprints.getBuilt());
             stateMachine = stateMachineBlueprints.getBuilt();
             return stateMachine;
         }
@@ -99,7 +86,6 @@ public class ShipStateMachineBlueprintsTest {
     @Test
     public void  test_that_stateMachine_is_the_right_one(){
         //CommandReceiverHolder<ShipCommands> fromResource = new FakeResourceImpl().getCommandHandler();
-        assertSame(stateMachine,ship.commandHandler);
         assertSame(stateMachine, initState.transitionObserver);
     }
 
@@ -108,17 +94,11 @@ public class ShipStateMachineBlueprintsTest {
         assertNotNull(ship);
         assertNotNull(stateMachine);
         assertNotNull(initState.transitionObserver);
-        assertSame(stateMachine, initState.transitionObserver);
     }
 
     @Test
     public void test_that_command_returns_correct_commandReceiver(){
-        ShipCommands commandReceiver = ship.command();
         assertSame(initState.getCommandReceiver(), ship.command());
-
-        assertSame(stateMachine, initState.transitionObserver);
-        ship.command().activate();
-        //verify(commandReceiver).activate();
     }
 
     @Test

@@ -1,10 +1,9 @@
 package se.oakbright.battlecontroller;
 
 import se.oakbright.battleobjects.BattleObject;
-import se.oakbright.battleobjects.ShipCommands;
+import se.oakbright.battleobjects.ship.ShipCommands;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.BattleTeam;
-import android.util.Log;
 
 public class EnemyBaController extends BaController{
 	private static final String TAG = EnemyBaController.class.getSimpleName();

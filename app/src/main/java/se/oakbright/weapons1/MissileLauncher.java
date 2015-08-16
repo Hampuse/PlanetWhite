@@ -20,11 +20,12 @@ public class MissileLauncher extends Weapon {
 		//TODO activate it*/
 	}
 
+	/*
 	public static class Builder extends Weapon.Builder{
 		@Override
 		protected Weapon getType() {
 			return new MissileLauncher();
 		}
-	}
+	}*/
 
 }

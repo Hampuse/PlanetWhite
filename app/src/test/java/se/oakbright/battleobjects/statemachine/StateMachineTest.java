@@ -20,15 +20,10 @@ public class StateMachineTest {
     public void setup(){
         stateMachine = new StateMachine(state1);
     }
-    @Test
-    public void testConstructor(){
-       // assertSame(state1, stateMachine.getCurrentState());
-    }
 
     @Test
     public void testNewTransition(){
         stateMachine.newTransition(state1, state2);
-        //assertSame(state2, stateMachine.getCurrentState());
 
         try{
             stateMachine.newTransition(state1, state2);

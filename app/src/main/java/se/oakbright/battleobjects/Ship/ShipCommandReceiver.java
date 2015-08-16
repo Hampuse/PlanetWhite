@@ -1,8 +1,7 @@
-package se.oakbright.battleobjects.Ship;
+package se.oakbright.battleobjects.ship;
 
-import se.oakbright.CommandReceiver;
-import se.oakbright.TransitionCommand;
-import se.oakbright.battleobjects.ShipCommands;
+import se.oakbright.battleobjects.statemachine.CommandReceiver;
+import se.oakbright.battleobjects.statemachine.TransitionCommand;
 import se.oakbright.battleobjects.statemachine.State;
 
 /**

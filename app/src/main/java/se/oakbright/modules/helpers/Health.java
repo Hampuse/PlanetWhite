@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-import se.oakbright.Buildable;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.Module;
 import se.oakbright.modules.ModuleObserver;
@@ -61,6 +60,8 @@ public class Health extends Module{
         }
     }
 
+    //TODO:
+    /*
     public static class Builder extends Buildable<Health>{
         //public Buildable<? extends BattleObject> hostBuilder;
         public int startHp;
@@ -70,7 +71,7 @@ public class Health extends Module{
            // health.host = hostBuilder.getBuilt();
             return health;
         }
-    }
+    }*/
 
 
 }

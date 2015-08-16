@@ -1,7 +1,5 @@
 package se.oakbright.icons;
 
-import android.graphics.Path;
-
 public interface IconId {
 
 	public int getId();
@@ -14,5 +12,5 @@ public interface IconId {
 
 	public float[] getBoundingPointsKey();
 	
-	public InIcon getIcon(IconFactory iconFactory);//, int widthPxl, int heightPxl);
+	public InIcon getIcon(IconFactory iconFactory);
 }

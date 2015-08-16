@@ -1,6 +1,6 @@
 package se.oakbright.icons;
 
-import se.oakbright.Buildable;
+import se.oakbright.Blueprints;
 import se.oakbright.RuntimeTests;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.ServiceProvider;
@@ -8,7 +8,7 @@ import se.oakbright.planetwhite.ServiceProvider;
 /**
  * Created by hampuse on 2015-07-18.
  */
-public abstract class IconCreater extends Buildable<InIcon> {      //TODO SHOULD BE NAMED IconBuilder
+public abstract class IconCreater extends Blueprints<InIcon> {      //TODO SHOULD BE NAMED IconBuilder
    // public Icon icon;
 
     @Override
@@ -21,7 +21,4 @@ public abstract class IconCreater extends Buildable<InIcon> {      //TODO SHOULD
 
     protected abstract IconId getIconId();
 
-    //public abstract Icon getBuilt();//{
-//        return null;
-  //  }
 }

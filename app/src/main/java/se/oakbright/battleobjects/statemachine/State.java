@@ -3,10 +3,6 @@ package se.oakbright.battleobjects.statemachine;
 import java.util.HashSet;
 import java.util.Set;
 
-import se.oakbright.BattleObjectCommands;
-import se.oakbright.Buildable;
-import se.oakbright.TransitionCommand;
-import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.Module;
 
 import static junit.framework.Assert.assertNotNull;

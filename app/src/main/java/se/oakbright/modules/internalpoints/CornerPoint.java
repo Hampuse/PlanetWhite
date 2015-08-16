@@ -1,6 +1,5 @@
 package se.oakbright.modules.internalpoints;
 
-import se.oakbright.Buildable;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Shape;
 
@@ -26,6 +25,7 @@ public class CornerPoint implements InternalPoint{
         this.shape = shape;
     }*/
 
+    /*
     public static class Builder extends Buildable<CornerPoint>{
         public Buildable<Shape> shapeBuilder;
         public Buildable<Positioner> positionerBuilder;
@@ -37,6 +37,6 @@ public class CornerPoint implements InternalPoint{
             cornerPoint.positioner = positionerBuilder.getBuilt();
             return cornerPoint;
         }
-    }
+    }*/
 
 }

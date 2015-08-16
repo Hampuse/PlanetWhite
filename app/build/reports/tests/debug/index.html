@@ -20,13 +20,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">24</div>
+<div class="counter">14</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -38,7 +38,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.296s</div>
+<div class="counter">0.094s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">85%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,13 +58,29 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/se.oakbright.battleobjects.BattleObjectTest.html">BattleObjectTest</a>.
+<a href="classes/se.oakbright.battleobjects.BattleObjectTest.html#test_OutOfHpObserver_deactivates_battleobject">test_OutOfHpObserver_deactivates_battleobject</a>
+</li>
+<li>
+<a href="classes/se.oakbright.battleobjects.ship.ShipBlueprintsTest.html">ShipBlueprintsTest</a>.
+<a href="classes/se.oakbright.battleobjects.ship.ShipBlueprintsTest.html#test_correct_battleObject">test_correct_battleObject</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -79,23 +95,33 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
-<a href="packages/se.oakbright.battleobjects.Ship.html">se.oakbright.battleobjects.Ship</a>
+<td class="failures">
+<a href="packages/se.oakbright.battleobjects.html">se.oakbright.battleobjects</a>
 </td>
-<td>4</td>
+<td>1</td>
+<td>1</td>
 <td>0</td>
+<td>0.019s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="packages/se.oakbright.battleobjects.ship.html">se.oakbright.battleobjects.ship</a>
+</td>
+<td>5</td>
+<td>1</td>
 <td>0</td>
-<td>0.029s</td>
-<td class="success">100%</td>
+<td>0.038s</td>
+<td class="failures">80%</td>
 </tr>
 <tr>
 <td class="success">
 <a href="packages/se.oakbright.battleobjects.statemachine.html">se.oakbright.battleobjects.statemachine</a>
 </td>
-<td>4</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
-<td>0.009s</td>
+<td>0.004s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -105,37 +131,27 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.003s</td>
+<td>0.010s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success">
 <a href="packages/se.oakbright.modules.activatables.updatables.html">se.oakbright.modules.activatables.updatables</a>
 </td>
-<td>5</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.186s</td>
+<td>0.001s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success">
 <a href="packages/se.oakbright.modules.helpers.html">se.oakbright.modules.helpers</a>
 </td>
-<td>5</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.022s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/se.oakbright.modules.internalpoints.html">se.oakbright.modules.internalpoints</a>
-</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0.034s</td>
+<td>0s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -145,13 +161,23 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.013s</td>
+<td>0.019s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/se.oakbright.resourcesketch2.html">se.oakbright.resourcesketch2</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.003s</td>
 <td class="success">100%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -166,21 +192,39 @@
 </thead>
 <tbody>
 <tr>
+<td class="failures"/>
+<a href="classes/se.oakbright.battleobjects.BattleObjectTest.html">se.oakbright.battleobjects.BattleObjectTest</a>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0.019s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/se.oakbright.battleobjects.ship.ShipBlueprintsTest.html">se.oakbright.battleobjects.ship.ShipBlueprintsTest</a>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0.011s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
 <td class="success"/>
-<a href="classes/se.oakbright.battleobjects.Ship.ShipTest.html">se.oakbright.battleobjects.Ship.ShipTest</a>
+<a href="classes/se.oakbright.battleobjects.ship.ShipStateMachineBlueprintsTest.html">se.oakbright.battleobjects.ship.ShipStateMachineBlueprintsTest</a>
 <td>4</td>
 <td>0</td>
 <td>0</td>
-<td>0.029s</td>
+<td>0.027s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success"/>
 <a href="classes/se.oakbright.battleobjects.statemachine.StateMachineTest.html">se.oakbright.battleobjects.statemachine.StateMachineTest</a>
-<td>2</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.003s</td>
+<td>0.002s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -189,7 +233,7 @@
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>0.006s</td>
+<td>0.002s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -198,16 +242,7 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.003s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/se.oakbright.modules.activatables.updatables.MoverTest.html">se.oakbright.modules.activatables.updatables.MoverTest</a>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.174s</td>
+<td>0.010s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -221,47 +256,11 @@
 </tr>
 <tr>
 <td class="success"/>
-<a href="classes/se.oakbright.modules.activatables.updatables.WeaponTest.html">se.oakbright.modules.activatables.updatables.WeaponTest</a>
+<a href="classes/se.oakbright.modules.helpers.PositionerTest.html">se.oakbright.modules.helpers.PositionerTest</a>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.011s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/se.oakbright.modules.helpers.HealthTest.html">se.oakbright.modules.helpers.HealthTest</a>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.013s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/se.oakbright.modules.helpers.SpeedTest.html">se.oakbright.modules.helpers.SpeedTest</a>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.009s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/se.oakbright.modules.internalpoints.CornerPointTest.html">se.oakbright.modules.internalpoints.CornerPointTest</a>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.032s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/se.oakbright.modules.internalpoints.MiddlePointTest.html">se.oakbright.modules.internalpoints.MiddlePointTest</a>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.002s</td>
+<td>0s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
@@ -270,7 +269,16 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.013s</td>
+<td>0.019s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/se.oakbright.resourcesketch2.ShipMakerTest.html">se.oakbright.resourcesketch2.ShipMakerTest</a>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.003s</td>
 <td class="success">100%</td>
 </tr>
 </tbody>
@@ -279,7 +287,7 @@
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.2.1</a> at 2015-aug-15 18:32:04</p>
+<a href="http://www.gradle.org">Gradle 2.2.1</a> at 2015-aug-16 11:07:04</p>
 </div>
 </div>
 </body>

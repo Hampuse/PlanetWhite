@@ -12,7 +12,6 @@ public class IconCalculate {
 	}
 	
 	static int[] calculateBoundingPath(Resources res, IconId iconId, int numOfPoints){
-		//TODO if this is the way to do?
 		return new int[] {1,2,3,4,5,6};
 	}
 }

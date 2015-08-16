@@ -2,7 +2,6 @@ package se.oakbright.modules.helpers;
 
 //import android.graphics.Matrix;
 
-import se.oakbright.Buildable;
 import se.oakbright.Frames.Frame;
 
 /**
@@ -47,10 +46,11 @@ public class Positioner {
         this.movingFrame = movingFrame;
     }
 
+    /*
     public static class Builder extends Buildable<Positioner> {
         @Override
         protected Positioner buildNew() {
             return new Positioner();
         }
-    }
+    }*/
 }

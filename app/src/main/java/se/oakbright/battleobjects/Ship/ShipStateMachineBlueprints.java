@@ -1,7 +1,6 @@
-package se.oakbright.battleobjects.Ship;
+package se.oakbright.battleobjects.ship;
 
 import se.oakbright.Blueprints;
-import se.oakbright.battleobjects.ShipCommands;
 import se.oakbright.battleobjects.statemachine.State;
 import se.oakbright.battleobjects.statemachine.StateMachine;
 
@@ -24,10 +23,6 @@ public class ShipStateMachineBlueprints extends Blueprints<StateMachine<ShipComm
         return stateMachine;
     }
 
-    private void hej(){
-        throw new RuntimeException("Hej");
-    }
-
     private void createInitCommandReceiver(){
         ShipCommandReceiver c = new ShipCommandReceiver(init);  // The CommandReceiver will also register itself as commandReceiver at its State.
         c.onActivate.setTransition(hidden);
@@ -36,17 +31,14 @@ public class ShipStateMachineBlueprints extends Blueprints<StateMachine<ShipComm
     private void createHiddenCommandReceiver(){
         ShipCommandReceiver c = new ShipCommandReceiver(hidden);
         c.getReadyToLaunch.setTransition(readyToLaunch);
-        c.onDeactivate.setTransition(init);
     }
 
     private void createReadyToLaunchCommandReceiver(){
         ShipCommandReceiver c = new ShipCommandReceiver(readyToLaunch);
         c.launch.setTransition(outThere);
-        c.onDeactivate.setTransition(init);
     }
 
     private void createOutThereCommandReceiver(){
         ShipCommandReceiver c = new ShipCommandReceiver(outThere);
-        c.onDeactivate.setTransition(init);
     }
 }

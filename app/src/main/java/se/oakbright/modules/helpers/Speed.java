@@ -2,7 +2,6 @@ package se.oakbright.modules.helpers;
 
 import android.util.Log;
 
-import se.oakbright.Buildable;
 import se.oakbright.planetwhite.GameActivity;
 import se.oakbright.planetwhite.ServiceProvider;
 
@@ -89,6 +88,7 @@ public class Speed {
 		updateVelocityComponents();
 	}*/
 
+	/*
 	public static class Builder extends Buildable<Speed>{
 		public Buildable<Direction> directionBuilder;
 
@@ -99,5 +99,5 @@ public class Speed {
 			speed.direction = directionBuilder.getBuilt();
 			return speed;
 		}
-	}
+	}*/
 }

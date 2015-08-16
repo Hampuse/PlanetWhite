@@ -2,7 +2,6 @@ package se.oakbright.modules.helpers;
 
 import android.util.Log;
 
-import se.oakbright.Buildable;
 import se.oakbright.RuntimeTests;
 import se.oakbright.icons.IconCreater;
 import se.oakbright.icons.InIcon;
@@ -38,6 +37,8 @@ public class Shape {
         return icon.getHeightDst();
     }
 
+    //TODO REPLACE:
+    /*
     public static class Builder extends Buildable<Shape> {
         public IconCreater iconCreater;
         public Buildable<Positioner> positionerBuilder;
@@ -54,5 +55,5 @@ public class Shape {
 
             return shape;
         }
-    }
+    }*/
 }

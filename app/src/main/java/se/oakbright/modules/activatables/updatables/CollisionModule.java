@@ -2,7 +2,6 @@ package se.oakbright.modules.activatables.updatables;
 
 import android.os.Build;
 
-import se.oakbright.Buildable;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.helpers.Collidable;
 import se.oakbright.modules.helpers.Direction;
@@ -14,13 +13,11 @@ import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.Bounding;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.ServiceProvider;
-import se.oakbright.resources.TypeResource;
 
 /**
  * Created by hampuse on 2015-06-26.
  */
 public class CollisionModule extends Module implements Collidable {
-    //private boolean isAbleToCollide;
     private int onCollisionGiveDamage;
 
     private Health health;
@@ -30,39 +27,19 @@ public class CollisionModule extends Module implements Collidable {
     public Direction direction;
     public Bounding bounding;
 
-    /*public CollisionModule(){
-        this.isAbleToCollide = false;
-    }*/
-
     public void collideWith(CollisionModule other) {
         health.tryDecreaseHp(other.onCollisionGiveDamage());
         //calculate collision energy and direction change...
         //TODO mer intelligent krock
     }
 
-    /*public void setCollisionGiveDamage(int damage){
-        this.onCollisionGiveDamage = damage;
-    }*/
-
     protected int onCollisionGiveDamage() {
         return this.onCollisionGiveDamage;
     }
 
-    /*void setIsAbleToCollide(boolean b){
-        this.isAbleToCollide = b;
-    }*/
-
     public boolean isAbleToCollideWith(CollisionModule battleObject) {
         return true; //TODO  //this.isAbleToCollide;
     }
-
-    /*public void setHealth(Health health) {
-        this.health = health;
-    }*/
-
-    /*public void setPositioner(Positioner positioner) {
-        this.positioner = positioner;
-    }*/
 
     @Override
     public void activate() {
@@ -79,6 +56,12 @@ public class CollisionModule extends Module implements Collidable {
         return false;
     }
 
+    public interface Resource{
+    //TODO
+    }
+
+    //TODO REPLACE:
+    /*
     public static class Builder extends Buildable<CollisionModule>{
         public int onCollisionGiveDamage;
         public Buildable<Health> healthBuilder;
@@ -100,7 +83,7 @@ public class CollisionModule extends Module implements Collidable {
             collisionModule.bounding = boundingBuilder.getBuilt();
             return collisionModule;
         }
-    }
+    }*/
     /*private static void thoroughCheckForCollision(CollisionModule smallerObject1, CollisionModule biggerObject2){
         //--Thorough collision detection --//	//The thorough collision detection compares points from ob1, with the radius of ob2:s border at the angle in question.
         float[] ob1Points = smallerObject1.shape.getBoundingPointsKeyPoints();
@@ -124,7 +107,4 @@ public class CollisionModule extends Module implements Collidable {
         }
     }*/
 
-    public interface Resource extends TypeResource<CollisionModule>{
-
-    }
 }

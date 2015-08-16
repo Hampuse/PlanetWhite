@@ -7,9 +7,6 @@ import se.oakbright.battleobjects.BattleObject;
  */
 public abstract class Blueprints<T> { // extends BattleObject> {
     T built;
-    /*public Blueprints(ObjectResource<T> resource){
-        res = resource;
-    }*/
 
     public T getBuilt(){
         if(built == null){

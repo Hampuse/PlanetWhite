@@ -27,7 +27,7 @@ public class Aim implements InternalPoint {
         this.xOffsetFromTargetObject = xOffsetFromTargetObject;
         this.yOffsetFromTargetObject = yOffsetFromTargetObject;
     }
-	/*	public void notifyIsActiveChangeIn(IsActiveObservable subject) {
+	/*	public void notifyIsDeactivated(IsActiveObservable subject) {
 			if( !subject.isActive() && this.targetObject == subject ){	//If the targetObject get inactivated, delete this aim
 				this = null;
 			}

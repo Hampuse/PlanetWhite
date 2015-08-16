@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.oakbright.battleobjects.ShipTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-14T06:22:45" hostname="hampuse-Dator" time="0.034">
-  <properties/>
-  <testcase name="verify_that_states_activeModules_are_correct" classname="se.oakbright.battleobjects.ShipTest" time="0.034"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

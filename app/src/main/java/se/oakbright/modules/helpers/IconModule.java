@@ -2,9 +2,7 @@ package se.oakbright.modules.helpers;
 
 import android.graphics.Bitmap;
 
-import se.oakbright.Buildable;
 import se.oakbright.icons.IconCreater;
-import se.oakbright.icons.IconIdBlueprint;
 import se.oakbright.icons.InIcon;
 
 /**
@@ -12,8 +10,14 @@ import se.oakbright.icons.InIcon;
  */
 public class IconModule {
     private InIcon icon;
-    public IconIdBlueprint iconIdBlueprint;
+    //public IconIdBlueprint iconIdBlueprint;
     private boolean hasBeenInitialized;
+
+    public Bitmap getBitmap(){
+        return icon.getBitmap();
+    }
+
+
     //private boolean hasBeenInitialized = false;
 
    // protected IconModule(IconIdHolder iconIdHolder){
@@ -40,10 +44,9 @@ public class IconModule {
         hasBeenInitialized = true;
     }*/
 
-    public Bitmap getBitmap(){
-        return icon.getBitmap();
-    }
 
+
+    /*
     public static class Builder extends Buildable<IconModule> {
         public IconCreater iconCreater;
 
@@ -54,7 +57,7 @@ public class IconModule {
             verifyNotNull(iconModule.icon);
             return iconModule;
         }
-    }
+    }*/
     /*public void setIconIdBlueprint(IconIdBlueprint iconIdBlueprint){
         this.iconIdBlueprint = iconIdBlueprint;
     }*/

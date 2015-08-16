@@ -1,6 +1,6 @@
 package se.oakbright.modules.activatables.updatables;
 
-import se.oakbright.battleobjects.Launchable;
+import se.oakbright.battleobjects.ship.ShipCommands;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.Module;
 
@@ -13,7 +13,7 @@ public class PathCreator extends Module {
     private boolean isReadyToDrawPath;
     private PathModule path;
     private Positioner positioner;
-    private Launchable launchable;
+    private ShipCommands launchableCommand;
 
 
     @Override
@@ -74,7 +74,7 @@ public class PathCreator extends Module {
     private void setDrawingPath(boolean b) {
         this.isDrawingPath = b;
         if(b){
-            launchable.commandLaunch();
+            launchableCommand.launch();
         }
     }
 

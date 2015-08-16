@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.Log;
 
-import se.oakbright.Buildable;
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.IconModule;
 import se.oakbright.modules.internalpoints.InternalPoint;
@@ -15,16 +14,10 @@ import se.oakbright.planetwhite.BattleSurface;
  * Created by hampuse on 2015-06-24.
  */
 public class IconRenderer extends RenderableModuleMiddleLayer implements Renderable {
-	//private InIcon icon;
 	private IconModule iconModule;
-	//private Positioner positioner;
 	private InternalPoint pivotPoint, cornerPoint;
 	private Direction direction;
 
-
-    //public IconRenderer(InIcon icon) {
-      //  this.icon = icon;
-    //}
 	public IconRenderer(IconRenderer.Resource r){
 		iconModule = r.getIconModule();
 		pivotPoint = r.getPivotPoint();
@@ -32,32 +25,20 @@ public class IconRenderer extends RenderableModuleMiddleLayer implements Rendera
 	}
 
     public void render(Canvas canvas, BattleSurface battleSurface) {		//draws the ship on canvas. called from render() in MainGameSurface.
-        //if(this.isHiglighted){	//TODO should be implemented somehow
-        //	this.icon.drawHighlightMark(canvas, this.x, this.y);
-        //}
-
-        //debugDrawBoundingCircleAndSquare(canvas, battleSurface);
-
         if(iconModule.getBitmap() != null){
             Paint paint = new Paint();
             paint.setAntiAlias(true);
             paint.setFilterBitmap(true);
             canvas.drawBitmap(iconModule.getBitmap(), battleSurface.createBitmapMatrixPxl(cornerPoint, pivotPoint, direction), paint);
         }
-
-        // debugDrawMiddleAndCornerPoints(canvas, battleSurface);
-        // debugDrawBoundingPointsIfShip(canvas, battleSurface);
     }
-	/*public void setIcon(InIcon icon){
-		this.icon = icon;
+
+	/*public void setIconModule(IconModule iconModule){
+		this.iconModule = iconModule;
 	}*/
 
-	public void setIconModule(IconModule iconModule){
-		this.iconModule = iconModule;
-	}
 
-
-
+	/*
 	// DEBUG FUNCTIONS: //
 	private void debugDrawBoundingCircleAndSquare(int x, int y, Canvas canvas, BattleSurface battleSurface){
         //Log.d("vaer","draw object at x=" +this.x+ " y="+ this.y + "matrix="+this.orientationMatrixPxl);
@@ -107,7 +88,7 @@ public class IconRenderer extends RenderableModuleMiddleLayer implements Rendera
 			}
 		}
 		*/
-    }
+    //}
 
 	/*public static class Builder extends Buildable<IconRenderer> {
 		public IconModule.Builder iconModuleBuilder;

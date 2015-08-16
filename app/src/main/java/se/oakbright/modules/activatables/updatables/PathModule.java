@@ -3,7 +3,6 @@ package se.oakbright.modules.activatables.updatables;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import se.oakbright.Buildable;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.Module;
@@ -126,7 +125,8 @@ public class PathModule extends Module {   //TODO NEED TO EXTENDS SOMETHING ELSE
     public void deactivate() {
 
     }
-
+//TODO REPLACE:
+    /*
     public static class Builder extends Buildable<PathModule> {
         public Buildable<Positioner> positionerBuilder;
         public Buildable<Mover> moverBuilder;
@@ -138,5 +138,5 @@ public class PathModule extends Module {   //TODO NEED TO EXTENDS SOMETHING ELSE
             pathModule.positioner = positionerBuilder.getBuilt();
             return pathModule;
         }
-    }
+    }*/
 }

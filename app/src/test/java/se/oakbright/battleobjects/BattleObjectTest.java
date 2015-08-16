@@ -1,5 +1,18 @@
 package se.oakbright.battleobjects;
 
+import org.junit.Before;
+import org.junit.Test;
+
+import se.oakbright.battleobjects.statemachine.CommandReceiverHolder;
+import se.oakbright.battleobjects.statemachine.State;
+import se.oakbright.battleobjects.statemachine.StateMachine;
+import se.oakbright.modules.helpers.Direction;
+import se.oakbright.modules.helpers.Health;
+import se.oakbright.modules.helpers.Positioner;
+import se.oakbright.modules.helpers.Shape;
+import se.oakbright.planetwhite.BattleTeam;
+
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -7,80 +20,63 @@ import static org.mockito.Mockito.verify;
 /**
  * Created by hampuse on 2015-07-12.
  */
-//TODO make
-    /*
+
 public class BattleObjectTest {
     BattleObject battleObject;
-    static Health health;
-    static StateMachine<State<BattleObjectInterface>> stateMachine = mock(StateMachine.class);
-    //static StateMachine<State<BattleObjectInterface>> stateMachine2 = stateMachine;
+    Health health = new Health(1);
+    CommandReceiverHolder commandHandler = mock(CommandReceiverHolder.class);
 
     @Before
     public void setup(){
-        TypeBuilder<BattleObjectFake> battleObjectBuilder = new TypeBuilder<BattleObjectFake>(getBattleObjectFakeResource());
-        //BattleObjectFake.Builder battleObjectBuilder = new BattleObjectFake.Builder();
-       battleObject = battleObjectBuilder.getBuilt();
+        battleObject = new BattleObject(new FakeResourceImpl());
     }
 
-    public BattleObjectFake.Resource getBattleObjectFakeResource(){
-        return new BattleObjectFake.Resource(){
-
-        }
+    public static void Test(BattleObject ob){    //To be called by other test files.
+        //assertNotNull(ob.shape);
+        //assertNotNull(ob.health);
+        assertNotNull(ob.positioner);
+        //assertNotNull(ob.direction);
+        //assertNotNull(ob.team);
+        assertNotNull(ob.commandHandler);
     }
 
     @Test
     public void test_OutOfHpObserver_deactivates_battleobject(){
-        State state = mock(State.class);
-        CommandHandler commandHandler = mock(CommandHandler.class);
-        when(stateMachine.getCurrentState()).thenReturn(state);
-        when(state.getCommandHandler()).thenReturn(commandHandler);
-
         health.tryDecreaseHp(1);    //Should make the health zero, which should call the notify on
-        // the observer injected by battleobject, which should call deactivate() on the current commandHandler.
-        //verify(health).addOutOfHpObserver(Matchers.<ModuleObserver<Health>>any());
-
+                                    // the observer injected by battleobject, which should result in a deactivate() call on the commandHandler. and IAOBservers
         verify(commandHandler).deactivate();
+        //TODO verify(iAObserver.notified);
     }
 
-    public static class BattleObjectFake extends BattleObject{
-
-        public class TResource extends BattleObject.BattleObjectResource implements TypeResource<BattleObjectFake> {
-            @Override
-            public BattleObjectFake createNewOfType() {
-                return new BattleObjectFake(this);
-            }
+    public class FakeResourceImpl implements BattleObject.BattleObjectResource{
+        @Override
+        public Shape getShape() {
+            return null;
         }
 
-        public BattleObjectFake(TypeResource<TResource> r){}
+        @Override
+        public Health getHealth() {
+            return health;
+        }
 
-        //TODO resource
-        /*public static class Builder extends BattleObject.Builder<BattleObjectFake,BattleObjectInterface>{
-            public Builder(){
-                super();
+        @Override
+        public Positioner getPositioner() {
+            return null;
+        }
 
-                healthBuilder = new Health.Builder(); //mock(Health.Builder.class);
-                healthBuilder.startHp = 1;
-                BattleObjectTest.health = healthBuilder.getBuilt();
-                //when(healthBuilder.getBuilt()).thenReturn(BattleObjectTest.health);
-                stateMachineBuilder = mock(StateMachine.Builder.class); //TODO NOT SHIP//StateMachine.Builder.class);
-                BattleObjectTest.stateMachine = stateMachineBuilder.getBuilt();
-                when(stateMachineBuilder.getBuilt()).thenReturn(BattleObjectTest.stateMachine);
-                shapeBuilder = mock(Shape.Builder.class);
-                when(shapeBuilder.getBuilt()).thenReturn(mock(Shape.class));
-                team = mock(BattleTeam.class);
-            }
+        @Override
+        public Direction getDirection() {
+            return null;
+        }
 
+        @Override
+        public BattleTeam getTeam() {
+            return null;
+        }
 
-            @Override
-            protected BattleObjectFake getType() {
-                return new BattleObjectFake();
-            }
-
-            @Override
-            protected void beforeBuildNew() {
-
-            }
-
-        }*/
-    //}
-//}
+        @Override
+        public CommandReceiverHolder getCommandHandler() {
+            return commandHandler;
+        }
+    }
+}

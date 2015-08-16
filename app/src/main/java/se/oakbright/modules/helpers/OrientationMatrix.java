@@ -2,7 +2,6 @@ package se.oakbright.modules.helpers;
 
 import android.graphics.Matrix;
 
-import se.oakbright.Buildable;
 import se.oakbright.modules.internalpoints.InternalPoint;
 
 /**
@@ -41,6 +40,7 @@ public class OrientationMatrix {
         return pointsTemp;
     }
 
+    /*
     public static class Builder extends Buildable<OrientationMatrix> {
         public Buildable<? extends InternalPoint> cornerPointBuilder;
         public Buildable<? extends InternalPoint> pivotPointBuilder;
@@ -54,5 +54,5 @@ public class OrientationMatrix {
             orientationMatrix.direction = directionBuilder.getBuilt();
             return orientationMatrix;
         }
-    }
+    }*/
 }

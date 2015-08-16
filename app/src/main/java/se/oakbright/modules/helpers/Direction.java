@@ -1,6 +1,5 @@
 package se.oakbright.modules.helpers;
 
-import se.oakbright.Buildable;
 import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.calculation.DirectionCalculation;
 
@@ -25,6 +24,8 @@ public class Direction {
         return (float) ((this.direction -90)*Math.PI/180);
     }
 
+    //TODO
+    /*
     public static class Builder extends Buildable<Direction>{
         public Buildable<? extends InternalPoint> positionBuilder;
         @Override
@@ -33,5 +34,5 @@ public class Direction {
             direction.position = positionBuilder.getBuilt();
             return direction;
         }
-    }
+    }*/
 }

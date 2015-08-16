@@ -144,15 +144,9 @@ public class BattleModel {
 		this.battleClock.halt();
 	}
 	
-	void setSlowMotionBattleClock(){	//TODO DOESN*T WORK
-		this.battleClock.setSlowMotion();
-	}
-	
 	void resumeBattleClock(){
 		this.battleClock.resume();
 	}
-
-
 	
 	public void addUpdatable(Updatable obj){
 		this.updatablesChanges.put(obj, true);
