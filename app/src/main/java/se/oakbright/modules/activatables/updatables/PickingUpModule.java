@@ -2,12 +2,17 @@ package se.oakbright.modules.activatables.updatables;
 
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.Module;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-26.
  */
 public class PickingUpModule extends Module {
     private BattleObject pickedUpObject = null;
+
+    public PickingUpModule(Resource r){
+        super(r);
+    }
 
    //TODO
     /*protected boolean tryPickUpObject(PickUpObject pickedUpObject){

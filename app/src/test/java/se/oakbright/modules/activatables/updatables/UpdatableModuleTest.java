@@ -6,6 +6,7 @@ import org.junit.Test;
 import se.oakbright.modules.activatables.renderables.IconRenderer;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resource.Resource;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -19,7 +20,7 @@ public class UpdatableModuleTest {
 
     @Before
     public void setup(){
-        updatableModule = new UpdatableModule(){
+        updatableModule = new UpdatableModule(new Resource()){  //TODO empty resource now
             @Override
             public void update() {
             }

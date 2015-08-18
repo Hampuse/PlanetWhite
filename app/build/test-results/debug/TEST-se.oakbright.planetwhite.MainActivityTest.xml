@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="se.oakbright.planetwhite.MainActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-16T09:07:03" hostname="hampuse-Dator" time="0.019">
+<testsuite name="se.oakbright.planetwhite.MainActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-18T19:00:35" hostname="hampuse-Dator" time="0.02">
   <properties/>
-  <testcase name="test" classname="se.oakbright.planetwhite.MainActivityTest" time="0.019"/>
+  <testcase name="test" classname="se.oakbright.planetwhite.MainActivityTest" time="0.02"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -8,6 +8,8 @@ import android.graphics.Point;
 import se.oakbright.modules.helpers.Health;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.planetwhite.BattleSurface;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
 
 /**
  * Created by hampuse on 2015-06-26.
@@ -15,6 +17,12 @@ import se.oakbright.planetwhite.BattleSurface;
 public class HealthIndicatorRenderer extends RenderableModuleForegroundLayer {
     Health health;
     Positioner positioner;
+
+    public HealthIndicatorRenderer(Resource r){
+        super(r);
+        health = r.getThe(HEALTH);
+        positioner = r.getThe(POSITIONER);
+    }
 
     public void render(Canvas canvas, BattleSurface battleSurface) {
         //-- HEALTH INDICATOR --//

@@ -1,5 +1,7 @@
 package se.oakbright.battleobjects.statemachine;
 
+import se.oakbright.modules.Module;
+
 /**
  * Created by hampuse on 2015-06-26.
  */

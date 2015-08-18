@@ -1,15 +1,24 @@
 package se.oakbright.modules.internalpoints;
 
+import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Shape;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
 
 /**
  * Created by hampuse on 2015-06-27.
  */
 
-public class CornerPoint implements InternalPoint{
+public class CornerPoint extends InternalPoint{
     public Shape shape;
     private Positioner positioner;
+
+    public CornerPoint(Resource r){
+        super(r);
+        this.shape = r.getThe(SHAPE);
+        this.positioner = r.getThe(POSITIONER);
+    }
 
     @Override
     public int x() {
@@ -19,6 +28,14 @@ public class CornerPoint implements InternalPoint{
     @Override
     public int y() {
         return (int)( positioner.getY() - ((float) shape.getHeightDst()/2) );
+    }
+
+    @Override
+    public void activate() {
+    }
+
+    @Override
+    public void deactivate() {
     }
 
     /*public final void setShape(Shape shape){

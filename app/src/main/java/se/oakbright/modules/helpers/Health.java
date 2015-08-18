@@ -10,18 +10,25 @@ import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.Module;
 import se.oakbright.modules.ModuleObserver;
 import se.oakbright.modules.activatables.Activatable;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-26.
  */
 public class Health extends Module{
-    private final int startHp;
+    private int maxHp;
     private int hp;
     private List<ModuleObserver<Health>> outOfHpObservers = new LinkedList<ModuleObserver<Health>>();
     //private Activatable host;
 
-    public Health(int hp){
-        this.startHp = hp;
+    public Health(Resource r){
+        super(r);
+        this.maxHp = 1;
+        this.hp = 1;
+    }
+
+    public void setFullHp(int hp){
+        this.maxHp = hp;
         this.hp = hp;
     }
 
@@ -35,7 +42,7 @@ public class Health extends Module{
     }
 
     public int getPercentOfHealthLeft() {
-        return 100*this.hp/this.startHp;
+        return 100*this.hp/this.maxHp;
     }
 
     /*public void setHost(Activatable host){

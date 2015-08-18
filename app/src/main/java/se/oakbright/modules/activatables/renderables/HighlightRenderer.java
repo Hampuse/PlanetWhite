@@ -7,7 +7,8 @@ import android.graphics.Paint;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Shape;
 import se.oakbright.planetwhite.BattleSurface;
-
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
 /**
  * Created by hampuse on 2015-06-27.
  */
@@ -15,9 +16,14 @@ public final class HighlightRenderer extends RenderableModuleBackgroundLayer imp
     private Positioner positioner;
     private Shape shape;
 
-    public void setPositioner(Positioner positioner){
-        this.positioner = positioner;
+    public HighlightRenderer(Resource r){
+        super(r);
+        positioner = r.getThe(POSITIONER);
     }
+
+    /*public void setPositioner(Positioner positioner){
+        this.positioner = positioner;
+    }*/
 
     @Override
     public void render(Canvas canvas, BattleSurface battleSurface) {

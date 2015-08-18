@@ -1,17 +1,12 @@
 package se.oakbright.modules.activatables.updatables;
 
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.util.Log;
-
 import se.oakbright.Frames.Frame;
-import se.oakbright.RuntimeTests;
-import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.helpers.Speed;
-import se.oakbright.modules.activatables.Activatable;
-import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
+
 
 /**
  * Created by hampuse on 2015-06-25.
@@ -39,19 +34,12 @@ public class Mover extends UpdatableModule {
     private Direction direction;
     //TODO private TrackerModule trackerModule;
 
-    /*public Mover(Frame movingFrame, int velocity){
-        this.movingFrame = movingFrame;
-        this.goVelocity = velocity;
-        this.speed = new Speed(velocity);
-        this.pathPaint.setColor(Color.WHITE);
-        this.pathPaint.setStyle(Paint.Style.STROKE);
-        this.pathPaint.setStrokeWidth(2);
-        this.pathPaint.setAntiAlias(true);
-    }*/
-
-    /*public Mover(Mover.Builder r){
-
-    }*/
+   public Mover(Resource r){
+       super(r);
+       this.speed = new Speed(r);
+       this.positioner = r.getThe(POSITIONER);
+      // this.movingFrame = get(MOVING_FRAME);
+   }
 
     public void update() {
         //TODO

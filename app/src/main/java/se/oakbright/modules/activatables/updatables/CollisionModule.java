@@ -1,7 +1,5 @@
 package se.oakbright.modules.activatables.updatables;
 
-import android.os.Build;
-
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.helpers.Collidable;
 import se.oakbright.modules.helpers.Direction;
@@ -11,8 +9,8 @@ import se.oakbright.modules.helpers.Shape;
 import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.modules.Module;
 import se.oakbright.modules.helpers.Bounding;
-import se.oakbright.planetwhite.BattleModel;
-import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
 
 /**
  * Created by hampuse on 2015-06-26.
@@ -27,6 +25,15 @@ public class CollisionModule extends Module implements Collidable {
     public Direction direction;
     public Bounding bounding;
 
+    public CollisionModule(Resource r){
+        super(r);
+        health = r.getThe(HEALTH);
+        positioner = r.getThe(POSITIONER);
+        shape = r.getThe(SHAPE);
+        middlePoint = r.getThe(MIDDLE_POINT);
+        direction = r.getThe(DIRECTION);
+        bounding = r.getThe(BOUNDING);
+    }
     public void collideWith(CollisionModule other) {
         health.tryDecreaseHp(other.onCollisionGiveDamage());
         //calculate collision energy and direction change...
@@ -56,9 +63,6 @@ public class CollisionModule extends Module implements Collidable {
         return false;
     }
 
-    public interface Resource{
-    //TODO
-    }
 
     //TODO REPLACE:
     /*

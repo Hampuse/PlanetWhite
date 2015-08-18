@@ -3,6 +3,7 @@ package se.oakbright.modules.activatables.updatables;
 import se.oakbright.Frames.Frame;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.helpers.Positioner;
+import se.oakbright.resource.Resource;
 
 /**
  * ObMoverBouncer extends ObMover to "bounce" (change direction) on borders of the moving frame, so that they don't go outside the field.
@@ -11,6 +12,10 @@ import se.oakbright.modules.helpers.Positioner;
  */
 public class MoverBouncer extends Mover {
 private static final String TAG = MoverBouncer.class.getSimpleName();
+
+    public MoverBouncer(Resource r){
+        super(r);
+    }
 
    //TODO
    /* public MoverBouncer(Positioner positionerPart, BattleObject host, Frame movingFrame, int velocity) {

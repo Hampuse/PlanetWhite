@@ -2,13 +2,16 @@ package se.oakbright.modules.helpers;
 
 import android.util.Log;
 
+import se.oakbright.modules.Module;
 import se.oakbright.planetwhite.GameActivity;
 import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resource.Key;
+import se.oakbright.resource.Resource;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 
-public class Speed {
+public class Speed extends Module {	//TODO maybe don't need to be a Module?
 	private static final String TAG = Speed.class.getSimpleName();
 	public static final int STANDING_STILL = 0;
 
@@ -33,6 +36,11 @@ public class Speed {
 		this.setVelocity(velocity);
 	}*/
 
+	public Speed(Resource r){
+		super(r);
+		this.direction = r.getThe(Key.DIRECTION);
+		this.velocity = 100000;
+	}
 	private void updateVelocityComponents(){
 		this.yv = (int) (Math.sin(direction.radians())*velocity);
         this.xv = (int) (Math.cos(direction.radians())*velocity);
@@ -100,4 +108,14 @@ public class Speed {
 			return speed;
 		}
 	}*/
+
+	@Override
+	public void activate() {
+
+	}
+
+	@Override
+	public void deactivate() {
+
+	}
 }

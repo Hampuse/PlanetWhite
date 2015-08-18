@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import se.oakbright.modules.internalpoints.CornerPoint;
 import se.oakbright.modules.internalpoints.MiddlePoint;
 import se.oakbright.modules.helpers.Positioner;
+import se.oakbright.resource.Resource;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -24,7 +25,7 @@ public class PositionerTest {
     @Before
     public void setUp(){
         //MockitoAnnotations.initMocks(this);
-        positioner = new Positioner();
+        positioner = new Positioner(new Resource());
        // positioner.setCornerPoint(cornerPointMock);
        // positioner.setPivotPoint(middlePointMock);
     }

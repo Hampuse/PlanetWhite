@@ -10,6 +10,7 @@ import se.oakbright.battleobjects.IsActiveObserver;
 import se.oakbright.calculation.DirectionCalculation;
 import se.oakbright.modules.internalpoints.Aim;
 import se.oakbright.modules.internalpoints.InternalPoint;
+import se.oakbright.resource.Resource;
 
 public abstract class Weapon extends UpdatableModule implements IsActiveObserver{
 	private static final String TAG = Weapon.class.getSimpleName();
@@ -21,20 +22,14 @@ public abstract class Weapon extends UpdatableModule implements IsActiveObserver
 	protected Direction direction;
 	protected InternalPoint mouthPosition;
 
-	/*public Weapon(Weapon.Builder r){
-	asdfa
-	}*/
-
-	public interface Resource {
-		void getTest();
-	}
-
-	public Weapon( int aimScope, int reloadTime){
-		timeAtLastReload = 0;
+	public Weapon(Resource r){
+		super(r);
 		this.aim = null;
-		this.AIM_SCOPE = aimScope;
-		this.RELOAD_TIME = reloadTime;
+		this.AIM_SCOPE = 90;
+		this.RELOAD_TIME = 0;
 	}
+
+	//TODO make it possible to set stuff
 	
 	public void tryFire(){
 		if(this.aim != null){

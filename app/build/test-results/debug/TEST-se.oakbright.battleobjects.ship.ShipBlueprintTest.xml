@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="se.oakbright.battleobjects.ship.ShipBlueprintTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-08-18T19:00:34" hostname="hampuse-Dator" time="0.04">
+  <properties/>
+  <testcase name="test_correct_battleObject" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.034"/>
+  <testcase name="test_can_get_Direction" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.0"/>
+  <testcase name="test_can_get_Icon" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.001"/>
+  <testcase name="test_can_get_commandHandler" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.001"/>
+  <testcase name="test_can_get_Shape" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.001"/>
+  <testcase name="test_can_get_Health" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.001"/>
+  <testcase name="test_can_get_Positioner" classname="se.oakbright.battleobjects.ship.ShipBlueprintTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

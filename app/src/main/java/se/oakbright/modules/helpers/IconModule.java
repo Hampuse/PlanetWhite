@@ -4,19 +4,34 @@ import android.graphics.Bitmap;
 
 import se.oakbright.icons.IconCreater;
 import se.oakbright.icons.InIcon;
+import se.oakbright.modules.Module;
+import se.oakbright.resource.Key;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-07-15.
  */
-public class IconModule {
+public class IconModule extends Module {
     private InIcon icon;
     //public IconIdBlueprint iconIdBlueprint;
-    private boolean hasBeenInitialized;
+    //private boolean hasBeenInitialized;
 
+    public IconModule(Resource r){
+        super(r);
+        icon = r.getThe(Key.ICON);
+    }
     public Bitmap getBitmap(){
         return icon.getBitmap();
     }
 
+    @Override
+    public void activate() {
+
+    }
+    @Override
+    public void deactivate() {
+
+    }
 
     //private boolean hasBeenInitialized = false;
 

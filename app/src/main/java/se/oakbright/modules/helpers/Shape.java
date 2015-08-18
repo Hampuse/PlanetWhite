@@ -1,17 +1,28 @@
 package se.oakbright.modules.helpers;
 
-import android.util.Log;
-
-import se.oakbright.RuntimeTests;
-import se.oakbright.icons.IconCreater;
 import se.oakbright.icons.InIcon;
+import se.oakbright.modules.Module;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
+
 
 /**
  * Created by hampuse on 2015-06-26.
  */
-public class Shape {
+public class Shape extends Module {
     private InIcon icon;
     private Positioner positioner;
+
+    /*public Shape(){ //TODO AWAY, just to try
+        super(new Resource());
+    }*/
+
+    public Shape(Resource r){
+        super(r);
+        //throw new RuntimeException("test");
+        icon = r.getThe(ICON);
+        positioner = r.getThe(POSITIONER);
+    }
 
     public float[] getBoundingPointsKeyPoints(){
         return this.icon.getBoundingPointsKeyCoords();
@@ -35,6 +46,16 @@ public class Shape {
 
     public int getHeightDst(){
         return icon.getHeightDst();
+    }
+
+    @Override
+    public void activate() {
+
+    }
+
+    @Override
+    public void deactivate() {
+
     }
 
     //TODO REPLACE:

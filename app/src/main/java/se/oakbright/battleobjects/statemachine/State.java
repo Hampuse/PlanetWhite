@@ -1,6 +1,7 @@
 package se.oakbright.battleobjects.statemachine;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import se.oakbright.modules.Module;
@@ -57,5 +58,11 @@ public class State<C> {
             throw new IllegalArgumentException();
         }
         this.activeModules.add(module);
+    }
+
+    public void addActiveModules(List<Module> modules){
+        for(Module module: modules){
+            addActiveModule(module);
+        }
     }
 }

@@ -2,15 +2,12 @@ package se.oakbright.setup;
 
 import java.io.Serializable;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.util.Log;
 
-import se.oakbright.Blueprints;
+import se.oakbright.Blueprint;
 import se.oakbright.battlecontroller.TeamAiController;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.planetwhite.BattleModel;
-import se.oakbright.planetwhite.BattleSurface;
 import se.oakbright.planetwhite.BattleTeam;
 
 public class TeamSetup implements Serializable{
@@ -22,7 +19,7 @@ public class TeamSetup implements Serializable{
 	private final Team team;
 
 	//TODO private MotherShip.Blueprint motherShipBP = null;
-	private Blueprints<BattleObject> motherShipBP = null;
+	private Blueprint<BattleObject> motherShipBP = null;
 
 	private int motherShipX;
 	private int motherShipY;

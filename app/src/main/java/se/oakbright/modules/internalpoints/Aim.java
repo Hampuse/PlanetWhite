@@ -5,7 +5,7 @@ import se.oakbright.battleobjects.BattleObject;
 /**
  * Created by hampuse on 2015-08-06.
  */
-public class Aim implements InternalPoint {
+public class Aim implements Point {
 
     private final int x;
     private final int y;

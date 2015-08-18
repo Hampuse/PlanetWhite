@@ -3,14 +3,21 @@ package se.oakbright.modules.helpers;
 //import android.graphics.Matrix;
 
 import se.oakbright.Frames.Frame;
+import se.oakbright.modules.Module;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-24.
  */
-public class Positioner {
+public class Positioner extends Module{ //Module<BasicResource> { //
     private int x;
     private int y;
-    private Frame movingFrame;
+    private Frame movingFrame;//TODO SHOULD not be here, should be an own module
+
+    public Positioner(Resource r){ //<BasicKeys>
+        super(r);
+       // movingFrame = r.get("movingFrame");
+    }
 
     public void setPosition(int x, int y) {
         this.x = x;
@@ -42,9 +49,17 @@ public class Positioner {
         return this.y;
     }
 
-    public void setFrame(Frame movingFrame){
-        this.movingFrame = movingFrame;
+    @Override
+    public void activate() {
     }
+
+    @Override
+    public void deactivate() {
+    }
+
+    /*public void setFrame(Frame movingFrame){
+        this.movingFrame = movingFrame;
+    }*/
 
     /*
     public static class Builder extends Buildable<Positioner> {

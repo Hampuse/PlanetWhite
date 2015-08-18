@@ -4,18 +4,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import se.oakbright.battleobjects.statemachine.CommandReceiverHolder;
-import se.oakbright.battleobjects.statemachine.State;
-import se.oakbright.battleobjects.statemachine.StateMachine;
-import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.Health;
-import se.oakbright.modules.helpers.Positioner;
-import se.oakbright.modules.helpers.Shape;
-import se.oakbright.planetwhite.BattleTeam;
+import se.oakbright.resource.Resource;
 
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static se.oakbright.resource.Key.*;
 
 /**
  * Created by hampuse on 2015-07-12.
@@ -23,20 +20,29 @@ import static org.mockito.Mockito.verify;
 
 public class BattleObjectTest {
     BattleObject battleObject;
-    Health health = new Health(1);
     CommandReceiverHolder commandHandler = mock(CommandReceiverHolder.class);
+    Health health;
 
     @Before
     public void setup(){
-        battleObject = new BattleObject(new FakeResourceImpl());
+        health = new Health(getMockedResource());
+        health.setFullHp(1);
+        battleObject = new BattleObject(getMockedResource());
+    }
+
+    private Resource getMockedResource(){
+        Resource r = mock(Resource.class);
+        when(r.getThe(COMMAND_HANDLER)).thenReturn(commandHandler);
+        when(r.getThe(HEALTH)).thenReturn(health);
+        return r;
     }
 
     public static void Test(BattleObject ob){    //To be called by other test files.
-        //assertNotNull(ob.shape);
-        //assertNotNull(ob.health);
+        assertNotNull(ob.shape);
+        assertNotNull(ob.health);
         assertNotNull(ob.positioner);
-        //assertNotNull(ob.direction);
-        //assertNotNull(ob.team);
+        assertNotNull(ob.direction);
+        assertNotNull(ob.team);
         assertNotNull(ob.commandHandler);
     }
 
@@ -47,7 +53,7 @@ public class BattleObjectTest {
         verify(commandHandler).deactivate();
         //TODO verify(iAObserver.notified);
     }
-
+/*
     public class FakeResourceImpl implements BattleObject.BattleObjectResource{
         @Override
         public Shape getShape() {
@@ -78,5 +84,5 @@ public class BattleObjectTest {
         public CommandReceiverHolder getCommandHandler() {
             return commandHandler;
         }
-    }
+    }*/
 }

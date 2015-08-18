@@ -8,6 +8,8 @@ import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.Module;
 import se.oakbright.calculation.DirectionCalculation;
 import se.oakbright.calculation.Point;
+import se.oakbright.resource.Key;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-28.
@@ -22,11 +24,13 @@ public class PathModule extends Module {   //TODO NEED TO EXTENDS SOMETHING ELSE
     private float distanceToNextPoint;
     public Point nextPoint;
 
-    private Mover mover;
-    private Positioner positioner;
+    private final Mover mover;
+    private final Positioner positioner;
 
-    public PathModule(){
-
+    public PathModule(Resource r){
+        super(r);
+        this.mover = r.getThe(Key.MOVER);
+        this.positioner = r.getThe(Key.POSITIONER);
         this.setPath(new ConcurrentLinkedQueue<Point>());
         this.pathTail = new Point(0,0);
         this.nextPoint = null;

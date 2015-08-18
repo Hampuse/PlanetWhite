@@ -3,14 +3,16 @@ package se.oakbright.weapons1;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.activatables.updatables.Weapon;
 import se.oakbright.calculation.DirectionCalculation;
+import se.oakbright.resource.Resource;
 
 public class BulletLauncher extends Weapon{
 	public final static int aimScope = 45;
 	public final static int reloadTime = 200;
 	private int spread;
 
-	public BulletLauncher(BattleObject host) {
-		super(aimScope, reloadTime);
+	public BulletLauncher(Resource r) {
+		super(r);
+		//TODO super(aimScope, reloadTime);
 		this.spread = 6;
 	}
 

@@ -1,7 +1,6 @@
 package se.oakbright.battlecontroller;
 
-import se.oakbright.Blueprints;
-import se.oakbright.battleobjects.ship.ShipBlueprints;
+import se.oakbright.battleobjects.ship.ShipBlueprint;
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.battleobjects.ship.ShipCommands;
 import se.oakbright.planetwhite.BattleModel;
@@ -13,14 +12,15 @@ import se.oakbright.planetwhite.BattleTeam;
 public class DebugBaController extends TeamAiController {
     BattleObject<ShipCommands> ship1;
     BattleObject<ShipCommands> ship2;
+    //BattleTeam team;
 
     public DebugBaController(BattleModel battleModel,BattleTeam team){
         super(battleModel,team);
     }
     private boolean firstTime = true;
 
-    public static DebugBaController.Blueprint getBlueprint(){
-        return new DebugBaController.Blueprint(DebugBaController.class);
+    public static Blueprint getBlueprint(){
+        return new Blueprint(DebugBaController.class);
     }
 
     @Override
@@ -58,8 +58,8 @@ public class DebugBaController extends TeamAiController {
     }*/
 
     private BattleObject<ShipCommands> createNewShip(){
-        Blueprints<BattleObject<ShipCommands>> shipBlueprints = new ShipBlueprints();
-        return shipBlueprints.getBuilt();
+        se.oakbright.Blueprint<BattleObject<ShipCommands>> shipBlueprint = new ShipBlueprint(this.team);
+        return shipBlueprint.getBuilt();
     }
 
     private void launchShip(BattleObject<ShipCommands> ship){

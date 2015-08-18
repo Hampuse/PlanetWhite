@@ -1,17 +1,22 @@
 package se.oakbright.modules.activatables.selectables;
 
 import se.oakbright.modules.Module;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-26.
  */
 public class SelectionModule extends Module {
     private boolean selected;    // if ship is selected
-    private Module highLight;
+    private Module highLight;   //TODO maybe highlight should not be a Module, but something else?
 
    // public void setHighlighted(boolean b) {
    //     this.highLight.activate(); //this.isHighlighted = b;
    // }
+
+    public SelectionModule(Resource r){
+        super(r);
+    }
 
     public boolean isSelected() {
         if(selected){

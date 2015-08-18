@@ -8,6 +8,8 @@ import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.activatables.updatables.PathModule;
 import se.oakbright.calculation.Point;
 import se.oakbright.planetwhite.BattleSurface;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
 
 /**
  * Created by hampuse on 2015-06-28.
@@ -17,7 +19,10 @@ public class PathRenderer extends RenderableModuleBackgroundLayer {
     private PathModule path;
     private Positioner positioner;
 
-    public PathRenderer(){
+    public PathRenderer(Resource r){
+        super(r);
+        //TODO path = r.get(PATH);
+        positioner = r.getThe(POSITIONER);
         this.pathPaint.setColor(Color.WHITE);
         this.pathPaint.setStyle(Paint.Style.STROKE);
         this.pathPaint.setStrokeWidth(2);

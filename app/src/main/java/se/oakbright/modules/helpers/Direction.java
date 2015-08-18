@@ -1,14 +1,22 @@
 package se.oakbright.modules.helpers;
 
+import se.oakbright.modules.Module;
 import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.calculation.DirectionCalculation;
+import se.oakbright.resource.Resource;
+import static se.oakbright.resource.Key.*;
 
 /**
  * Created by hampuse on 2015-07-10.
  */
-public class Direction {
+public class Direction extends Module{
     private int direction = 0;  //degrees //TODO would be better in radians no?
-    InternalPoint position;
+    final InternalPoint position;
+
+    public Direction(Resource r){
+        super(r);
+        position = r.getThe(PIVOT_POINT);
+    }
 
     public void setDirectionDegrees(int direction) {
         this.direction = direction;
@@ -22,6 +30,14 @@ public class Direction {
 
     public float radians(){
         return (float) ((this.direction -90)*Math.PI/180);
+    }
+
+    @Override
+    public void activate() {
+    }
+
+    @Override
+    public void deactivate() {
     }
 
     //TODO

@@ -3,6 +3,7 @@ package se.oakbright.modules.activatables.updatables;
 import se.oakbright.battleobjects.ship.ShipCommands;
 import se.oakbright.modules.helpers.Positioner;
 import se.oakbright.modules.Module;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-26.
@@ -15,6 +16,10 @@ public class PathCreator extends Module {
     private Positioner positioner;
     private ShipCommands launchableCommand;
 
+
+    public PathCreator(Resource r){
+        super(r);
+    }
 
     @Override
     public void activate() {

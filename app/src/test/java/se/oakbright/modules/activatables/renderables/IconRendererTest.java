@@ -8,6 +8,7 @@ import se.oakbright.modules.helpers.IconModule;
 import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.planetwhite.BattleModel;
 import se.oakbright.planetwhite.ServiceProvider;
+import se.oakbright.resource.Resource;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -21,7 +22,7 @@ public class IconRendererTest {
 
     @Before
     public void setup(){
-        iconRenderer = new IconRenderer(new ResourceImpl());
+        iconRenderer = new IconRenderer(new Resource());    //TODO resource is empty now
         ServiceProvider.reset();
         ServiceProvider.setBattleModel(battleModel);
     }
@@ -32,16 +33,4 @@ public class IconRendererTest {
         verify(battleModel).addRenderableMiddleLayer(iconRenderer);
     }
 
-    //TODO:
-    private class ResourceImpl implements IconRenderer.Resource{
-        @Override
-        public InternalPoint getPivotPoint() {
-            return null;
-        }
-
-        @Override
-        public IconModule getIconModule() {
-            return null;
-        }
-    }
 }

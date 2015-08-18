@@ -2,17 +2,26 @@ package se.oakbright.modules.helpers;
 
 import android.graphics.Matrix;
 
+import se.oakbright.modules.Module;
 import se.oakbright.modules.internalpoints.InternalPoint;
+import se.oakbright.resource.Key;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-07-10.
  */
-public class OrientationMatrix {
+public class OrientationMatrix extends Module {
     private Matrix matrix = new Matrix();
     private InternalPoint cornerPoint;
     private InternalPoint pivotPoint;
     private Direction direction;
 
+    public OrientationMatrix(Resource r){
+        super(r);
+        this.cornerPoint = r.getThe(Key.CORNER_POINT);
+        this.pivotPoint = r.getThe(Key.PIVOT_POINT);
+        this.direction = r.getThe(Key.DIRECTION);
+    }
     private Matrix getOrientationMatrix(){
         this.matrix.reset();
         this.matrix.postTranslate(cornerPoint.x(), cornerPoint.y());
@@ -40,19 +49,13 @@ public class OrientationMatrix {
         return pointsTemp;
     }
 
-    /*
-    public static class Builder extends Buildable<OrientationMatrix> {
-        public Buildable<? extends InternalPoint> cornerPointBuilder;
-        public Buildable<? extends InternalPoint> pivotPointBuilder;
-        public Buildable<Direction> directionBuilder;
+    @Override
+    public void activate() {
 
-        @Override
-        protected OrientationMatrix buildNew() {
-            OrientationMatrix orientationMatrix = new OrientationMatrix();
-            orientationMatrix.cornerPoint = cornerPointBuilder.getBuilt();
-            orientationMatrix.pivotPoint = pivotPointBuilder.getBuilt();
-            orientationMatrix.direction = directionBuilder.getBuilt();
-            return orientationMatrix;
-        }
-    }*/
+    }
+
+    @Override
+    public void deactivate() {
+
+    }
 }

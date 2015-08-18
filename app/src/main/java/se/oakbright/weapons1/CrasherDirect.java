@@ -4,11 +4,13 @@ import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.activatables.updatables.Weapon;
 import se.oakbright.calculation.DirectionCalculation;
 import se.oakbright.modules.helpers.Direction;
+import se.oakbright.resource.Resource;
 
 public class CrasherDirect extends Weapon {
 	Direction shipDirection;
-	public CrasherDirect(BattleObject host) {
-		super(180, 0);
+	public CrasherDirect(Resource r) {
+		super(r);
+		//TODOsuper(180, 0);
 	}
 
 	@Override

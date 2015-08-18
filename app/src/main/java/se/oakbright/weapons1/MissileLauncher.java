@@ -4,11 +4,13 @@ import android.util.Log;
 
 import se.oakbright.battleobjects.BattleObject;
 import se.oakbright.modules.activatables.updatables.Weapon;
+import se.oakbright.resource.Resource;
 
 public class MissileLauncher extends Weapon {
 
-	public MissileLauncher() {
-		super(45,1500);
+	public MissileLauncher(Resource r) {
+		super(r);
+		//TODO super(45,1500);
 	}
 	
 	@Override

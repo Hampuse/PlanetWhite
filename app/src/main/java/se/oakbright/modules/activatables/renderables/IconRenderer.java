@@ -1,27 +1,29 @@
 package se.oakbright.modules.activatables.renderables;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.util.Log;
 
 import se.oakbright.modules.helpers.Direction;
 import se.oakbright.modules.helpers.IconModule;
 import se.oakbright.modules.internalpoints.InternalPoint;
 import se.oakbright.planetwhite.BattleSurface;
+import static se.oakbright.resource.Key.*;
+import se.oakbright.resource.Resource;
 
 /**
  * Created by hampuse on 2015-06-24.
  */
 public class IconRenderer extends RenderableModuleMiddleLayer implements Renderable {
-	private IconModule iconModule;
-	private InternalPoint pivotPoint, cornerPoint;
-	private Direction direction;
+	private final IconModule iconModule;
+	private final InternalPoint pivotPoint, cornerPoint;
+	private final Direction direction;
 
-	public IconRenderer(IconRenderer.Resource r){
-		iconModule = r.getIconModule();
-		pivotPoint = r.getPivotPoint();
-		//cornerPoint = r.get
+	public IconRenderer(Resource r){
+		super(r);
+		iconModule = r.getThe(ICON_MODULE);
+		pivotPoint = r.getThe(PIVOT_POINT);
+		cornerPoint = r.getThe(CORNER_POINT);
+		direction = r.getThe(DIRECTION);
 	}
 
     public void render(Canvas canvas, BattleSurface battleSurface) {		//draws the ship on canvas. called from render() in MainGameSurface.
@@ -107,9 +109,4 @@ public class IconRenderer extends RenderableModuleMiddleLayer implements Rendera
 			return iconRenderer;
 		}
 	}*/
-
-	public interface Resource{
-		public InternalPoint getPivotPoint();
-		IconModule getIconModule();
-	}
 }
